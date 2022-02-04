@@ -1,4 +1,4 @@
-# Opencore Visual Beginners Guide
+# Opencore Visual Beginners Guide 2022
 
 ## Why this guide
 
