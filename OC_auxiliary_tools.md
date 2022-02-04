@@ -1,4 +1,4 @@
-## Using OpenCore Auxiliary Tools (OCAuxiliaryTools)
+### Using OpenCore Auxiliary Tools (OCAuxiliaryTools)
 
 - This is an excellent configuration and update utility. *OCAuxiliaryTools* will be used to create the complete OpenCore EFI folder including the Config.plist. (You may use this alongside a plist editor such as [PlistEDPlus](https://github.com/ic005k/PlistEDPlus)).
 
