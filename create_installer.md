@@ -1,3 +1,5 @@
+# Create installer USB-stick
+
 ## Create a bootable installer for macOS with TINU
 
 TINU is a very useful opensource GUI for the `createinstallmedia` command, together with some useful tools such as an EFI mounter, the macOS Downloader and the OpenCore EFI-folder integration.

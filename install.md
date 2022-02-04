@@ -1,3 +1,5 @@
+# Install & Postinstall
+
 ## Install
 
 - Enable the BIOS settings optimal for macOS: [Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#intel-bios-settings)
