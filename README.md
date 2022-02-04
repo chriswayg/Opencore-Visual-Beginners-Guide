@@ -1,6 +1,6 @@
-# Opencore Visual Beginners Guide 2022
+# Opencore Visual Beginners Guide
 
-## Why this guide
+# Opencore Visual Beginners Guide 2022
 
 This is intended to be a beginner friendly OpenCore guide which uses mostly GUI Tools to create a vanilla hackintosh install. This should make starting out with OpenCore more accessible. Everything done by these tools is transparent to the user and allows complete customisation. All downloads are from official sources, usually from the Github repos of the original developers. This guide is based on the [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/), making minimal changes when using compatible GUI tools.
 
