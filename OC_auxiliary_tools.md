@@ -142,7 +142,7 @@
 
 - **Backup your EFI:** Menu -> Edit -> Backup EFI to Desktop 
 
-![](/Users/christian/developer/git_projects/Opencore-Visual-Beginners-Guide/images/backup_efi.png)
+![](images/backup_efi.png)
 
 - **Validate your Config.plist:** Menu -> Edit -> OC Validate
 
