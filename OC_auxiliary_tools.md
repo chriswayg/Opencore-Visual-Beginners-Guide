@@ -6,27 +6,27 @@
 
 - Download & install [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) and launch the *OCAuxiliaryTools* application.
 
-![](images/3575E5DF-F24E-424B-91D1-A6DE63814FD0.png)
+![](images/download_ocat.png)
 
 - Select *Menu -> Edit -> Database* or click the *Database* button
 
-![](images/10251A87-1564-43E1-BD84-872D8F77E209.png)
+![](images/menu_database.png)
 
 - Check which [Platform Info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo) is relevant for your hardware. For this example we will use `iMac20,1` 
 
 - Select the relevant configuration and click the *Generate EFI* button
 
-![](images/99F402D7-F6EF-4254-9EF8-D05D4A954D0D.png)
+![](images/select_configuration.png)
 
 - This will generate the EFI folder with the most recent official release version of OpenCore on your desktop. The `Config.plist` will open in *OCAuxiliaryTools* for editing.
 
-![](images/CB9D65DD-CF5D-45CF-B17E-15E332B81A4D.png)
+![](images/generate_efi_folder.png)
 
 ### ACPI
 
 - In [ACPI - Add](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi) uncheck what is not needed (as shown below)
 
-![](images/5C853968-AF4D-4A41-82C8-8C026C661520.png)
+![](images/acpi_add.png)
 
 - For example we do not need  [SSDT-PMC](https://dortania.github.io/Getting-Started-With-ACPI/Universal/nvram)  in Comet Lake any more, as the NVRAM works without it.
 
@@ -36,24 +36,24 @@
 
 - In [ACPI - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi), uncheck *ResetLogoStatus*
 
-![](images/E21E45C9-18A3-45C5-88B3-A47532DC416A.png)
+![](images/acpi_quirks.png)
 
   **You can hover with your mouse over each option to see the explanation from the official OpenCore reference manual.** This is a really helpful feature of *OCAuxiliaryTools*, as it enables you to quickly understand options which are only clearly explained in the very detailed [OpenCore - Configuration](https://dortania.github.io/docs/latest/Configuration.html) document:
 
-![](images/84D4C438-E879-4223-8188-5B07AD228994.png)
+![](images/opencore_configuration_doc.png)
 
 ### Booter
 
 - No changes in [Booter](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#booter)
 
-![](images/7564699D-B406-47DD-9DC0-84C8B0B64624.png)
+![](images/booter.png)
 
 ### Device Properties
 
 - In [Device Properties](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#deviceproperties) enable the iGPU for computing tasks only (not intended to drive a display), as you will be using a compatible dedicated AMD GPU.
 - Change  `AAPL,ig-platform-id` to `0300913E`
 
-![](images/165B9B4D-BCC3-46A4-8B18-111E42665292.png)
+![](images/device_properties.png)
 
 - Note, that keys which start with a **#** are commented out and will not be used by OpenCore
 
@@ -63,24 +63,25 @@
 
 - Click on the **[...]** button to open the most common kexts available within *OCAuxiliaryTools*. Just drag-and-drop `IntelMausi.kext` into the app window. It will automatically be added to the Config.plist and enabled.
 
-![](images/55355DB7-6F2D-4F24-8BFC-5800E0C427DB.png)
+![](images/kernel_add.png)
 
 - Add any additional kexts, if needed by clicking on the **[+]** button for kexts downloaded from elsewhere.
 
 - No changes in the [Kernel - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#quirks-3) section
 
-![](images/4ADDC26E-4459-46C4-8450-420CFC969CA8.png)
+![](images/kernel_quirks.png)
 
 - Again just hover with the mouse over each option to read the explanation from the OpenCore documentation.
 
 ### Misc
 
 - In the section [Misc - Boot ](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#misc) you may choose PickerVariant *GoldenGate* for the OpenCore booter GUI
-  ![](images/D8683333-AE5B-4B40-8080-8C250635E4C2.png)
+
+![](images/misc_boot.png)
 
 - In the [Misc - Debug](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#debug) section: *DisplayLevel* click the *Select* button and enable *Debug__Warn* and *Debug__Error*
 
-![](images/AFCE311B-E30A-42D9-B444-60FA8FF10AF4.png)
+![](images/misc_debug.png)
 
 - You could change `Target` to `67`  to show additional debug information, but this requires that you utilize the debug version of OpenCore, which is not used by default in the EFI created by *OCAuxiliaryTools*. If you do require more extensive debugging, manually replace the following files Inside your EFI with the  [debug versions](https://github.com/acidanthera/OpenCorePkg/releases) :
   
@@ -92,11 +93,11 @@
 
 - In the [Misc - Security](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#security) section change *SecureBootModel* to *Default* if installing macOS Big Sur or newer.
 
-![](images/659E0BE9-E9E4-4891-8926-9B1C2C35FC4E.png)
+![](images/misc_security.png)
 
 - In [Misc - Tools](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#tools), click the **[…]** button and add `OpenShell.efi` by dragging it into the list
 
-![](images/F6F138BE-1213-4E15-A134-301C2976EB54.png)
+![](images/misc_tools.png)
 
 ### NVRAM
 
@@ -106,7 +107,7 @@
 
 - Change `prev-lang:kbd`  to use a `String` and input `en-US:0` (or your language code) instead of using the HEX value.
 
-![](images/C536D267-8562-4E9E-B64D-A2F3E657F996.png)
+![](images/nvram_add.png)
 
 ### Platform Info
 
@@ -114,7 +115,7 @@
 
 - Click *Generate* (near the *SystemProductName* field)
 
-![](images/70ECF443-7726-4777-8CC1-5AA067AE5D70.png)
+![](images/platform_info.png)
 
 - Also check the serial on the  [Apple Support](https://checkcoverage.apple.com/us/en/) webpage.
 
@@ -126,7 +127,7 @@
 
 - No changes needed in the [UEFI](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#uefi) section
 
-![](images/2117C7AB-88C0-4001-9050-082F0D7A5A52.png)
+![](images/uefi.png)
 
 - You can add additional drivers using the **[+]** or **[…]** button.
 - The OpenCanopy boot GUI will work out-of-the-box as *OCAuxiliaryTools* activates it by default.
@@ -141,16 +142,18 @@
 
 - **Backup your EFI:** Menu -> Edit -> Backup EFI to Desktop 
 
+![](/Users/christian/developer/git_projects/Opencore-Visual-Beginners-Guide/images/backup_efi.png)
+
 - **Validate your Config.plist:** Menu -> Edit -> OC Validate
 
-![](images/1BA1186E-7A43-4B26-B402-7DA28F56AD53.png)
+![](images/oc_validate.png)
 
 - **Mount your EFI partition:** Menu -> Edit -> Mount ESP Partition
 
-![](images/DDED8DD1-A35E-44DD-8287-E69934B13689.png)
+![](images/mount_efi.png)
 
 - **Upgrade OpenCore and Kexts:** Menu -> Edit -> Sync OC Main Program
 
 - Detailed instructions here: [Updating OpenCore and Kexts with OCAT](https://github.com/5T33Z0/OC-Little-Translated/blob/main/D_Updating_OpenCore/README.md)
 
-![](images/8C94FB6B-0DA4-45CF-9E67-6E9FE109A05F.png)
+![](images/upgrade_opencore.png)

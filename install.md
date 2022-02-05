@@ -17,7 +17,7 @@
 
 * [PlistEDPlus](https://github.com/ic005k/PlistEDPlus) a lightweight plist editor with rich features.
 
-![](images/0F2F399B-9E45-4984-AAD4-4C256666EA31.png)
+![](images/plist_ed_plus.png)
 
 ### Hackintool
 
@@ -25,7 +25,7 @@
 
 * useful for system information, iGPU configuration and USB mapping:
 
-![](images/2022-02-04-23-49-33-image.png)
+![](images/hackintool.png)
 
 ## Versions used
 

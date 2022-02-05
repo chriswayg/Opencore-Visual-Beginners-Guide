@@ -10,15 +10,15 @@ TINU is a very useful opensource GUI for the `createinstallmedia` command, toget
 
 - Launch TINU and click *Create a bootable macOS installer*
 
-![](images/2022-02-04-23-31-31-image.png)
+![](images/tinu_launched.png)
 
 - Click on *Proceed* and choose the target USB-stick. Then click *Next*
 
-![](images/2022-02-04-23-32-36-image.png)
+![](images/tinu_choose_drive.png)
 
 - Click on *Get Installer*
 
-![](images/F5709511-E976-403B-9ED2-9C7B6780990D.png)
+![](images/tinu_get_installer.png)
 
 - Try to download *Big Sur* from the App Store by using the provided link within TINU.
 
@@ -32,14 +32,14 @@ TINU is a very useful opensource GUI for the `createinstallmedia` command, toget
 
 - Open the installer application for macOS Big Sur inside TINU and click *Next*
 
-![](images/2022-02-04-23-34-37-image.png)
+![](images/tinu_choose_installer.png)
 
-![](images/2022-02-04-23-35-50-image.png)
+![](images/tinu_confirm_installer.png)
 
 - Click *Options* and add the EFI folder which you previously created in *OCAuxiliaryTools* from the Desktop
 
-![](images/CADD83CC-13F9-404A-A533-32291A5B85DB.png)
+![](images/tinu_add_opencore.png)
 
 - Click *Done* and start creating the macOS installer by clicking on ***Yes, I understand***. 
 
-- This will take a few minutes. You can check the log for details.
+- This will take a number of minutes. You can check the log for details.
