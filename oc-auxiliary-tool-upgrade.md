@@ -2,7 +2,11 @@
 
 ## Switch to the Debug Version of OpenCore
 
-If you encounter problems during booting, you should utilize the *debug* version of OpenCore. As explained above in the *Misc* section, make sure you have activated debugging and then *Select Menu -> Edit -> OpenCore DEBUG*
+- Launch OCAuxiliaryTools
+
+![](images/ocat_kexts.png)
+
+- If you encounter problems during booting, you should utilize the *debug* version of OpenCore. As explained previously in the *Misc* section, make sure you have activated debugging and then *Select Menu -> Edit -> OpenCore DEBUG*
 
 ![](images/menu_debug.png)
 
