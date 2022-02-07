@@ -4,4 +4,4 @@
 * [Create EFI & Config](OC\_auxiliary\_tools.md)
 * [Create Installer USB-stick](create\_installer.md)
 * [Install & Postinstall](install.md)
-* [Upgrade OpenCore](upgrade-opencore.md)
+* [Upgrade OpenCore](OC\_auxiliary\_tools\_upgrade.md)
