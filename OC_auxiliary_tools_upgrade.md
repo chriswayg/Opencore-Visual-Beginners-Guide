@@ -56,7 +56,7 @@ It is recommended to perform the upgrade first on a USB-stick and then transfer 
 
 - Correct any remaining erros as indicated by OC Validate. The OC Validate button will change from red into a checkmark. This should be sufficient for updating your Config.plist.
 
-  ![](images/upgrade_no_warnings.png)
+![](images/upgrade_no_warnings.png)
   
 - Note: Any additional errors are most likely configuration errors which you need to fix on your own. Also refer to [Updating OpenCore and macOS | OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/universal/update.html) in the Dortania guide, which provides more details.
   
