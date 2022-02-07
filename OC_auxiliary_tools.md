@@ -28,13 +28,13 @@
 
 ![](images/acpi_add.png)
 
-- For example we do not need  [SSDT-PMC](https://dortania.github.io/Getting-Started-With-ACPI/Universal/nvram)  in Comet Lake any more, as the NVRAM works without it.
+- For example we may not need  [SSDT-PMC](https://dortania.github.io/Getting-Started-With-ACPI/Universal/nvram)  in Comet Lake any more, as the NVRAM works without it.
 
 - Check the relevant section of the [Desktop Comet Lake | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi) for more details.
 
 - Add any additional SSDTs, if needed by clicking on the **[+]** button for downloaded SSDTs or by clicking on the **[…]** button for the most common prebuilt SSDTs available within *OCAuxiliaryTools*
 
-- In [ACPI - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi), uncheck *ResetLogoStatus*
+- In [ACPI - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi), uncheck *ResetLogoStatus*. (It is enabled by default in sample.plist. This Quirk didn't exist at the time the OpenCore Install Guide was written, so it's unknown if it's a requirement. Most likely it's not. @5T33Z0)
 
 ![](images/acpi_quirks.png)
 
@@ -83,13 +83,7 @@
 
 ![](images/misc_debug.png)
 
-- You could change `Target` to `67`  to show additional debug information, but this requires that you utilize the debug version of OpenCore, which is not used by default in the EFI created by *OCAuxiliaryTools*. If you do require more extensive debugging, manually replace the following files Inside your EFI with the  [debug versions](https://github.com/acidanthera/OpenCorePkg/releases) :
-  
-  ```
-  EFI/BOOT/BOOTx64.efi
-  EFI/OC/Drivers/OpenRuntime.efi
-  EFI/OC/OpenCore.efi
-  ```
+- By default the EFI created by *OCAuxiliaryTools* uses the most recent *release* version of OpenCore. If you want to show additional debug information change `Target` to `67`  and switch to the *debug* version of OpenCore, which will be explained at the end of this guide.
 
 - In the [Misc - Security](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#security) section change *SecureBootModel* to *Default* if installing macOS Big Sur or newer.
 
@@ -135,25 +129,9 @@
 
 ### Notes
 
-- If your motherboard uses the Intel’s I225-V 2.5GBe ethernet controller, additional settings are required in the relevant sections. Just refer to the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) and use relevant presets in *OCAuxiliaryTools*.
+- If your motherboard uses the Intel’s I225-V 2.5GBe ethernet controller, additional settings are required in the relevant sections. Just refer to the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) and use the applicable presets in *OCAuxiliaryTools*.
 - Remember to **save your Config.plist** by clicking the *Save* button or with Menu -> Edit -> Save.
 
-### Useful Features of OCAuxiliaryTools
 
-- **Backup your EFI:** Menu -> Edit -> Backup EFI to Desktop 
 
-![](images/backup_efi.png)
 
-- **Validate your Config.plist:** Menu -> Edit -> OC Validate
-
-![](images/oc_validate.png)
-
-- **Mount your EFI partition:** Menu -> Edit -> Mount ESP Partition
-
-![](images/mount_efi.png)
-
-- **Upgrade OpenCore and Kexts:** Menu -> Edit -> Sync OC Main Program
-
-- Detailed instructions here: [Updating OpenCore and Kexts with OCAT](https://github.com/5T33Z0/OC-Little-Translated/blob/main/D_Updating_OpenCore/README.md)
-
-![](images/upgrade_opencore.png)
