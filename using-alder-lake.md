@@ -51,7 +51,9 @@ All currently available Alder Lake desktop CPUs should work.
 
 #### Recommended GPUs
 
-AMD RX 400 series, RX 500 series, RX 5000 series, RX 6800, RX 6800 XT, RX 6900 XT. AMD RX 6600 and 6600 XT are only supported in Monterey 12.1 and newer. But RX 6700 is currently not supported at all.
+In the context of Alder Lake, I have seen primarily recommended: AMD RX 400 series, RX 500 series, RX 5000 series, RX 6800, RX 6800 XT, RX 6900 XT. AMD RX 6600 and 6600 XT are only supported in Monterey 12.1 and newer. (But RX 6700 is currently not supported at all.)
+
+Refer to the Dortania recommendations in [GPU Support | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#gpu-support) and [GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/), which continue to apply for Alder lake.
 
 #### SSDs actually used
 
