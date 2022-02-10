@@ -34,7 +34,9 @@ Mostly Z690 and a few B660M, but no Hackintosh seen yet with H610 or H670. Gigab
 * i5-12400, i5-12400F
 * i5-12600K, i5 12600KF
 * i7-12700K, i7-12700KF
-* i9-12900K All currently available Alder Lake desktop CPUs should work.
+* i9-12900K&#x20;
+
+All currently available Alder Lake desktop CPUs should work.
 
 #### GPUs actually used
 
@@ -56,17 +58,23 @@ AMD RX 400 series, RX 500 series, RX 5000 series, RX 6800, RX 6800 XT, RX 6900 X
 * WD SN850 PCIe 4.0 NVMe SSD 1TB
 * WD Black SN750 SE NVMe SSD1TB
 * WD Blue SN550 NVMe 1TB
-* PNY CS1031 256GB Some Samsung NVMe drives may still have problems [SSD boot time tests · dortania](https://github.com/dortania/bugtracker/issues/192)
+* PNY CS1031 256GB&#x20;
+
+Some Samsung NVMe drives may still have problems [SSD boot time tests · dortania](https://github.com/dortania/bugtracker/issues/192)
 
 #### Wifi Cards actually used
 
 * Fenvi FV-T919 WiFi / Bluetooth Wireless Card
-* Fenvi M.2 NGFF BCM94360NG Wifi / Bluetooth 4.0 Network Card The recommendations from the Dortania guides continue to apply.
+* Fenvi M.2 NGFF BCM94360NG Wifi / Bluetooth 4.0 Network Card&#x20;
+
+The recommendations from the Dortania guides continue to apply.
 
 #### OS used
 
 * Monterey (mostly)
-* Big Sur macOS Catalina 10.15.4 and above should work based on Comet Lake support in macOS.
+* Big Sur
+
+macOS Catalina 10.15.4 and above should work based on Comet Lake support in macOS.
 
 ### Things that don't work
 
@@ -77,7 +85,7 @@ AMD RX 400 series, RX 500 series, RX 5000 series, RX 6800, RX 6800 XT, RX 6900 X
 
 ### BIOS:
 
-All the BIOS configurations are essentially the same as used for Comet Lake, except for the CPU configuration
+All the BIOS configurations are essentially the same as used for Comet Lake, except for the CPU configuration.
 
 #### P-cores and E-cores
 
@@ -101,7 +109,7 @@ Therefore in BIOS configure accordingly:
 
 #### ACPI -> Add
 
-Required to add `SSDT-PLUG-ALT.aml` [XCPM power management compatibility table with Darwin method for Alder Lake CPUs](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/AcpiSamples/Source/SSDT-PLUG-ALT.dsl)
+Required to add `SSDT-PLUG-ALT.aml` [XCPM power management compatibility table with Darwin method for Alder Lake CPUs](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/AcpiSamples/Source/SSDT-PLUG-ALT.dsl).
 
 #### SSDTs
 
@@ -149,7 +157,7 @@ The kext used are essentially the same as the ones used for Comet Lake
 * CPUFriend.kext (A Lilu plug-in for dynamic power management data injection.) with CpuFriendDataProvider.kext
   * See [acidanthera/CPUFriend: Dynamic macOS CPU power management data injection](https://github.com/acidanthera/CPUFriend)
 * LucyRTL8125Ethernet.kext (Realtek 2.5GbE Driver)
-* kexts for USB mapping, depending on the use of USBmap or USBtoolbox
+* kexts for USB mapping, depending on the use of USBMap or USBToolBox
 
 #### Kernel -> Emulate
 
@@ -220,7 +228,9 @@ I researched more in-depth about the specifics which might differ from a Comet L
 * Golden Build: [Asus Z690 ProArt Creator WiFi (Thunderbolt 4) + i7-12700K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/asus-z690-proart-creator-wifi-thunderbolt-4-i7-12700k-amd-rx-6800-xt.318311/)
 * User Build: [ASRock Z690 Steel Legend (WiFi 6E)](https://www.tonymacx86.com/threads/asrock-z690-steel-legend-wifi-6e.317456/) nice guide including CPU ID explanation
 * User Build: [Gigabyte Z690 ELITE AX D4 + i9-12900K + AMD RX 6600 XT](https://www.tonymacx86.com/threads/gigabyte-z690-elite-ax-d4-i9-12900k-amd-rx-6600-xt.318584/)
-* User Build: [SUCCESS - Z690i Intel 12th Gen CPU i5-12400 (low cost)](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/) clean, minimal configuration The _Golden Builds_ are well documented and would help those who buy the same motherboard and CPU. - Yet, I am not satisfied just copying a configuration, since I might buy different hardware and I should be able to understand every part of the Config to maintain it longterm. Also you should use the tools recommended on r/hackintosh.
+* User Build: [SUCCESS - Z690i Intel 12th Gen CPU i5-12400 (low cost)](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/) clean, minimal configuration&#x20;
+
+The _Golden Builds_ are well documented and would help those who buy the same motherboard and CPU. - Yet, I am not satisfied just copying a configuration, since I might buy different hardware and I should be able to understand every part of the Config to maintain it longterm. Also you should use the tools recommended on r/hackintosh.
 
 #### Github
 
