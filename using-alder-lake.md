@@ -87,6 +87,8 @@ macOS Catalina 10.15.4 and above should work based on Comet Lake support in macO
 
 All the BIOS configurations are essentially the same as used for Comet Lake, except for the CPU configuration.
 
+* CFG Lock may not be configurable in preferences on ASUS boards. This is an obvious BIOS bug, although it may not cause boot failures. We had to unlock it manually through the Shell method described in OpenCore Reference Manual. (Dortania)
+
 #### P-cores and E-cores
 
 Experiment with either of these configurations to see which works best for their workflows:
@@ -257,3 +259,10 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 * Another example: B660M [reddit.com: search results - flair\_name:"SUCCESS" B660M](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)
 * On TM: [Z690 User Builds ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date)
 * Or search for _Alder Lake_ for general info on each hackintosh site
+
+## More Info
+
+* Additional details have been discussed in this **essential technical article** by Dortania: [Intel Z690 compatibility with macOS | Dortania](https://dortania.github.io/hackintosh/updates/2022/01/09/alder-lake.html)).
+* A kext for Alder Lake currently in development: an **experimental** Lilu plugin that optimizes Alder Lake's heterogeneous core configuration: [GitHub - b00t0x/CpuTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild)
+* This section should eventually contain Alder Lake related updates to the guide. Started February 10: [OpenCore-Install-Guide/config.plist at alderlake · alyxferrari/OpenCore-Install-Guide · GitHub](https://github.com/alyxferrari/OpenCore-Install-Guide/tree/alderlake/config.plist)
+* Discussion and relevant links in the comments: [Request for an initial version of a Dortania OpenCore Guide for Alder Lake · Issue #257 · dortania/bugtracker · GitHub](https://github.com/dortania/bugtracker/issues/257)
