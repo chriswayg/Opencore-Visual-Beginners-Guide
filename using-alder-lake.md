@@ -2,7 +2,7 @@
 
 ## OpenCore Alder Lake (12th-Gen Intel) Hackintosh Guidance
 
-What can we learn from existing successful OpenCore Alder Lake desktop builds? I looked at almost every documented system on the major English and German hackintosh sites. In this article I will share the key points that I noticed when looking at these builds, documentation and configurations. This is just a very preliminary guide, since Dortania does not have an _OpenCore Alder Lake Guide_ yet. Please point out any errors or missing configuration options and add successfully used hardware (especially motherboards) in the comments. (I will add these into the main post.)
+What can we learn from existing successful OpenCore Alder Lake desktop builds? I looked at almost every documented system on the major English and German hackintosh sites. In this article I will share the key points that I noticed when looking at these builds, documentation and configurations. This is just a very preliminary guide, since Dortania does not have an _OpenCore Alder Lake Guide_ yet.&#x20;
 
 Essentially follow the [Desktop Comet Lake | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html) and incorporate the insights listed below. As always, do not just copy an EFI which you might find in other people's documentation. It may not work, is hard to maintain and is against the rules of r/hackintosh. Create your own EFI based on the guide.
 
@@ -128,7 +128,6 @@ Very similar to Comet Lake, except for the additional _SSDT-PLUG-ALT.aml_
 I have seen configurations with various ACPI patches, but not investigated them in detail to find out if or for what purpose they were used. Many successful systems use none of these patches.
 
 * Fix RTC \_STA bug
-* Change MC\_\_ to MCHC
 * Change MC\_\_ to MCHC
 * Change ADBG to XDBG
 * HPET \_CRS to XCRS Rename
