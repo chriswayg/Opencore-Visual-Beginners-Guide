@@ -62,7 +62,7 @@ Refer to the Dortania recommendations in [GPU Support | OpenCore Install Guide](
 * WD Blue SN550 NVMe 1TB
 * PNY CS1031 256GB&#x20;
 
-Some Samsung NVMe drives may still have problems [SSD boot time tests · dortania](https://github.com/dortania/bugtracker/issues/192)
+Some Samsung NVMe drives may still have problems: [SSD boot time tests · dortania](https://github.com/dortania/bugtracker/issues/192).
 
 #### Wifi Cards actually used
 
@@ -80,7 +80,7 @@ macOS Catalina 10.15.4 and above should work based on Comet Lake support in macO
 
 ### Notes
 
-* Thermal management works. While Intel Power Gadget is rather buggy and not recommended in production, it mostly works, so do SuperIO and SMCProcessor.
+* Thermal management works. While Intel Power Gadget is rather buggy and not recommended in production, it mostly works, so do SuperIO and SMCProcessor. _(Vit, 22-01-09)_
 
 ### Things that don't work
 
@@ -94,7 +94,7 @@ macOS Catalina 10.15.4 and above should work based on Comet Lake support in macO
 All the BIOS configurations are essentially the same as used for Comet Lake, except for the CPU configuration.
 
 * CFG Lock may not be configurable in preferences on ASUS boards. This is an obvious BIOS bug, although it may not cause boot failures. We had to unlock it manually through the Shell method described in OpenCore Reference Manual. _(Vit, 22-01-09)_
-* XMP works at least with DDR5 we had at hand, but there were reports of no issues with DDR4 as well. While macOS does not name DDR5 as DDR5 in the profiler, this nuance is purely cosmetic._(Vit, 22-01-09)_
+* XMP works at least with DDR5 we had at hand, but there were reports of no issues with DDR4 as well. While macOS does not name DDR5 as DDR5 in the profiler, this nuance is purely cosmetic. _(Vit, 22-01-09)_
 
 #### P-cores and E-cores
 
@@ -135,7 +135,7 @@ Very similar to Comet Lake, except for the additional _SSDT-PLUG-ALT.aml_
 * SSDT-HPET.aml (occasionally used) - Patches out IRQ conflicts.
 * SSDT-DTPG.aml (occasionally used) - Implements DTGP method that is needed by other SSDTs. Related to Thunderbolt.
 
-#### ACPI > Patch (optional)
+#### ACPI -> Patch (optional)
 
 I have seen configurations with various ACPI patches, but not investigated them in detail to find out if or for what purpose they were used. Many successful systems use none of these patches.
 
@@ -148,7 +148,7 @@ I have seen configurations with various ACPI patches, but not investigated them 
 
 Also see: [SSDTs: The easy way | Getting Started With ACPI](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
 
-#### Booter > Quirks
+#### Booter -> Quirks
 
 `ResizeAppleGpuBars -1` (or 0, if Re-Sizable BAR Support is enabled in BIOS)
 
@@ -191,20 +191,20 @@ Cpuid1Mask    FFFFFFFF000000000000000000000000`
 MinKernel     19.0.0
 ```
 
-#### Kernel - Quirks
+#### Kernel -> Quirks
 
 `ProvideCurrentCpuInfo Yes`
 
 * More patches are required for XNU when using the efficiency cores, though handled automatically by the `ProvideCurrentCpuInfo` quirk starting with OpenCore 0.7.7. _(Vit, 22-01-09)_
 
-#### NVRAM > Add
+#### NVRAM -> Add
 
 **7C436110-AB2A-4BBB-A880-FE41995C9F82** The `boot-args` follow the same pattern as described in [OpenCore Install Guide - NVRAM](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#nvram). The only required additional argument is this:
 
 * `-wegnoigpu` to disable internal GPU, which is not supported.
 * A typical _boot-args_ may look like this: `-v keepsyms=1 debug=0x100 agdpmod=pikera -wegnoigpu alcid=1`
-* `agdpmod=pikera` is used for disabling board ID checks on Navi GPUs (RX 5000 & 6000 series), without this you'll get a black screen. Don't use if you don't have Navi (ie. Polaris and Vega cards shouldn't use this)
-* In case the iGPU is needed for other operating systems, there are other ways to hide the iGPU described here: [Disabling GPU | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/extras/spoof.html#disabling-gpu)
+* `agdpmod=pikera` is used for disabling board ID checks on Navi GPUs (RX 5000 & 6000 series), without this you'll get a black screen. Don't use if you don't have Navi (ie. Polaris and Vega cards shouldn't use this).
+* In case the iGPU is needed for other operating systems, there are other ways to hide the iGPU described here: [Disabling GPU | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/extras/spoof.html#disabling-gpu).
 
 **4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102**
 
@@ -217,7 +217,7 @@ revcpu        Number    1
 
 * this is working together with the [acidanthera/RestrictEvents.kext](https://github.com/acidanthera/RestrictEvents/tree/64c9ea31fa62081f8fcc3076ca96d8d39d8c6ca2)
 
-#### PlatformInfo > Generic
+#### PlatformInfo -> Generic
 
 Use one of
 
@@ -225,9 +225,11 @@ Use one of
 * iMac20,1
 * iMacPro1,1
 
-#### UEFI > Output
+`MacPro7,1` is used in the majority of Alder Lake systems and appears to be the recommended choice. Read this for details: [Choosing the right SMBIOS | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/extras/smbios-support.html#how-to-decide).
 
-Prov`ideConsoleGop Yes`&#x20;
+#### UEFI -> Output
+
+`ProvideConsoleGop Yes`&#x20;
 
 * ASUS boards have a new aggregate GOP instance, which causes black screen during macOS first stage. This is addressed in the `ProvideConsoleGop` quirk starting with OpenCore 0.7.6. _(Vit, 22-01-09)_
 * This is enabled in OC > _Sample.plist_ and should remain enabled, not just for ASUS boards.
@@ -236,16 +238,16 @@ Prov`ideConsoleGop Yes`&#x20;
 
 Some of the configurations use Thunderbolt. Therefore these changes are only needed if the motherboard has Thunderbolt or an add-in card is used: **AppleVTD** allows certain Thunderbolt devices to connect and operate, such as Antelope Audio interfaces and Apple's own Thunderbolt-to-Gigabit Ethernet adapter. - Enabling AppleVTD requires the following:
 
-1. Kernel --> Quirks --> DisableIoMapper --> **check off**(affects macOS only)
-2. ACPI --> Add --> SSDT-DMAR.aml --> **check on**(affects all operating systems)
-3. ACPI --> Delete --> DMAR --> **check on**(affects all operating systems)
+1. Kernel --> Quirks --> DisableIoMapper --> **No** (affects macOS only)
+2. ACPI --> Add --> SSDT-DMAR.aml --> **Yes** (affects all operating systems)
+3. ACPI --> Delete --> DMAR --> **Yes** (affects all operating systems)
 4. BIOS Setup --> VT-d --> **Enabled**
 
 Also see here: [Fixing Sleep | OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/universal/sleep.html#fixing-thunderbolt)
 
 ### Successful BUILD LIST
 
-I researched more in-depth about the specifics which might differ from a Comet Lake configuration by looking at many documented _successful projects_ reported on r/hackintosh, TM, Github, hackintosh-forum-de and InsanelyMac (links below).
+I researched more in-depth about the specifics which might differ from a Comet Lake configuration by looking at many documented _successful projects_ reported on r/hackintosh, TM, Github, hackintosh-forum-de and InsanelyMac.
 
 #### r/Hackintosh
 
