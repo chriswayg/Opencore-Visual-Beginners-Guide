@@ -78,6 +78,10 @@ The recommendations from the Dortania guides continue to apply.
 
 macOS Catalina 10.15.4 and above should work based on Comet Lake support in macOS.
 
+### Notes
+
+* Thermal management works. While Intel Power Gadget is rather buggy and not recommended in production, it mostly works, so do SuperIO and SMCProcessor.
+
 ### Things that don't work
 
 * Sidecar requires either an iGPU or an Apple T2 chip for HEVC encoding/decoding so it does not work on this system (iGPU UHD 770 is not supported by macOS). Alternatives to Sidecar: Luna Display and Duet Display.
@@ -89,7 +93,8 @@ macOS Catalina 10.15.4 and above should work based on Comet Lake support in macO
 
 All the BIOS configurations are essentially the same as used for Comet Lake, except for the CPU configuration.
 
-* CFG Lock may not be configurable in preferences on ASUS boards. This is an obvious BIOS bug, although it may not cause boot failures. We had to unlock it manually through the Shell method described in OpenCore Reference Manual. (Dortania)
+* CFG Lock may not be configurable in preferences on ASUS boards. This is an obvious BIOS bug, although it may not cause boot failures. We had to unlock it manually through the Shell method described in OpenCore Reference Manual. _(Vit, 22-01-09)_
+* XMP works at least with DDR5 we had at hand, but there were reports of no issues with DDR4 as well. While macOS does not name DDR5 as DDR5 in the profiler, this nuance is purely cosmetic._(Vit, 22-01-09)_
 
 #### P-cores and E-cores
 
@@ -115,6 +120,8 @@ Therefore in BIOS configure accordingly:
 
 Required to add `SSDT-PLUG-ALT.aml` [XCPM power management compatibility table with Darwin method for Alder Lake CPUs](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/AcpiSamples/Source/SSDT-PLUG-ALT.dsl).
 
+* Most firmware dropped `Processor`-based CPU definition in ACPI and switched to `Device`-based definition, which is not recognised by macOS. To workaround this one needs to use the `SSDT-PLUG-ALT` ACPI table. _(Vit, 22-01-09)_
+
 #### SSDTs
 
 Very similar to Comet Lake, except for the additional _SSDT-PLUG-ALT.aml_
@@ -123,9 +130,10 @@ Very similar to Comet Lake, except for the additional _SSDT-PLUG-ALT.aml_
 * SSDT-EC-USBX.aml (required)
 * SSDT-PLUG-ALT.aml (required)
 * SSDT-SBUS.aml (optional)
+* SSDT-USBW.aml (optional) Works with USBWakeFixup.kext to enable proper wake from sleep
 * SSDT-DMAC.aml (occasionally used) As on a real MacPro 7,1 : " the DMAC Direct Memory Access Controller provides an interface between the bus and the input-output devices , share the bus with the processor to make the data transfer, speedups the memory operations by bypassing the involvement of the CPU ".
 * SSDT-HPET.aml (occasionally used) - Patches out IRQ conflicts.
-* SSDT-DTPG.aml (occasionally used) - Related to Thunderbolt .
+* SSDT-DTPG.aml (occasionally used) - Implements DTGP method that is needed by other SSDTs. Related to Thunderbolt.
 
 #### ACPI > Patch (optional)
 
@@ -142,7 +150,9 @@ Also see: [SSDTs: The easy way | Getting Started With ACPI](https://dortania.git
 
 #### Booter > Quirks
 
-* ResizeAppleGpuBars > -1 (or 0, if Re-Sizable BAR Support is enabled in BIOS)
+`ResizeAppleGpuBars -1` (or 0, if Re-Sizable BAR Support is enabled in BIOS)
+
+* We did not have PCIe 5.0 hardware to ensure optimal performance, but there were no issues with PCIe 4.0 and 3.0 including Resize Bar support handled by the `ResizeAppleGpuBars` quirk. _(Vit, 22-01-09)_
 
 #### Kexts in Kernel -> Add
 
@@ -158,10 +168,13 @@ The kext used are essentially the same as the ones used for Comet Lake
 
 **Other common kexts used on Alder Lake:**
 
-* RestrictEvents.kext (Lilu Kernel extension for blocking unwanted processes causing compatibility issues on different hardware. Makes showing the proper CPU name possible.)
+* RestrictEvents.kext (Lilu Kernel extension for blocking unwanted processes causing compatibility issues on different hardware. Makes showing the proper CPU name possible and is needed when enabling E-cores.)
+* Enabling the efficiency cores will require [RestrictEvents](https://github.com/acidanthera/RestrictEvents) CPU name spoofing functionality due to large core count.&#x20;
 * CPUFriend.kext (A Lilu plug-in for dynamic power management data injection.) with CpuFriendDataProvider.kext
   * See [acidanthera/CPUFriend: Dynamic macOS CPU power management data injection](https://github.com/acidanthera/CPUFriend)
+  * Partial XCPM compatibility is available, but frequency vector tuning will be [required](https://github.com/dortania/bugtracker/issues/190). _(Vit, 22-01-09)_
 * LucyRTL8125Ethernet.kext (Realtek 2.5GbE Driver)
+* [USBWakeFixup](https://github.com/osy/USBWakeFixup) is needed to fix keyboard wakeup support, but may cause [compatibility issues](https://github.com/osy/USBWakeFixup/issues/14) with Bluetooth. Works with SSDT-USBW.
 * kexts for USB mapping, depending on the use of USBMap or USBToolBox
 
 #### Kernel -> Emulate
@@ -178,13 +191,20 @@ Cpuid1Mask    FFFFFFFF000000000000000000000000`
 MinKernel     19.0.0
 ```
 
+#### Kernel - Quirks
+
+`ProvideCurrentCpuInfo Yes`
+
+* More patches are required for XNU when using the efficiency cores, though handled automatically by the `ProvideCurrentCpuInfo` quirk starting with OpenCore 0.7.7. _(Vit, 22-01-09)_
+
 #### NVRAM > Add
 
 **7C436110-AB2A-4BBB-A880-FE41995C9F82** The `boot-args` follow the same pattern as described in [OpenCore Install Guide - NVRAM](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#nvram). The only required additional argument is this:
 
-* `-wegnoigpu` to disable internal GPU
+* `-wegnoigpu` to disable internal GPU, which is not supported.
 * A typical _boot-args_ may look like this: `-v keepsyms=1 debug=0x100 agdpmod=pikera -wegnoigpu alcid=1`
 * `agdpmod=pikera` is used for disabling board ID checks on Navi GPUs (RX 5000 & 6000 series), without this you'll get a black screen. Don't use if you don't have Navi (ie. Polaris and Vega cards shouldn't use this)
+* In case the iGPU is needed for other operating systems, there are other ways to hide the iGPU described here: [Disabling GPU | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/extras/spoof.html#disabling-gpu)
 
 **4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102**
 
@@ -204,6 +224,13 @@ Use one of
 * MacPro7,1
 * iMac20,1
 * iMacPro1,1
+
+#### UEFI > Output
+
+Prov`ideConsoleGop Yes`&#x20;
+
+* ASUS boards have a new aggregate GOP instance, which causes black screen during macOS first stage. This is addressed in the `ProvideConsoleGop` quirk starting with OpenCore 0.7.6. _(Vit, 22-01-09)_
+* This is enabled in OC > _Sample.plist_ and should remain enabled, not just for ASUS boards.
 
 #### Thunderbolt related
 
@@ -264,7 +291,7 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 
 ## More Info
 
-* Additional details have been discussed in this **essential technical article** by Dortania: [Intel Z690 compatibility with macOS | Dortania](https://dortania.github.io/hackintosh/updates/2022/01/09/alder-lake.html)).
+* Additional details have been discussed in this **essential technical article**: [Intel Z690 compatibility with macOS | Dortania](https://dortania.github.io/hackintosh/updates/2022/01/09/alder-lake.html)). _Vit, 2022-01-09_
 * A kext for Alder Lake currently in development: an **experimental** Lilu plugin that optimizes Alder Lake's heterogeneous core configuration: [GitHub - b00t0x/CpuTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild)
 * This section should eventually contain Alder Lake related updates to the guide. Started February 10: [OpenCore-Install-Guide/config.plist at alderlake · alyxferrari/OpenCore-Install-Guide · GitHub](https://github.com/alyxferrari/OpenCore-Install-Guide/tree/alderlake/config.plist)
 * Discussion and relevant links in the comments: [Request for an initial version of a Dortania OpenCore Guide for Alder Lake · Issue #257 · dortania/bugtracker · GitHub](https://github.com/dortania/bugtracker/issues/257)
