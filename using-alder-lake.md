@@ -127,12 +127,14 @@ Very similar to Comet Lake, except for the additional _SSDT-PLUG-ALT.aml_
 
 I have seen configurations with various ACPI patches, but not investigated them in detail to find out if or for what purpose they were used. Many successful systems use none of these patches.
 
-* Fix RTC \_STA bug
+* Fix RTC \_STA bug (possibly related: [SSDT-RTC-FIX · acidanthera/bugtracker · GitHub](https://github.com/acidanthera/bugtracker/issues/348))
 * Change MC\_\_ to MCHC
-* Change ADBG to XDBG
+* Change ADBG to XDBG (explained in this comment: [Gigabyte Z690 Aero G](https://www.tonymacx86.com/threads/gigabyte-z690-aero-g-i5-12600k-amd-rx-6800-xt.317179/page-25#post-2291723))
 * HPET \_CRS to XCRS Rename
 * RTC IRQ 8 Patch
 * TIMR IRQ 0 Patch
+
+Also see: [SSDTs: The easy way | Getting Started With ACPI](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
 
 #### Booter > Quirks
 
