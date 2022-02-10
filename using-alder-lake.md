@@ -103,7 +103,7 @@ Therefore in BIOS configure accordingly:
 
 Required to add `SSDT-PLUG-ALT.aml` [XCPM power management compatibility table with Darwin method for Alder Lake CPUs](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/AcpiSamples/Source/SSDT-PLUG-ALT.dsl)
 
-#### SSDT s
+#### SSDTs
 
 Very similar to Comet Lake, except for the additional _SSDT-PLUG-ALT.aml_
 
@@ -115,7 +115,7 @@ Very similar to Comet Lake, except for the additional _SSDT-PLUG-ALT.aml_
 * SSDT-HPET.aml (occasionally used) - Patches out IRQ conflicts.
 * SSDT-DTPG.aml (occasionally used) - Related to Thunderbolt .
 
-#### ACPI Patches (optional)
+#### ACPI > Patch (optional)
 
 I have seen configurations with various ACPI patches, but not investigated them in detail to find out if or for what purpose they were used. Many successful systems use none of these patches.
 
@@ -165,14 +165,6 @@ Cpuid1Mask    FFFFFFFF000000000000000000000000`
 MinKernel     19.0.0
 ```
 
-#### PlatformInfo
-
-Use one of
-
-* MacPro7,1
-* iMac20,1
-* iMacPro1,1
-
 #### NVRAM > Add
 
 **7C436110-AB2A-4BBB-A880-FE41995C9F82** The `boot-args` follow the same pattern as described in [OpenCore Install Guide - NVRAM](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#nvram). The only required additional argument is this:
@@ -191,6 +183,14 @@ revcpu        Number    1
 ```
 
 * this is working together with the [acidanthera/RestrictEvents.kext](https://github.com/acidanthera/RestrictEvents/tree/64c9ea31fa62081f8fcc3076ca96d8d39d8c6ca2)
+
+#### PlatformInfo > Generic
+
+Use one of
+
+* MacPro7,1
+* iMac20,1
+* iMacPro1,1
 
 #### Thunderbolt related
 
