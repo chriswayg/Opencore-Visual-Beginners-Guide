@@ -170,14 +170,12 @@ The kext used are essentially the same as the ones used for Comet Lake
 
 **Other common kexts used on Alder Lake:**
 
-* RestrictEvents.kext (Lilu Kernel extension for blocking unwanted processes causing compatibility issues on different hardware. Makes showing the proper CPU name possible and is needed when enabling E-cores.)
-* Enabling the efficiency cores will require [RestrictEvents](https://github.com/acidanthera/RestrictEvents) CPU name spoofing functionality due to large core count.&#x20;
-* CPUFriend.kext (A Lilu plug-in for dynamic power management data injection.) with CpuFriendDataProvider.kext
-  * See [acidanthera/CPUFriend: Dynamic macOS CPU power management data injection](https://github.com/acidanthera/CPUFriend)
+* [RestrictEvents.kext](https://github.com/acidanthera/RestrictEvents) - Lilu Kernel extension for blocking unwanted processes causing compatibility issues on different hardware. - Is needed when enabling E-cores due to large core count and makes showing the proper CPU name possible.
+* [CPUFriend.kext ](https://github.com/acidanthera/CPUFriend)- A Lilu plug-in for dynamic power management data injection. Used with CpuFriendDataProvider.kext which can be created according to the instructions here: [CPUFriend/Instructions](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md)
   * Partial XCPM compatibility is available, but frequency vector tuning will be [required](https://github.com/dortania/bugtracker/issues/190). _(Vit, 22-01-09)_
-* LucyRTL8125Ethernet.kext (Realtek 2.5GbE Driver)
+* [LucyRTL8125Ethernet.kext](https://github.com/Mieze/LucyRTL8125Ethernet) - A macOS driver for Realtek RTL8125 2.5GBit Ethernet Controllers.
 * [USBWakeFixup](https://github.com/osy/USBWakeFixup) is needed to fix keyboard wakeup support, but may cause [compatibility issues](https://github.com/osy/USBWakeFixup/issues/14) with Bluetooth. Works with SSDT-USBW.
-* kexts for USB mapping, depending on the use of USBMap or USBToolBox
+* Kexts for USB mapping, depending on the use of [USBMap](https://github.com/corpnewt/USBMap) or [USBToolBox](https://github.com/USBToolBox/tool)
 
 #### Kernel -> Emulate
 
