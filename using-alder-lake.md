@@ -21,6 +21,7 @@ Mostly Z690 and a few B660M, but no Hackintosh seen yet with H610 or H670. Gigab
 * Gigabyte Z690 AERO G DDR4 (plus Thunderbolt card) - ATX
 * ASUS Z690 ProArt Creator WiFi (Thunderbolt 4) DDR5 - ATX
 * ASUS ROG STRIX Z690-A GAMING WIFI D4 DDR4 - ATX
+* ASUS ROG STRIX Z690-F GAMING WIFI DDR5 - ATX
 * ASUS PRIME Z690M-PLUS D4 DDR4 - microATX
 * ASUS PRIME Z690-P D4 LGA DDR4 - ATX
 * ASUS TUF GAMING Z690-PLUS D4 DDR4 - ATX
@@ -36,7 +37,7 @@ Mostly Z690 and a few B660M, but no Hackintosh seen yet with H610 or H670. Gigab
 * i7-12700K, i7-12700KF
 * i9-12900K&#x20;
 
-All currently available Alder Lake desktop CPUs should work.
+All currently available Alder Lake Core-i-x-12xxx CPUs should work.
 
 #### GPUs actually used
 
