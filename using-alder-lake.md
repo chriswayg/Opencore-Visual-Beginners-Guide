@@ -101,8 +101,9 @@ All the BIOS configurations are essentially the same as used for Comet Lake, exc
 
 Experiment with either of these configurations to see which works best for their workflows:
 
-* **Option 1:** All P-cores, all E-cores, and Hyper-Threading enabled. The maximum CPU frequency will be that of the E-cores. But multi-threading performance will be better.
-* **Option 2:**: Only P-cores and Hyper-Threading enabled. The maximum CPU frequency will be that of the P-cores. But multi-threading performance will be less.
+* **Option 1:** All P-cores, all E-cores, and Hyper-Threading enabled. The Ring Clock frequency will be 3.6 GHz with a [CPU performance impact of no more than 6%](https://chipsandcheese.com/2021/12/16/alder-lake-e-cores-ring-clock-and-hybrid-teething-troubles/), due to lesser L3 and memory performance of the P-cores. Overall multi-threading performance will be better.
+* **Option 2:**: Only P-cores and Hyper-Threading enabled. The Ring Clock frequency will be 4.7 GHz. Overall multi-threading performance will be less.
+* Both options may be optimised by [Alder Lake Overclocking](https://skatterbencher.com/2021/11/04/alder-lake-overclocking-whats-new/#Disable\_Ring\_to\_Core\_Ratio\_Offset). The Ring Clock and CPU clock are separate.
 
 Therefore in BIOS configure accordingly:
 
@@ -287,9 +288,9 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 
 ### Search Links
 
-* To be able to see the various successes of Alder Lake on _r/hackintosh_ enter the following in the search box: `flair_name:"SUCCESS" Z690`
-* Another example: B660M [reddit.com: search results - flair\_name:"SUCCESS" B660M](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)
-* On TM: [Z690 User Builds ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date)
+* To be able to see the various successes of Alder Lake  on _r/hackintosh_ enter the following in the search box for Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
+  * Another example with B660M:  [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
+* On TM search for: [Z690 User Builds ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date)
 * Or search for _Alder Lake_ for general info on each hackintosh site
 
 ## More Info
