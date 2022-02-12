@@ -4,7 +4,7 @@
 
 What can we learn from existing successful OpenCore Alder Lake desktop builds? I looked at almost every documented system on the major English and German hackintosh sites. In this article I will share the key points that I noticed when looking at these builds, documentation and configurations. This is just a very preliminary guide, since Dortania does not have an _OpenCore Alder Lake Guide_ yet.&#x20;
 
-Essentially follow the [Desktop Comet Lake | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html) and incorporate the insights listed below. As always, do not just copy an EFI which you might find in other people's documentation. It may not work, is hard to maintain and is against the rules of r/hackintosh. Create your own EFI based on the guide.
+Essentially follow the [Desktop Comet Lake | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html) and incorporate the insights listed below. As always, do not just copy an EFI which you might find in other people's documentation. It may not work, is hard to maintain and is against the rules of [r/hackintosh](https://www.reddit.com/r/hackintosh/). Create your own EFI based on the guide.
 
 ### Actual Hardware used:
 
@@ -54,7 +54,7 @@ All currently available Alder Lake Core-i-x-12xxx CPUs should work.
 
 In the context of Alder Lake, I have seen primarily recommended: AMD RX 400 series, RX 500 series, RX 5000 series, RX 6800, RX 6800 XT, RX 6900 XT. AMD RX 6600 and 6600 XT are only supported in Monterey 12.1 and newer. (But RX 6700 is currently not supported at all.)
 
-Refer to the Dortania recommendations in [GPU Support | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#gpu-support) and [GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/), which continue to apply for Alder lake.
+Refer to the Dortania recommendations in [GPU Support | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#gpu-support) and [GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/), which continue to apply for Alder Lake.
 
 #### SSDs actually used
 
@@ -70,7 +70,7 @@ Some Samsung NVMe drives may still have problems: [SSD boot time tests · dortan
 * Fenvi FV-T919 WiFi / Bluetooth Wireless Card
 * Fenvi M.2 NGFF BCM94360NG Wifi / Bluetooth 4.0 Network Card&#x20;
 
-The recommendations from the Dortania guides continue to apply.
+The recommendations from the [Wireless Buyers Guide](https://dortania.github.io/Wireless-Buyers-Guide/) continue to apply.
 
 #### OS used
 
@@ -99,56 +99,62 @@ All the BIOS configurations are essentially the same as used for Comet Lake, exc
 
 #### P-cores and E-cores
 
-Experiment with either of these configurations to see which works best for their workflows:
+Experiment with either of these configurations to see which works best for your workflow:
 
 * **Option 1:** All P-cores, all E-cores, and Hyper-Threading enabled. The Ring Clock frequency will be 3.6 GHz with a [CPU performance impact of no more than 6%](https://chipsandcheese.com/2021/12/16/alder-lake-e-cores-ring-clock-and-hybrid-teething-troubles/), due to lesser L3 and memory performance of the P-cores. Overall multi-threading performance will be better.
 * **Option 2:**: Only P-cores and Hyper-Threading enabled. The Ring Clock frequency will be 4.7 GHz. Overall multi-threading performance will be less.
 * Both options may be optimised by [Alder Lake Overclocking](https://skatterbencher.com/2021/11/04/alder-lake-overclocking-whats-new/#Disable\_Ring\_to\_Core\_Ratio\_Offset). The Ring Clock and CPU clock are separate.
 
-Therefore in BIOS configure accordingly:
+Therefore in **BIOS > Advanced CPU Settings** configure accordingly:
 
-* **Advanced CPU Settings**
-  * **Option 1**: _All cores, all threads_
-    * Hyper Threading → Enabled
-    * All P-Cores and E-Cores → Enabled
-  * **Option 2**: _Only P-cores and Hyper-Threads_
-    * Hyper Threading → Enabled
-    * CPU Cores Enabling Mode → Selectable Mode
-    * CPU Cores Enabling Mode → (Enable all P-Cores and Disable all E-Cores)
+* **Option 1**: _All cores, all threads_
+  * Hyper Threading → Enabled
+  * All P-Cores and E-Cores → Enabled
+* **Option 2**: _Only P-cores and Hyper-Threads_
+  * Hyper Threading → Enabled
+  * CPU Cores Enabling Mode → Selectable Mode
+  * CPU Cores Enabling Mode → (Enable all P-Cores and Disable all E-Cores)
 
 ### OpenCore Config.plist Configuration
+
+Use the latest version of [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases/), at least 0.7.7
 
 #### ACPI -> Add
 
 Required to add `SSDT-PLUG-ALT.aml` [XCPM power management compatibility table with Darwin method for Alder Lake CPUs](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/AcpiSamples/Source/SSDT-PLUG-ALT.dsl).
 
-* Most firmware dropped `Processor`-based CPU definition in ACPI and switched to `Device`-based definition, which is not recognised by macOS. To workaround this one needs to use the `SSDT-PLUG-ALT` ACPI table. _(Vit, 22-01-09)_
+* Most firmware dropped _Processor_-based CPU definition in ACPI and switched to _Device_-based definition, which is not recognised by macOS. To workaround this one needs to use the `SSDT-PLUG-ALT` ACPI table. _(Vit, 22-01-09)_
 
 #### SSDTs
 
 Very similar to Comet Lake, except for the additional _SSDT-PLUG-ALT.aml_
 
+* SSDT-PLUG-ALT.aml (required)
 * SSDT-AWAC.aml (required)
 * SSDT-EC-USBX.aml (required)
-* SSDT-PLUG-ALT.aml (required)
 * SSDT-SBUS.aml (optional)
-* SSDT-USBW.aml (optional) Works with USBWakeFixup.kext to enable proper wake from sleep
-* SSDT-DMAC.aml (occasionally used) As on a real MacPro 7,1 : " the DMAC Direct Memory Access Controller provides an interface between the bus and the input-output devices , share the bus with the processor to make the data transfer, speedups the memory operations by bypassing the involvement of the CPU ".
-* SSDT-HPET.aml (occasionally used) - Patches out IRQ conflicts.
+* SSDT-USBW.aml (optional) Works with USBWakeFixup.kext to enable proper wake from sleep.
+* SSDT-DMAC.aml (occasionally used) As on a real MacPro 7,1 : "the DMAC Direct Memory Access Controller provides an interface between the bus and the input-output devices , share the bus with the processor to make the data transfer, speedups the memory operations by bypassing the involvement of the CPU ".
+* SSDT-HPET.aml (occasionally used) - Patches out IRQ conflicts. Check:  [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > HPET).
 * SSDT-DTPG.aml (occasionally used) - Implements DTGP method that is needed by other SSDTs. Related to Thunderbolt.
 
 #### ACPI -> Patch (optional)
 
-I have seen configurations with various ACPI patches, but not investigated them in detail to find out if or for what purpose they were used. Many successful systems use none of these patches.
+I see many configurations with various ACPI patches. Other Alder Lake systems use none of these patches. Apply as needed:
 
-* Fix RTC \_STA bug (possibly related: [SSDT-RTC-FIX · acidanthera/bugtracker · GitHub](https://github.com/acidanthera/bugtracker/issues/348))
-* Change MC\_\_ to MCHC
-* Change ADBG to XDBG (explained in this comment: [Gigabyte Z690 Aero G](https://www.tonymacx86.com/threads/gigabyte-z690-aero-g-i5-12600k-amd-rx-6800-xt.317179/page-25#post-2291723))
-* HPET \_CRS to XCRS Rename
-* RTC IRQ 8 Patch
-* TIMR IRQ 0 Patch
+```
+TableSignature  OemTableId        TableLength  Find              Replace           Count  Comment 
+44534454                          0            4D435F5F          4D434843          0      Change MC__ to MCHC
+53534454        4967667853736474  0            4D435F5F          4D434843          0      Change MC__ to MCHC
+53534454        475357417070      0            4303141941444247  4303141958444247  1      Change ADBG to XDBG
+```
 
-Also see: [SSDTs: The easy way | Getting Started With ACPI](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
+* Enable _Change MC\_\_ to MCHC_ and possibly _Change ADBG to XDBG_ as shown above, if you encounter relevant ACPI Errors:
+  * See: [fix wake from sleep issue on _**Gigabyte** Z690_ boards](https://www.tonymacx86.com/threads/z690-chipset-and-alder-lake-cpus.316618/page-132#post-2291256).
+  * _Change ADBG to XDBG_ is related to an [ACPI error](https://www.tonymacx86.com/threads/gigabyte-z690-aero-g-i5-12600k-amd-rx-6800-xt.317179/page-25#post-2291723) on **Gigabyte** Z690 boards.
+  * _Change MC\_\_ to MCHC_ is also used on **ASUS** Z690 boards.
+* _HPET \_CRS to XCRS Rename_, _RTC IRQ 8 Patch_, _TIMR IRQ 0 Patch._ Check:  [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > HPET).
+* _Fix RTC \_STA bug_ (seems to be an old fix previously used in Clover which should not be necessary in OpenCore). Try instead:  [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > AWAC)
 
 #### Booter -> Quirks
 
@@ -158,24 +164,27 @@ Also see: [SSDTs: The easy way | Getting Started With ACPI](https://dortania.git
 
 #### Kexts in Kernel -> Add
 
-The kext used are essentially the same as the ones used for Comet Lake
+The kexts used are essentially the same as the ones used for Comet Lake:
 
-* Lilu.kext
-* VirtualSMC.kext
-* WhateverGreen.kext
-* SMCProcessor.kext
-* SMCSuperIO.kext
-* AppleALC.kext
-* NVMeFix.kext
+* Lilu.kext (required)
+* WhateverGreen.kext (required)
+* VirtualSMC.kext (required)
+  * SMCProcessor.kext (optional - monitoring CPU temperature)
+  * SMCSuperIO.kext (optional - monitoring fan speed)
+* AppleALC.kext (usually required - enable audio)
+* NVMeFix.kext (optional - for fixing power management and initialization on non-Apple NVMe)
 
 **Other common kexts used on Alder Lake:**
 
 * [RestrictEvents.kext](https://github.com/acidanthera/RestrictEvents) - Lilu Kernel extension for blocking unwanted processes causing compatibility issues on different hardware. - Is needed when enabling E-cores due to large core count and makes showing the proper CPU name possible.
 * [CPUFriend.kext ](https://github.com/acidanthera/CPUFriend)- A Lilu plug-in for dynamic power management data injection. Used with CpuFriendDataProvider.kext which can be created according to the instructions here: [CPUFriend/Instructions](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md)
   * Partial XCPM compatibility is available, but frequency vector tuning will be [required](https://github.com/dortania/bugtracker/issues/190). _(Vit, 22-01-09)_
-* [LucyRTL8125Ethernet.kext](https://github.com/Mieze/LucyRTL8125Ethernet) - A macOS driver for Realtek RTL8125 2.5GBit Ethernet Controllers.
+* An Ethernet kext. Commonly found on Z690:
+  * [LucyRTL8125Ethernet.kext](https://github.com/Mieze/LucyRTL8125Ethernet) - A macOS driver for Realtek RTL8125 2.5GBit Ethernet Controllers.
 * [USBWakeFixup](https://github.com/osy/USBWakeFixup) is needed to fix keyboard wakeup support, but may cause [compatibility issues](https://github.com/osy/USBWakeFixup/issues/14) with Bluetooth. Works with SSDT-USBW.
 * Kexts for USB mapping, depending on the use of [USBMap](https://github.com/corpnewt/USBMap) or [USBToolBox](https://github.com/USBToolBox/tool)
+
+See [Kexts | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#kexts) for more details.
 
 #### Kernel -> Emulate
 
@@ -208,7 +217,7 @@ MinKernel     19.0.0
 
 **4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102**
 
-* Add your CPU name, for example:
+* Optionally add your CPU name, for example:
 
 ```
 revcpuname    String    10-Core Intel i5-12600K
@@ -260,9 +269,9 @@ I researched more in-depth about the specifics which might differ from a Comet L
 * Discussion: [Z690 Chipset and Alder Lake CPUs](https://www.tonymacx86.com/threads/z690-chipset-and-alder-lake-cpus.316618/)
 * Golden Build: [Gigabyte Z690 Aero G + i5-12600K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/gigabyte-z690-aero-g-i5-12600k-amd-rx-6800-xt.317179/)
 * Golden Build: [Asus Z690 ProArt Creator WiFi (Thunderbolt 4) + i7-12700K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/asus-z690-proart-creator-wifi-thunderbolt-4-i7-12700k-amd-rx-6800-xt.318311/)
-* User Build: [ASRock Z690 Steel Legend (WiFi 6E)](https://www.tonymacx86.com/threads/asrock-z690-steel-legend-wifi-6e.317456/) nice guide including CPU ID explanation
+* User Build: [ASRock Z690 Steel Legend (WiFi 6E)](https://www.tonymacx86.com/threads/asrock-z690-steel-legend-wifi-6e.317456/) nice guide including CPU ID explanation.
 * User Build: [Gigabyte Z690 ELITE AX D4 + i9-12900K + AMD RX 6600 XT](https://www.tonymacx86.com/threads/gigabyte-z690-elite-ax-d4-i9-12900k-amd-rx-6600-xt.318584/)
-* User Build: [SUCCESS - Z690i Intel 12th Gen CPU i5-12400 (low cost)](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/) clean, minimal configuration&#x20;
+* User Build: [ ](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/)Gigabyte Z690I AORUS ULTRA [Intel 12th Gen CPU i5-12400 (low cost)](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/) clean, minimal configuration.
 
 The _Golden Builds_ are well documented and would help those who buy the same motherboard and CPU. - Yet, I am not satisfied just copying a configuration, since I might buy different hardware and I should be able to understand every part of the Config to maintain it longterm. Also you should use the tools recommended on r/hackintosh.
 
