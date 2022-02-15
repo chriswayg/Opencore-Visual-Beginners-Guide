@@ -318,6 +318,6 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 ## More Info
 
 * Additional details have been discussed in this **essential technical article**: [Intel Z690 compatibility with macOS | Dortania](https://dortania.github.io/hackintosh/updates/2022/01/09/alder-lake.html)). _Vit, 2022-01-09_
-* A kext for Alder Lake currently in development: an **experimental** Lilu plugin that optimizes Alder Lake's heterogeneous core configuration: [GitHub - b00t0x/CpuTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild)
-* This section should eventually contain Alder Lake related updates to the guide. Started February 10: [OpenCore-Install-Guide/config.plist at alderlake · alyxferrari/OpenCore-Install-Guide · GitHub](https://github.com/alyxferrari/OpenCore-Install-Guide/tree/alderlake/config.plist)
+* Work-in-Progress: **Dortania OpenCore Install Guide - Alder Lake**: [OpenCore-Install-Guide/alder-lake.md · alyxferrari/OpenCore-Install-Guide · GitHub](https://github.com/alyxferrari/OpenCore-Install-Guide/blob/alderlake/config.plist/alder-lake.md) (started February 10, 2022).
+* A kext for Alder Lake currently in development: an _**experimental**_ Lilu plugin that optimizes Alder Lake's heterogeneous core configuration: [GitHub - b00t0x/CpuTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild)
 * Discussion and relevant links in the comments: [Request for an initial version of a Dortania OpenCore Guide for Alder Lake · Issue #257 · dortania/bugtracker · GitHub](https://github.com/dortania/bugtracker/issues/257)
