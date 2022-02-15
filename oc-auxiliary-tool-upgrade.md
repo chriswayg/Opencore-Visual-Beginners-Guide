@@ -2,7 +2,7 @@
 
 ## Switch to the Debug Version of OpenCore
 
-- Launch OCAuxiliaryTools
+- Launch OCAuxiliaryTools and open the relevant Config.plist.
 
 ![](images/ocat_kexts.png)
 
