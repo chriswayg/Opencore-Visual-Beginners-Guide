@@ -1,6 +1,12 @@
+---
+description: Some prior hackintosh experience is recommended
+---
+
 # Using Alder Lake
 
 ## OpenCore Alder Lake (12th-Gen Intel) Hackintosh Guidance
+
+![](.gitbook/assets/Intel-Alder-Lake-Desktop-CPU.png)
 
 What can we learn from existing successful OpenCore Alder Lake desktop builds? I looked at almost every documented system on the major English and German hackintosh sites. In this article I will share the key points that I noticed when looking at these builds, documentation and configurations. This is just a very preliminary guide, since Dortania does not have an _OpenCore Alder Lake Guide_ yet.&#x20;
 
@@ -25,6 +31,7 @@ Mostly Z690 and a few B660M, but no Hackintosh seen yet with H610 or H670. Gigab
 * ASUS PRIME Z690M-PLUS D4 DDR4 - microATX
 * ASUS PRIME Z690-P D4 LGA DDR4 - ATX
 * ASUS TUF GAMING Z690-PLUS D4 DDR4 - ATX
+* ASUS PRIME B660M-K D4 DDR4 - microATX
 * ASRock Z690 Pro RS DDR4 - ATX
 * ASRock Z690 Steel Legend WiFi 6E DDr4 - ATX
 * ASRock B660M-HDV DDR4 - microATX
