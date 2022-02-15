@@ -59,14 +59,16 @@ All currently available Alder Lake Core-i-x-12xxx CPUs should work.
 
 #### Recommended GPUs
 
-In the context of Alder Lake, I have seen primarily recommended: AMD RX 400 series, RX 500 series, RX 5000 series, RX 6800, RX 6800 XT, RX 6900 XT. AMD RX 6600 and 6600 XT are only supported in Monterey 12.1 and newer. (But RX 6700 is currently not supported at all.)
+Discrete GPUs are supported without any limitations including DRM and digital audio. _(Vit, 22-01-09)_
 
-Refer to the Dortania recommendations in [GPU Support | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#gpu-support) and [GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/), which continue to apply for Alder Lake.
+In the context of Alder Lake, I have seen primarily recommended: _Polaris_ AMD RX 400 series & RX 500 series, as well as _Navi_ RX 5000 series, RX 6800, RX 6800 XT, RX 6900 XT. AMD RX 6600 and 6600 XT are only supported in Monterey 12.1 and newer. (But the RX 6700 is currently not supported at all.)
+
+The only two recommended SMBIOS on Alder Lake - `MacPro7,1` and `iMacPro1,1` - require a _Polaris, Vega or Navi GPU_ to work properly. Also refer to the Dortania recommendations in [GPU Support | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#gpu-support) and [GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/).
 
 #### SSDs actually used
 
 * WD SN850 PCIe 4.0 NVMe SSD 1TB
-* WD Black SN750 SE NVMe SSD1TB
+* WD Black SN750 SE NVMe SSD 1TB
 * WD Blue SN550 NVMe 1TB
 * PNY CS1031 256GB&#x20;
 
@@ -185,7 +187,7 @@ The kexts used are essentially the same as the ones used for Comet Lake:
 
 * [RestrictEvents.kext](https://github.com/acidanthera/RestrictEvents) - Lilu Kernel extension for blocking unwanted processes causing compatibility issues on different hardware. - Is needed when enabling E-cores due to large core count and makes showing the proper CPU name possible.
 * [CPUFriend.kext ](https://github.com/acidanthera/CPUFriend)- A Lilu plug-in for dynamic power management data injection. Used with CpuFriendDataProvider.kext which can be created according to the instructions here: [CPUFriend/Instructions](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md)
-  * Partial XCPM compatibility is available, but frequency vector tuning will be [required](https://github.com/dortania/bugtracker/issues/190). _(Vit, 22-01-09)_
+  * Partial XCPM (XNU CPU Power Management) compatibility is available, but frequency vector tuning (through CPUFriend) will be [required](https://github.com/dortania/bugtracker/issues/190). _(Vit, 22-01-09)_
 * An Ethernet kext. Commonly found on Z690:
   * [LucyRTL8125Ethernet.kext](https://github.com/Mieze/LucyRTL8125Ethernet) - A macOS driver for Realtek RTL8125 2.5GBit Ethernet Controllers.
 * [USBWakeFixup](https://github.com/osy/USBWakeFixup) is needed to fix keyboard wakeup support, but may cause [compatibility issues](https://github.com/osy/USBWakeFixup/issues/14) with Bluetooth. Works with SSDT-USBW.
@@ -219,7 +221,7 @@ MinKernel     19.0.0
 
 * `-wegnoigpu` to disable internal GPU, which is not supported.
 * A typical _boot-args_ may look like this: `-v keepsyms=1 debug=0x100 agdpmod=pikera -wegnoigpu alcid=1`
-* `agdpmod=pikera` is used for disabling board ID checks on Navi GPUs (RX 5000 & 6000 series), without this you'll get a black screen. Don't use if you don't have Navi (ie. Polaris and Vega cards shouldn't use this).
+* `agdpmod=pikera` is used for disabling board ID checks on _Navi GPUs_ (RX 5000 & 6000 series), without this you'll get a black screen. Don't use if you don't have Navi (ie. Polaris and Vega cards shouldn't use this).
 * In case the iGPU is needed for other operating systems, there are other ways to hide the iGPU described here: [Disabling GPU | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/extras/spoof.html#disabling-gpu).
 
 **4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102**
@@ -237,9 +239,15 @@ revcpu        Number    1
 
 Use one of
 
-* MacPro7,1
-* iMac20,1
-* iMacPro1,1
+* `MacPro7,1`
+* `iMacPro1,1`
+
+I have seen `iMac20,1` used by some on Alder Lake, but this is the wrong choice, because the iGPU needs to be disabled, since Apple has not created any drivers for 12th Gen iGPUs. You must pay very close attention when selecting a SMBIOS, as macOS assumes the iGPU is present on every `iMac` SMBIOS. Features like Quick Look and such will be broken if macOS based on the the SMBIOS expects an iGPU.
+
+`MacPro7,1` and `iMacPro1,1` are the only two SMBIOS that will allow for dGPU to handle all the workload including background rendering and other tasks that the iGPU would handle.
+
+* You'll likely need to fix power management as sleep may break: [Fixing Power management](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html).
+* Note that this requires a _Polaris, Vega or Navi GPU_ to work properly.
 
 `MacPro7,1` is used in the majority of Alder Lake systems and appears to be the recommended choice. Read this for details: [Choosing the right SMBIOS | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/extras/smbios-support.html#how-to-decide).
 
@@ -302,7 +310,7 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 
 ### Search Links
 
-* To be able to see the various successes of Alder Lake  on _r/hackintosh_ enter the following in the search box for Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
+* To be able to see the various successes of Alder Lake  on _r/hackintosh_ enter the following in the search box for Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)``
   * Another example with B660M:  [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
 * On TM search for: [Z690 User Builds ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date)
 * Or search for _Alder Lake_ for general info on each hackintosh site
