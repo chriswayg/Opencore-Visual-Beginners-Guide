@@ -106,7 +106,7 @@ All the BIOS configurations are essentially the same as used for Comet Lake, exc
 * CFG Lock may not be configurable in preferences on ASUS boards. This is an obvious BIOS bug, although it may not cause boot failures. We had to unlock it manually through the Shell method described in OpenCore Reference Manual. _(Vit, 22-01-09)_
 * XMP works at least with DDR5 we had at hand, but there were reports of no issues with DDR4 as well. While macOS does not name DDR5 as DDR5 in the profiler, this nuance is purely cosmetic. _(Vit, 22-01-09)_
 
-#### P-cores and E-cores
+#### CPU: P-cores and E-cores
 
 Experiment with either of these configurations to see which works best for your workflow:
 
@@ -138,18 +138,18 @@ Required to add `SSDT-PLUG-ALT.aml` [XCPM power management compatibility table w
 
 Very similar to Comet Lake, except for the additional _SSDT-PLUG-ALT.aml_
 
-* SSDT-PLUG-ALT.aml (required)
-* SSDT-AWAC.aml (required)
-* SSDT-EC-USBX.aml (required)
-* SSDT-SBUS.aml (optional)
-* SSDT-USBW.aml (optional) Works with USBWakeFixup.kext to enable proper wake from sleep.
-* SSDT-DMAC.aml (occasionally used) As on a real MacPro 7,1 : "the DMAC Direct Memory Access Controller provides an interface between the bus and the input-output devices , share the bus with the processor to make the data transfer, speedups the memory operations by bypassing the involvement of the CPU ".
-* SSDT-HPET.aml (occasionally used) - Patches out IRQ conflicts. Check:  [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > HPET).
-* SSDT-DTPG.aml (occasionally used) - Implements DTGP method that is needed by other SSDTs. Related to Thunderbolt.
+* `SSDT-PLUG-ALT.aml` (required)
+* `SSDT-AWAC.aml` (required)
+* `SSDT-EC-USBX.aml` (required)
+* `SSDT-SBUS.aml` (optional)
+* `SSDT-USBW.aml` (optional) Works with USBWakeFixup.kext to enable proper wake from sleep.
+* `SSDT-DMAC.aml` (occasionally used) As on a real MacPro 7,1 : "the DMAC Direct Memory Access Controller provides an interface between the bus and the input-output devices , share the bus with the processor to make the data transfer, speedups the memory operations by bypassing the involvement of the CPU ".
+* `SSDT-HPET.aml` (occasionally used) - Patches out IRQ conflicts. Check:  [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > HPET).
+* `SSDT-DTPG.aml` (occasionally used) - Implements DTGP method that is needed by other SSDTs. Related to Thunderbolt.
 
 #### ACPI -> Patch (optional)
 
-I see many configurations with various ACPI patches. Other Alder Lake systems use none of these patches. Apply as needed:
+I see many configurations with various ACPI patches. Some Alder Lake systems use none of these patches. - Apply as needed:
 
 ```
 TableSignature  OemTableId        TableLength  Find              Replace           Count  Comment 
@@ -175,21 +175,21 @@ TableSignature  OemTableId        TableLength  Find              Replace        
 
 The kexts used are essentially the same as the ones used for Comet Lake:
 
-* Lilu.kext (required)
-* WhateverGreen.kext (required)
-* VirtualSMC.kext (required)
-  * SMCProcessor.kext (optional - monitoring CPU temperature)
-  * SMCSuperIO.kext (optional - monitoring fan speed)
-* AppleALC.kext (usually required - enable audio)
-* NVMeFix.kext (optional - for fixing power management and initialization on non-Apple NVMe)
+* `Lilu.kext` (required)
+* `WhateverGreen.kext` (required)
+* `VirtualSMC.kext` (required)
+  * `SMCProcessor.kext` (optional - monitoring CPU temperature)
+  * `SMCSuperIO.kext` (optional - monitoring fan speed)
+* `AppleALC.kext` (usually required - enable audio)
+* `NVMeFix.kext` (optional - for fixing power management and initialization on non-Apple NVMe)
 
 **Other common kexts used on Alder Lake:**
 
-* [RestrictEvents.kext](https://github.com/acidanthera/RestrictEvents) - Lilu Kernel extension for blocking unwanted processes causing compatibility issues on different hardware. - Is needed when enabling E-cores due to large core count and makes showing the proper CPU name possible.
-* [CPUFriend.kext ](https://github.com/acidanthera/CPUFriend)- A Lilu plug-in for dynamic power management data injection. Used with CpuFriendDataProvider.kext which can be created according to the instructions here: [CPUFriend/Instructions](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md)
+* [`RestrictEvents.kext`](https://github.com/acidanthera/RestrictEvents) - Lilu Kernel extension for blocking unwanted processes causing compatibility issues on different hardware. - Is needed when enabling E-cores due to large core count and makes showing the proper CPU name possible.
+* [`CPUFriend.kext`](https://github.com/acidanthera/CPUFriend) - A Lilu plug-in for dynamic power management data injection. Used with `CpuFriendDataProvider.kext` which can be created according to the instructions here: [CPUFriend/Instructions](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md)
   * Partial XCPM (XNU CPU Power Management) compatibility is available, but frequency vector tuning (through CPUFriend) will be [required](https://github.com/dortania/bugtracker/issues/190). _(Vit, 22-01-09)_
 * An Ethernet kext. Commonly found on Z690:
-  * [LucyRTL8125Ethernet.kext](https://github.com/Mieze/LucyRTL8125Ethernet) - A macOS driver for Realtek RTL8125 2.5GBit Ethernet Controllers.
+  * ``[`LucyRTL8125Ethernet.kext`](https://github.com/Mieze/LucyRTL8125Ethernet) - A macOS driver for Realtek RTL8125 2.5GBit Ethernet Controllers.
 * [USBWakeFixup](https://github.com/osy/USBWakeFixup) is needed to fix keyboard wakeup support, but may cause [compatibility issues](https://github.com/osy/USBWakeFixup/issues/14) with Bluetooth. Works with SSDT-USBW.
 * Kexts for USB mapping, depending on the use of [USBMap](https://github.com/corpnewt/USBMap) or [USBToolBox](https://github.com/USBToolBox/tool)
 
