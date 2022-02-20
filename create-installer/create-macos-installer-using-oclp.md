@@ -26,15 +26,31 @@ First we'll want to select the *"Create macOS Installer"* button. This will pres
 
 For this example, we'll assume you'll need an installer. Selecting this option will download Apple's Installer Catalogs and build a list for you to choose:
 
-| Downloading                                                                            | Listed Installers                                                                                      |
-|:-------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------ |
-| ![OCLP GUI Installer Download Catalog](images/OCLP-GUI-Installer-Download-Catalog.png) | ![OCLP GUI Installer Download Listed Products](images/OCLP-GUI-Installer-Download-Listed-Products.png) |
+
+
+- **Downloading**
+
+![OCLP GUI Installer Download Catalog](images/OCLP-GUI-Installer-Download-Catalog.png)
+
+- **Listed Installers**
+
+![OCLP GUI Installer Download Listed Products](images/OCLP-GUI-Installer-Download-Listed-Products.png)
 
 Since *OCLP only supports Big Sur and newer*, only those entries will be shown. For this example, we'll select macOS 12.1 Monterey as that's the latest public release at the time of writing. This will download and install the macOS installer to your applications folder.
 
-| Downloading the Installer                                                                | Requesting to install                                                                  | Finished Installing                                                                      |
-|:---------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------- |:---------------------------------------------------------------------------------------- |
-| ![OCLP GUI Installer Download Progress](images/OCLP-GUI-Installer-Download-Progress.png) | ![OCLP GUI Installer Needs Installing](images/OCLP-GUI-Installer-Needs-Installing.png) | ![OCLP GUI Installer Download Finished](images/OCLP-GUI-Installer-Download-Finished.png) |
+
+
+- **Downloading the Installer**
+
+![OCLP GUI Installer Download Progress](images/OCLP-GUI-Installer-Download-Progress.png)
+
+- **Requesting to install**
+
+![OCLP GUI Installer Needs Installing](images/OCLP-GUI-Installer-Needs-Installing.png)
+
+- **Finished Installing**
+
+![OCLP GUI Installer Download Finished](images/OCLP-GUI-Installer-Download-Finished.png)
 
 ### Write installer to USB drive
 
@@ -42,15 +58,31 @@ Once finished, you can proceed to write the installer onto a USB drive.
 
 * Note: The entire USB drive will be formatted
 
-| Select Downloaded Installer                               | Select disk to format                         |
-|:--------------------------------------------------------- |:--------------------------------------------- |
-| ![](images/OCLP-GUI-Installer-Select-Local-Installer.png) | ![](images/OCLP-GUI-Installer-Format-USB.png) |
 
-Now the patcher will start the installer flashing!
 
-| Flashing                                            | Success Prompt                                   | Finished Flashing                                  |
-|:--------------------------------------------------- |:------------------------------------------------ |:-------------------------------------------------- |
-| ![](images/OCLP-GUI-Installer-Flashing-Process.png) | ![](images/OCLP-GUI-Installer-Sucess-Prompt.png) | ![](images/OCLP-GUI-Installer-Finished-Script.png) |
+- **Select Downloaded Installer**
+
+![](images/OCLP-GUI-Installer-Select-Local-Installer.png)
+
+- **Select disk to format**
+
+![](images/OCLP-GUI-Installer-Format-USB.png)
+
+Now OCLP will start the installer flashing - copying macOS to the USB drive!
+
+
+
+- **Flashing**
+
+![](images/OCLP-GUI-Installer-Flashing-Process.png)
+
+- **Success Prompt**
+
+![](images/OCLP-GUI-Installer-Sucess-Prompt.png)
+
+- **Finished Flashing**
+
+![](images/OCLP-GUI-Installer-Finished-Script.png)
 
 #### Credits
 
