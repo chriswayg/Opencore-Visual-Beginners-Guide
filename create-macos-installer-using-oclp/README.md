@@ -86,6 +86,7 @@ Now OCLP will start the installer flashing - copying macOS to the USB drive!
 - Downlaod, install and launch [EFI-Agent](https://github.com/headkaze/EFI-Agent/releases)
 
 - Open *EFI Agent* from its Menu Bar Icon and click on the downward triangle next to the USB drive you wish to use (*SanDisk Ultra* in this example).
+
 ![](../create-installer/images/EFI-Agent.png)
 
 - After authenticating, you will see the EFI partition of your USB drive in the Finder.
@@ -93,7 +94,6 @@ Now OCLP will start the installer flashing - copying macOS to the USB drive!
 ![](../create-installer/images/EFI-USB-drive-partition.png)
 
 - Drag to copy the EFI folder previously created and configured with [OCAuxiliaryTools](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/oc_auxiliary_tools) from the **Desktop** to the EFI partition on the USB drive.
-
 
 ![](../create-installer/images/EFI-USB-drive-drag-EFI-folder.png)
 
