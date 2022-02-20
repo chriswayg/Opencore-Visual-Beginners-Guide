@@ -128,4 +128,4 @@ No changes needed in the [UEFI](https://dortania.github.io/OpenCore-Install-Guid
 * If your motherboard uses the Intel’s I225-V 2.5GBe ethernet controller, additional settings are required in the relevant sections. Just refer to the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) and use the applicable presets in _OCAuxiliaryTools_.
 * Remember to **save your Config.plist** by clicking the _Save_ button or with Menu -> Edit -> Save.
 
-Several additional features of OCAuxiliaryTools will be discussed on the page [Debug and Upgrade OpenCore](oc-auxiliary-tool-upgrade.md).
+Several **additional features of OCAuxiliaryTools** will be discussed on the page **** [**Debug and Upgrade OpenCore**](oc-auxiliary-tool-upgrade.md).
