@@ -1,4 +1,8 @@
-# Create Installer USB-stick
+---
+description: Alternative GUI method, if you need macOS older than Big Sur
+---
+
+# Create macOS Installer using TINU
 
 ## Create a bootable installer for macOS with TINU
 
