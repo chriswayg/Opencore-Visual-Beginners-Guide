@@ -79,6 +79,27 @@ Now OCLP will start the installer flashing - copying macOS to the USB drive!
 
 ![](../create-installer/images/OCLP-GUI-Installer-Finished-Script.png)
 
+### Copy EFI folder to USB drive
+
+- Downlaod, install and launch [EFI-Agent](https://github.com/headkaze/EFI-Agent/releases)
+
+- Open *EFI Agent* from its Menu Bar Icon and click on the downward triangle next to the USB drive you wish to use (*SanDisk Ultra* in this example).
+![](../create-installer/images/EFI-Agent.png)
+
+- After authenticating, you will see the EFI partition of your USB drive in the Finder.
+
+![](../create-installer/images/EFI-USB-drive-partition.png)
+
+- Drag the EFI folder created with [OCAuxiliaryTools](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/oc_auxiliary_tools) from the Desktop to the EFI partition on the USB drive
+
+
+![](../create-installer/images/EFI-USB-drive-drag-EFI-folder.png)
+
+This step completes the creation of a hackintosh bootable USB drive with the macOS installer and the OpenCore EFI folder on it.
+
+You may want to add some of the tools mentioned in this guide to the USB drive.
+
+
 #### Credits
 
 This portion of the guide is almost entirely based on the section [Download and build macOS Installers | OpenCore Legacy Patcher](https://dortania.github.io/OpenCore-Legacy-Patcher/INSTALLER.html#creating-the-installer)
