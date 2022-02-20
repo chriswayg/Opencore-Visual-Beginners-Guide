@@ -21,11 +21,7 @@ This is intended to be a beginner friendly OpenCore guide which uses mostly GUI 
 * STORAGE: A SATA SSD or NVMe main drive with at least 120 GB (preferably not a Samsung NVMe).
 * WIFI: easiest is a Fenvi FV-T919 which has Bluetooth included.
 
-Detailed Hackintosh hardware information can be found here: 
-[Hardware Limitations](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#hardware-limitations), 
-[GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/), 
-[Wireless Buyers Guide](https://dortania.github.io/Wireless-Buyers-Guide/), 
-[Anti-Hackintosh Buyers Guide](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/) and in the FAQ [Hardware Compatibility](https://www.reddit.com/r/hackintosh/wiki/faq#wiki_ok.21_i_fulfill_some_points.2C_what_now.3F).
+Detailed Hackintosh hardware information can be found here: [Hardware Limitations](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#hardware-limitations), [GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/), [Wireless Buyers Guide](https://dortania.github.io/Wireless-Buyers-Guide/), [Anti-Hackintosh Buyers Guide](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/) and in the FAQ [Hardware Compatibility](https://www.reddit.com/r/hackintosh/wiki/faq#wiki\_ok.21\_i\_fulfill\_some\_points.2C\_what\_now.3F).
 
 ### Prerequsites
 
@@ -39,7 +35,7 @@ Detailed Hackintosh hardware information can be found here:
 
 ### Example Hardware
 
-For this guide I have selected recent compatible hardware for a beginner friendly example of installing Big Sur or Monterey. I have used this workflow with comparable hardware for multiple systems already. My links to the _OpenCore Install Guide_ point to the relevant 10th Gen _Comet Lake_ sections. 
+For this guide I have selected recent compatible hardware for a beginner friendly example of installing Big Sur or Monterey. I have used this workflow with comparable hardware for multiple systems already. My links to the _OpenCore Install Guide_ point to the relevant 10th Gen _Comet Lake_ sections.
 
 ![](images/intro-hardware.png)
 
@@ -50,3 +46,5 @@ The example hardware is similar to the internals of a [mid-2020 iMac](https://ev
 * GPU: A dedicated AMD GPU, RX 560 or above
 
 ![](images/intro-RX5500XT-GPU.jpg)
+
+**Continue with** [**Create EFI & Config - Opencore Visual Beginners Guide**](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/oc\_auxiliary\_tools)****

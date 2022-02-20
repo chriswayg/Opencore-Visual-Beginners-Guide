@@ -29,7 +29,7 @@ Currently, the easiest method to keep your OpenCore files, drivers, config and k
 
 ### Updating the Config.plist
 
-OCAuxiliaryTools actually merges any changes made to the structure of the Config.plist and feature-set, thereby updating it to the latest version, without losing settings. It integrates the tasks which had to be handled manually by four separate tools in the past such as _OCConfigCompare_, _KextUpdater_, _ProperTree_ and _OCValidate_.
+OCAuxiliaryTools actually merges any changes made to the structure of the Config.plist and feature-set, thereby updating it to the latest version, without losing settings. It integrates the tasks which had to be handled manually by multiple separate tools in the past such as [_OCConfigCompare_](https://github.com/corpnewt/OCConfigCompare) _/_ [_Meld_](https://yousseb.github.io/meld/), [_KextUpdater_](https://github.com/MacThings/kextupdater), [_ProperTree_](https://github.com/corpnewt/ProperTree) and [_OCValidate_](https://github.com/acidanthera/OpenCorePkg/tree/master/Utilities/ocvalidate).
 
 * Mount your EFI partition: _Menu -> Edit -> Mount ESP Partition_ (or click the Mount ESP button)
 * Then click: _Mount and open Config.plist_

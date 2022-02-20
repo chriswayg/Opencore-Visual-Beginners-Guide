@@ -1,12 +1,12 @@
 ---
-description: Some prior hackintosh experience is recommended
+description: Optional - some prior hackintosh experience is recommended
 ---
 
 # Using Alder Lake
 
 ## OpenCore Alder Lake (12th-Gen Intel) Hackintosh Guidance
 
-![](.gitbook/assets/Intel-Alder-Lake-Desktop-CPU.png)
+![](../.gitbook/assets/Intel-Alder-Lake-Desktop-CPU.png)
 
 What can we learn from existing successful OpenCore Alder Lake desktop builds? I looked at almost every documented system on the major English and German hackintosh sites. In this article I will share the key points that I noticed when looking at these builds, documentation and configurations. This is just a very preliminary guide, since Dortania does not have an _OpenCore Alder Lake Guide_ yet.&#x20;
 
