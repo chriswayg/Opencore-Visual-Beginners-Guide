@@ -35,9 +35,9 @@ In [ACPI - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plis
 
 ![](images/acpi\_quirks.png)
 
-**You can hover with your mouse over each option to see the explanation from the official OpenCore reference manual.** This is a really helpful feature of _OCAuxiliaryTools_, as it enables you to quickly understand options which are only clearly explained in the very detailed [OpenCore - Configuration](https://dortania.github.io/docs/latest/Configuration.html) document:
+**You can hover with your mouse over each option to see the explanation from the official OpenCore reference manual.** This is a really helpful feature of _OCAuxiliaryTools_, as it enables you to quickly understand options which are only clearly explained in the very detailed [OpenCore Reference Manual](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf) document:
 
-![](images/opencore\_configuration\_doc.png)
+![Configuration.pdf](images/opencore\_configuration\_doc.png)
 
 ### Booter
 
