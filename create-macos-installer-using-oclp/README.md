@@ -4,7 +4,7 @@ description: Preferred GUI method, if you need Big Sur or newer
 
 # Create macOS Installer using OCLP
 
-This doc is centered around downloading and writing the macOS installer to a USB drive.
+This section of the guide is focused around downloading and writing the macOS installer to a USB drive and then copying the EFI folder to the USB drive as well to create a bootable installer.
 
 * Note: 16GB+ USB will be required for the installer
 

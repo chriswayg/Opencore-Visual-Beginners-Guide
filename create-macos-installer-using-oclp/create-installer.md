@@ -1,5 +1,5 @@
 ---
-description: Alternative GUI method, if you need macOS older than Big Sur
+description: Alternative GUI method, if you need macOS Catalina or older
 ---
 
 # Create macOS Installer using TINU
