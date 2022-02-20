@@ -2,9 +2,9 @@
 
 ## Opencore Visual Beginners Guide 2022
 
-This is intended to be a beginner friendly OpenCore guide which uses mostly GUI Tools to create a vanilla hackintosh install. This should make starting out with OpenCore more accessible. Everything done by these tools is transparent to the user and allows complete customisation. All downloads are from official sources, usually from the Github repos of the original developers. This guide is based on the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) by Dortania only making minimal changes when using compatible GUI tools.
+This is intended to be a beginner friendly OpenCore guide which uses mostly GUI Tools like _OCAuxiliaryTools_ and _TINU_ to create a vanilla hackintosh install. This should make starting out with OpenCore more accessible. Everything done by these tools is transparent to the user and allows complete customisation. All downloads are from official sources, usually from the Github repos of the original developers. This guide is based on the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) by Dortania only making minimal changes when using compatible GUI tools.
 
-![](images/oc\_auxiliary\_tools.png)
+![OCAuxiliaryTools](images/oc\_auxiliary\_tools.png)
 
 ### Who this guide is for
 
@@ -31,4 +31,4 @@ For this guide I have selected recent compatible hardware for a beginner friendl
 
 * CPU: 10th-gen Comet Lake i3-10100 to i7-10700K
 * MB: Gigabyte or Asus with B460 (or Z490, H470, H410)
-* GPU: A dedicated AMD GPU, RX 560 and above as a minimum
+* GPU: A dedicated AMD GPU, RX 560 or above
