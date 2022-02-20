@@ -31,7 +31,7 @@ In [ACPI - Add](https://dortania.github.io/OpenCore-Install-Guide/config.plist/c
 * Check the relevant section of the [Desktop Comet Lake | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi) for more details.
 * Add any additional SSDTs, if needed by clicking on the **\[+]** button for downloaded SSDTs or by clicking on the **\[…]** button for the most common prebuilt SSDTs available within _OCAuxiliaryTools_
 
-In [ACPI - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi), uncheck _ResetLogoStatus_. (It is enabled by default in sample.plist. This Quirk didn't exist at the time the OpenCore Install Guide was written, so it's unknown if it's a requirement. Most likely it's not. @5T33Z0)
+In [ACPI - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi), uncheck _ResetLogoStatus_. (_'It is enabled by default in sample.plist. This Quirk didn't exist at the time the OpenCore Install Guide was written, so it's unknown if it's a requirement. Most likely it's not.' @5T33Z0_)
 
 ![](images/acpi\_quirks.png)
 
