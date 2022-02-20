@@ -19,7 +19,7 @@ This is intended to be a beginner friendly OpenCore guide which uses mostly GUI 
 * GPU: Intel iGPU or preferably a dedicated AMD GPU (Radeon RX 460 up to RX 6900 XT). Sapphire, Gigabyte or Asus are recommended.
 * RAM: 8 GB or more.
 * STORAGE: A SATA SSD or NVMe main drive with at least 120 GB (preferably not a Samsung NVMe).
-* WIFI: easiest is a Fenvi FV-T919 which has Bluetooth included
+* WIFI: easiest is a Fenvi FV-T919 which has Bluetooth included.
 
 Detailed Hackintosh hardware information can be found here: 
 [Hardware Limitations](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#hardware-limitations), 
@@ -29,19 +29,21 @@ Detailed Hackintosh hardware information can be found here:
 
 ### Prerequsites
 
+* An existing computer or VM running a recent version of macOS (High Sierra or newer)
 
 ![](images/intro-macos-plist-editor.png)
 
-* An existing computer or VM running a recent version of macOS (High Sierra or newer)
 * Familiarize yourself with the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) and use it to follow along in the relevant sections for more detailed configuration options.
+
+![](images/intro-opencore-install-guide.png)
 
 ### Example Hardware
 
-For this guide I have selected recent compatible hardware for a beginner friendly example of installing Big Sur (or Monterey). I have used this workflow with comparable hardware for multiple systems already. My links to the _OpenCore Install Guide_ point to the relevant 10th Gen _Comet Lake_ sections. 
+For this guide I have selected recent compatible hardware for a beginner friendly example of installing Big Sur or Monterey. I have used this workflow with comparable hardware for multiple systems already. My links to the _OpenCore Install Guide_ point to the relevant 10th Gen _Comet Lake_ sections. 
 
 ![](images/intro-hardware.png)
 
-The hardware is similar to a [mid-2020 iMac](https://everymac.com/systems/apple/imac/specs/imac-core-i7-3.8-8-core-27-inch-retina-5k-2020-20-2-specs.html):
+The example hardware is similar to the internals of a [mid-2020 iMac](https://everymac.com/systems/apple/imac/specs/imac-core-i7-3.8-8-core-27-inch-retina-5k-2020-20-2-specs.html):
 
 * CPU: 10th-gen Comet Lake i3-10100 to i7-10700K
 * MB: Gigabyte or Asus with B460 (or Z490, H470, H410)
