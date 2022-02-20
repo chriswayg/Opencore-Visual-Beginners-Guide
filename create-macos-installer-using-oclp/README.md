@@ -79,6 +79,8 @@ Now OCLP will start the installer flashing - copying macOS to the USB drive!
 
 ![](../create-installer/images/OCLP-GUI-Installer-Finished-Script.png)
 
+* You may now exit the OCLP App.
+
 ### Copy EFI folder to USB drive
 
 - Downlaod, install and launch [EFI-Agent](https://github.com/headkaze/EFI-Agent/releases)
@@ -90,16 +92,18 @@ Now OCLP will start the installer flashing - copying macOS to the USB drive!
 
 ![](../create-installer/images/EFI-USB-drive-partition.png)
 
-- Drag the EFI folder created with [OCAuxiliaryTools](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/oc_auxiliary_tools) from the Desktop to the EFI partition on the USB drive
+- Drag to copy the EFI folder previously created and configured with [OCAuxiliaryTools](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/oc_auxiliary_tools) from the **Desktop** to the EFI partition on the USB drive.
 
 
 ![](../create-installer/images/EFI-USB-drive-drag-EFI-folder.png)
 
 This step completes the creation of a hackintosh bootable USB drive with the macOS installer and the OpenCore EFI folder on it.
 
-You may want to add some of the tools mentioned in this guide to the USB drive.
+You may want to add some tools such as OCAuxiliaryTools and EFI-Agent to the USB drive, as these will be useful during post-install configuration.
+
+**Continue with  [Install & Postinstall - Opencore Visual Beginners Guide](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/install)**
 
 
-#### Credits
+### Credits
 
-This portion of the guide is almost entirely based on the section [Download and build macOS Installers | OpenCore Legacy Patcher](https://dortania.github.io/OpenCore-Legacy-Patcher/INSTALLER.html#creating-the-installer)
+This portion of the guide is mostly based on the section [Download and build macOS Installers | OpenCore Legacy Patcher](https://dortania.github.io/OpenCore-Legacy-Patcher/INSTALLER.html#creating-the-installer)
