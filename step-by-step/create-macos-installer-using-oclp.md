@@ -12,13 +12,11 @@ This section of the guide is focused around downloading and writing the macOS in
 
 With _OpenCore Legacy Patcher_ _(OCLP)_, the new GUI includes a convenient download menu for recent macOS installers. We will not be using the other featurs of OCLP, as they are not relevant to creating a hackintosh.
 
-So to start off, you'll want to grab the app:
+So to start off, you'll want to grab the latest _OpenCore-Patcher-GUI.app.zip_ from:
 
 * [OpenCore Legacy Patcher Release Apps](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)
 
-For this guide, we'll be using the standard **OpenCore-Patcher (GUI)**.
-
-Once downloaded, open the app and you should be greeted with this menu:
+For this guide, we'll be using the standard **OpenCore-Patcher (GUI)**. Once downloaded, open the app and you should be greeted with this menu:
 
 ![](../create-installer/images/OCLP-GUI-Main-Menu.png)
 
