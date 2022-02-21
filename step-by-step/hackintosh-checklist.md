@@ -1,8 +1,6 @@
 # Hackintosh Checklist
 
-
-
-## Hackintosh Checklist - What's working?
+## What's working?
 
 ### Desktop and General
 

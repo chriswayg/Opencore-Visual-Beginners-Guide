@@ -4,19 +4,19 @@
 
 * Launch OCAuxiliaryTools and open the relevant Config.plist.
 
-![](images/ocat\_kexts.png)
+![](../images/ocat\_kexts.png)
 
 * If you encounter problems during booting, you should utilize the _debug_ version of OpenCore. As explained previously in the _Misc_ section, make sure you have activated debugging and then _Select Menu -> Edit -> OpenCore DEBUG_
 
-![](images/menu\_debug.png)
+![](../images/menu\_debug.png)
 
 * Next, select _Menu -> Edit -> Synchronize OC Main Programn_ or click the _Sync OC main program_ button.
 
-![](images/sync\_debug.png)
+![](../images/sync\_debug.png)
 
 * Then press the _Start Sync_ button.
 
-![](images/sync\_success.png)
+![](../images/sync\_success.png)
 
 * Once everything works you can switch back to the _release_ version by taking essentially the same steps:
   * Select _Menu -> Edit -> OpenCore DEBUG_ - This will uncheck _OpenCore DEBUG_ in the Menu.
@@ -34,29 +34,29 @@ OCAuxiliaryTools actually merges any changes made to the structure of the Config
 * Mount your EFI partition: _Menu -> Edit -> Mount ESP Partition_ (or click the Mount ESP button)
 * Then click: _Mount and open Config.plist_
 
-![](images/mount\_efi.png)
+![](../images/mount\_efi.png)
 
 It is recommended to perform the upgrade first on a USB-stick and then transfer the EFI, after you are sure that the upgrade was successful. In any case backup your EFI first before making any changes.
 
 * Select _Menu -> Edit -> Backup EFI to Desktop_ or click the _Backup EFI to Desktop_ button.
 
-![](images/backup\_efi.png)
+![](../images/backup\_efi.png)
 
 * Select _Menu -> Edit -> Sync OC Main Program_. - If your Config.plist is outdated, you should see some OC Validate warnings indicated by a red exclamation mark on the OC Validate button.
 
-![](images/upgrade\_load\_config.png)
+![](../images/upgrade\_load\_config.png)
 
 * Clicking on the red button will show the errors.
 
-![](images/upgrade\_initial\_warnings.png)
+![](../images/upgrade\_initial\_warnings.png)
 
 * Close the _OC Validate_ dialog. Because the _Save_ button is grayed out, make and reverse a change by (for example) clicking twice on _ACPI -> Quirks -> NormalizeHeaders_ so that the _Save_ button will turn blue. Now click the _Save_ button, which will update the Config.plist and get rid of all or most of the shown errors.
 
-![](images/upgrade\_remaining\_warnings.png)
+![](../images/upgrade\_remaining\_warnings.png)
 
 * Correct any remaining erros as indicated by OC Validate. The OC Validate button will change from red into a checkmark. This should be sufficient for updating your Config.plist.
 
-![](images/upgrade\_no\_warnings.png)
+![](../images/upgrade\_no\_warnings.png)
 
 * Note: Any additional errors are most likely configuration errors which you need to fix on your own. Also refer to [Updating OpenCore and macOS | OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/universal/update.html) in the Dortania guide, which provides more details.
 
@@ -66,14 +66,14 @@ Ocasionally you may need to remove a kext (or driver) which is not needed any mo
 
 * Next, select _Menu -> Edit -> Synchronize OC Main Programn_ or click the _Sync OC main program_ button.
 
-![](images/upgrade\_open\_sync.png)
+![](../images/upgrade\_open\_sync.png)
 
 * In this dialog window we see Kexts on the left and OpenCore files on the right with indicators which files will need to be updated: Green = up-to-date, Red = outdated, Gray = link to repo is missing. You can add a repo link for kexts in _Settings -> Kext Update URL -> \[+]_.
 * We will start with the kexts. Therefore, click _Select All_ or individually mark the checkboxes for kexts you want to update (otherwise they will be ignored).
 * Click on _Check for Kexts Updates_. This will download the latest available kexts.
 * Click on _Update Kexts_, which will update the kexts in your EFI folder.
 
-![](images/upgrade\_kexts.png)
+![](../images/upgrade\_kexts.png)
 
 ### Upgrading OpenCore, Drivers and Resources
 
@@ -81,11 +81,11 @@ Ocasionally you may need to remove a kext (or driver) which is not needed any mo
 * Click _Update OpenCore to the latest version_. This is optional for the current stable version of OpenCore, but is recommended if you are using the OpenCore DEV version.
 * Then press the _Start Sync_ button.
 
-![](images/upgrade\_success.png)
+![](../images/upgrade\_success.png)
 
 *   If you check back in the _Sync_ window, all OpenCore files should now be marked green.
 
-    ![](images/upgrade\_complete.png)
+    ![](../images/upgrade\_complete.png)
 
 ### NOTES
 

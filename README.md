@@ -46,5 +46,3 @@ The example hardware is similar to the internals of a [mid-2020 iMac](https://ev
 * GPU: A dedicated AMD GPU, RX 560 or above
 
 ![](images/intro-RX5500XT-GPU.jpg)
-
-**Continue with** [**Create EFI & Config - Opencore Visual Beginners Guide**](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/oc\_auxiliary\_tools)****

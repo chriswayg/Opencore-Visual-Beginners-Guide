@@ -1,11 +1,19 @@
 # Table of contents
 
+## 📗 Step-by-Step
+
 * [Intro & Hardware](README.md)
-  * [Using Alder Lake](readme/using-alder-lake.md)
-* [Create EFI & Config](OC\_auxiliary\_tools.md)
-* [Create macOS Installer using OCLP](create-macos-installer-using-oclp/README.md)
-  * [Create macOS Installer using TINU](create-macos-installer-using-oclp/create-installer.md)
-* [Install & Postinstall](install/README.md)
-  * [BIOS Settings Explained](install/bios-settings-explained.md)
-  * [Hackintosh Checklist](install/hackintosh-checklist.md)
-* [Debug and Upgrade OpenCore](oc-auxiliary-tool-upgrade.md)
+* [Create EFI & Config](step-by-step/oc\_auxiliary\_tools.md)
+* [Create macOS Installer using OCLP](step-by-step/create-macos-installer-using-oclp.md)
+* [Install & Postinstall](step-by-step/install.md)
+* [Debug and Upgrade OpenCore](step-by-step/oc-auxiliary-tool-upgrade.md)
+* [Hackintosh Checklist](step-by-step/hackintosh-checklist.md)
+
+## 📙 Alternatives
+
+* [Create macOS Installer using TINU](alternatives/create-installer.md)
+
+## 📘 Advanced Topics
+
+* [Using Alder Lake](advanced-topics/using-alder-lake.md)
+* [BIOS Settings Explained](advanced-topics/bios-settings-explained.md)
