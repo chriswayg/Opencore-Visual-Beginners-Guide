@@ -12,43 +12,43 @@ You may have never used the OpenCore UEFI Shell before. Here is a little Hackint
 
 You have access to the builtin _OpenShell.efi_ which is intended for fixing and troubleshooting. - Press the _space bar_ and then select _OpenShell_ from the OpenCore boot menu or the GUI:
 
-![](../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image.png)
 
 You will be greeted with a _Mapping table_ showing partitions named FS0, FS1, FS2, etc.&#x20;
 
-![](../.gitbook/assets/EFI-mapping-table.png)
+![](../../.gitbook/assets/EFI-mapping-table.png)
 
 The command-line interface has many similarities with the macOS BSD-Unix based CLI and other CLIs which you may know from Windows or Linux. Some of the basic commands are very similar, while others are unique to the UEFI Shell.
 
 Type `fs0:` to make the root of the partition the active directory. Type `vol` to check what partition you are on. Then type `ls` to list the files. You may be able to recognise this as the EFI partition of the main macOS drive or it could be a different partition, for example if you have USB drives plugged in.&#x20;
 
-![](../.gitbook/assets/EFI-shell-show-volume.png)
+![](../../.gitbook/assets/EFI-shell-show-volume.png)
 
 If you have newly plugged in a USB drive, refresh the mapping table by typing `map -r`. To see more details of the storage devices, type the `map -v -b` command. (`-v` gives more _verbose_ output and `-b` will _break_ the output of the command into screens to allow you to read it all)
 
-![](../.gitbook/assets/EFI-mapping-detail.png)
+![](../../.gitbook/assets/EFI-mapping-detail.png)
 
 In this example you can more easily find a USB drive partition (_FS0 and FS1_) by looking for the _Removable: Yes_ devices.
 
 Next use the command `devtree -b` to look for the location of the EFI partition on the main macOS drive. As my screenshots come from within a Parallels VM, the device names are different than what will be displayed on a Hackintosh. Under Mojave-0 the first _FAT File System_ should be our EFI partition. The handle is `B7`.
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1).png>)
 
 On a Hackintosh, you will likely see the name of the storage drive manufacturer, for example _Kingston_ or _WDC_, which will make the partition handles easier to locate.&#x20;
 
-![](../.gitbook/assets/B50A9159-DCD2-4B82-9C01-3305771D4C24.png)
+![](../../.gitbook/assets/B50A9159-DCD2-4B82-9C01-3305771D4C24.png)
 
 We can find the `B7` handle in the Mapping Table by using the command `map -b -v`&#x20;
 
-![](../.gitbook/assets/EFI-shell-mapping-lookup.png)
+![](../../.gitbook/assets/EFI-shell-mapping-lookup.png)
 
 After having confirmed the identity of the partition, we can now make the root of the FS2 partition the active directory by typing `fs2:` and listing its files with `ls`. Change directory with `cd efi\oc` into your OC directory
 
-![](../.gitbook/assets/EFI-shell-list-OC.png)
+![](../../.gitbook/assets/EFI-shell-list-OC.png)
 
 Before making changes, backup at least your Config.plist with the command `cp Config.plist Config.plist.bak`&#x20;
 
-![](../.gitbook/assets/EFI-shell-backup-config.png)
+![](../../.gitbook/assets/EFI-shell-backup-config.png)
 
 Alternatively backup your complete EFI folder, which may take a little while...
 
@@ -60,7 +60,7 @@ cp -r EFI bak
 
 Then type `edit Config.plist`. Scenario: Maybe you cannot boot, because you forgot to exclude your dGPU (a dedicated Nvidia 1660 card) in the _boot-args_ . Therefore in this hypothetical example we will make a small change to the `boot-args` to exclude the dedicated GPU by adding `-wegnoegpu` . - Scroll down to the NVRAM section by using the _page down_ key. Then edit the string to look like is shown below. (Don't do this for real, if you actually use your dedicated GPU, as this is just for illustration purposes. Instead just add or delete the verbose setting `-v`, if you want to make a minimal edit.)
 
-![](../.gitbook/assets/EFI-shell-edit-config.png)
+![](../../.gitbook/assets/EFI-shell-edit-config.png)
 
 Save the changes by pressing `Ctrl S` and then `Enter`. Exit the editor with `Ctrl Q`. To test your changes type `reset`, which will restart your Hackintosh with these new settings.
 

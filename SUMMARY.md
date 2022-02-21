@@ -17,4 +17,5 @@
 
 * [Using Alder Lake](advanced-topics/using-alder-lake.md)
 * [BIOS Settings Explained](advanced-topics/bios-settings-explained.md)
-* [OpenCore UEFI Shell](advanced-topics/opencore-uefi-shell.md)
+* [OpenCore UEFI Shell](advanced-topics/opencore-uefi-shell/README.md)
+  * [acpiview - command](advanced-topics/opencore-uefi-shell/acpiview.md)
