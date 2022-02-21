@@ -2,7 +2,7 @@
 
 ## Opencore Visual Beginners Guide 2022
 
-This is intended to be a beginner friendly OpenCore guide which uses mostly GUI Tools like _OCAuxiliaryTools_ and _TINU_ to create a vanilla hackintosh install. This should make starting out with OpenCore more accessible. Everything done by these tools is transparent to the user and allows complete customisation. All downloads are from official sources, usually from the Github repos of the original developers. This guide is based on the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) by Dortania only making minimal changes when using compatible GUI tools.
+This is intended to be a beginner friendly OpenCore guide which uses mostly GUI Tools like _OCAuxiliaryTools_ and _OCLP_ to create a vanilla hackintosh install. This should make starting out with OpenCore more accessible. Everything done by these tools is transparent to the user and allows complete customisation. All downloads are from official sources, usually from the Github repos of the original developers. This guide is based on the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) by Dortania only making minimal changes when using compatible GUI tools.
 
 ![OCAuxiliaryTools](images/oc\_auxiliary\_tools.png)
 
