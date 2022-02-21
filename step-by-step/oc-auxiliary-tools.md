@@ -1,6 +1,6 @@
-# Create EFI & Config
+# Create EFI & Config - OCAuxiliaryTools
 
-## Using OpenCore Auxiliary Tools (OCAuxiliaryTools)
+## Using OpenCore Auxiliary Tools to Create EFI & Config
 
 * This is an excellent configuration and update utility. _OCAuxiliaryTools_ will be used to create the complete OpenCore EFI folder including the Config.plist. (You may use this alongside a plist editor such as [PlistEDPlus](https://github.com/ic005k/PlistEDPlus)).
 * Download & install [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) and launch the _OCAuxiliaryTools_ application.

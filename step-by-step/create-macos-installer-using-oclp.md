@@ -1,8 +1,10 @@
 ---
-description: Preferred GUI method, if you need Big Sur or newer
+description: Preferred GUI method, if you use Big Sur or newer
 ---
 
-# Create macOS Installer using OCLP
+# Create macOS Installer - OCLP
+
+## Create a bootable installer for macOS with OCLP
 
 This section of the guide is focused around downloading and writing the macOS installer to a USB drive and then copying the EFI folder to the USB drive as well to create a bootable installer.
 
@@ -10,7 +12,7 @@ This section of the guide is focused around downloading and writing the macOS in
 
 ### Download and launch OCLP
 
-With _OpenCore Legacy Patcher_ _(OCLP)_, the new GUI includes a convenient download menu for recent macOS installers. We will not be using the other featurs of OCLP, as they are not relevant to creating a hackintosh.
+With _OpenCore Legacy Patcher_ _(OCLP)_, the new GUI includes a convenient download menu for recent macOS installers. We will not be using the other features of OCLP, as they are not relevant to creating a hackintosh.
 
 So to start off, you'll want to grab the latest _OpenCore-Patcher-GUI.app.zip_ from:
 

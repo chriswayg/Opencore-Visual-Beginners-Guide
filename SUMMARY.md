@@ -3,15 +3,15 @@
 ## 📗 Step-by-Step
 
 * [Intro & Hardware](README.md)
-* [Create EFI & Config](step-by-step/oc-auxiliary-tools.md)
-* [Create macOS Installer using OCLP](step-by-step/create-macos-installer-using-oclp.md)
+* [Create EFI & Config - OCAuxiliaryTools](step-by-step/oc-auxiliary-tools.md)
+* [Create macOS Installer - OCLP](step-by-step/create-macos-installer-using-oclp.md)
 * [Install & Postinstall](step-by-step/install-postinstall.md)
-* [Debug and Upgrade OpenCore](step-by-step/oc-auxiliary-tools-upgrade.md)
+* [Debug & Upgrade OpenCore](step-by-step/oc-auxiliary-tools-upgrade.md)
 * [Hackintosh Checklist](step-by-step/hackintosh-checklist.md)
 
 ## 📙 Alternatives
 
-* [Create macOS Installer using TINU](alternatives/create-installer-using-tinu.md)
+* [Create macOS Installer - TINU](alternatives/create-installer-using-tinu.md)
 
 ## 📘 Advanced Topics
 
