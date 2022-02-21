@@ -16,8 +16,6 @@ You have access to the builtin _OpenShell.efi_ which is intended for fixing and 
 
 You will be greeted with a _Mapping table_ showing partitions named FS0, FS1, FS2, etc.&#x20;
 
-&#x20;
-
 ![](../.gitbook/assets/EFI-mapping-table.png)
 
 The command-line interface has many similarities with the macOS BSD-Unix based CLI and other CLIs which you may know from Windows or Linux. Some of the basic commands are very similar, while others are unique to the UEFI Shell.
@@ -70,9 +68,9 @@ If you are able to find your main EFI partition quickly (try `fs0:`and then `vol
 
 To list all commands type `help -b`. Then get more detailed help for a specific command, for example by typing `drivers -? -b`
 
-#### Useful Commands
+### Useful Commands
 
-* file related & commonly used commands
+**File related & commonly used commands**
 
 ```
 cd, ls, cp, mv, mkdir, rm, cls
@@ -85,7 +83,7 @@ ver
 reset
 ```
 
-* device & driver related commands
+**Device & driver related commands**
 
 ```
 devices
@@ -98,7 +96,7 @@ smbiosview
 
 There are many more commands to explore and you may use the linked documentation below.
 
-#### Links
+### Links
 
 * Introduction to basic commands: [How to Use UEFI Interactive Shell and Its Common Commands](https://linuxhint.com/use-uefi-interactive-shell-and-its-common-commands/#9)
 * Official UEFI Manual: [Specifications | Unified Extensible Firmware Interface Forum](https://uefi.org/specifications)
