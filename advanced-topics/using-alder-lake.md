@@ -1,5 +1,5 @@
 ---
-description: Optional - some prior hackintosh experience is recommended
+description: Some prior hackintosh experience is recommended
 ---
 
 # Using Alder Lake
