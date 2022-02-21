@@ -1,10 +1,10 @@
 ---
-description: Optional background information for Hackintosh relevant BIOS settings
+description: Background information for Hackintosh relevant BIOS settings
 ---
 
 # BIOS Settings Explained
 
-Based on the list in [Intel BIOS settings | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#intel-bios-settings)
+Based on the list in [Intel BIOS settings | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#intel-bios-settings)&#x20;
 
 * Many of these options may not be present in your firmware. I recommend matching up as closely as possible but don't be too concerned if some of these options are not available in your BIOS.
 
