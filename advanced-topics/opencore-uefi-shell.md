@@ -96,9 +96,11 @@ pci
 smbiosview
 ```
 
-[**acpiview**](opencore-uefi-shell/acpiview.md) is able to display and dump ACPI table information
+[**acpiview**](opencore-uefi-shell/acpiview.md) is able to display and dump ACPI table information.
 
 **Redirect command output to text file**
+
+You should be able to redirect the output of most commands to a file. For example, to be able to use full device partition paths for Windows & Linux boot entries in _OpenCore -> Config.plist -> Misc -> Entries,_ it will be useful to save the data to a file in the current directory.&#x20;
 
 ```
 map -v > mapping.txt
