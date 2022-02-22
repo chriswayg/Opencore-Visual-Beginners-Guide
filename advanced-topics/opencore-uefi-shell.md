@@ -7,6 +7,7 @@ You may have never used the OpenCore UEFI Shell before. Here is a little Hackint
 * The OpenCore UEFI Shell can be used for
   * editing Config.plist, even when Hackintosh is unbootable
   * restoring a Config.plist or an EFI folder from backup
+  * finding full device partition paths for Windows & Linux boot entries
   * checking devices
   * just for fun, to take a closer look under the hood
 
@@ -86,7 +87,7 @@ reset
 **Device & driver related commands**
 
 ```
-acpiview (Display ACPI Table information)
+acpiview
 devices
 dh
 drivers
@@ -94,6 +95,8 @@ memmap
 pci
 smbiosview
 ```
+
+[**acpiview**](opencore-uefi-shell/acpiview.md) is able to display and dump ACPI table information
 
 **Redirect command output to text file**
 

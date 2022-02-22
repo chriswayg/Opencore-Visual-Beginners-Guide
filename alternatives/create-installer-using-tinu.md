@@ -2,7 +2,7 @@
 description: Alternative GUI method, if you need macOS Catalina or older
 ---
 
-# Create macOS Installer using TINU
+# Create macOS Installer - TINU
 
 ## Create a bootable installer for macOS with TINU
 
@@ -42,3 +42,7 @@ TINU is a very useful opensource GUI for the `createinstallmedia` command, toget
 
 * Click _Done_ and start creating the macOS installer by clicking on _**Yes, I understand**_.
 * This will take a number of minutes. You can check the log for details.
+
+This step completes the creation of a hackintosh bootable USB drive with the macOS installer and the OpenCore EFI folder on it. - You may want to add some tools such as _OCAuxiliaryTools_ and _EFI-Agent_ to the USB drive, as these will be useful during post-install configuration.
+
+**Next follow the steps on the** [**Install & Postinstall**](../step-by-step/install-postinstall.md) **page!**

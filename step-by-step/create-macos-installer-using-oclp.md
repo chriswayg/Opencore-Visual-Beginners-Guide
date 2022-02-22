@@ -6,9 +6,11 @@ description: Preferred GUI method, if you use Big Sur or newer
 
 ## Create a bootable installer for macOS with OCLP
 
-This section of the guide is focused around downloading and writing the macOS installer to a USB drive and then copying the EFI folder to the USB drive as well to create a bootable installer.
+This section of the guide is focused around downloading and writing the full macOS installer to a USB drive and then copying the EFI folder to the USB drive as well to create a bootable installer.
 
 * Note: 16GB+ USB will be required for the installer
+
+_OLCP will only be able to create an installer for Big Sur or newer. If you need to create an installer for macOS Catalina or older, then use this alternative method:_ [_Create a bootable installer for macOS with TINU_](../alternatives/create-installer-using-tinu.md)_._
 
 ### Download and launch OCLP
 
@@ -96,10 +98,8 @@ Now OCLP will start the installer flashing - copying macOS to the USB drive!
 
 ![](../create-installer/images/EFI-USB-drive-drag-EFI-folder.png)
 
-This step completes the creation of a hackintosh bootable USB drive with the macOS installer and the OpenCore EFI folder on it.
+This step completes the creation of a hackintosh bootable USB drive with the macOS installer and the OpenCore EFI folder on it. - You may want to add some tools such as _OCAuxiliaryTools_ and _EFI-Agent_ to the USB drive, as these will be useful during post-install configuration.
 
-You may want to add some tools such as OCAuxiliaryTools and EFI-Agent to the USB drive, as these will be useful during post-install configuration.
+#### Credits
 
-### Credits
-
-This portion of the guide is mostly based on the section [Download and build macOS Installers | OpenCore Legacy Patcher](https://dortania.github.io/OpenCore-Legacy-Patcher/INSTALLER.html#creating-the-installer)
+_This portion of the guide is mostly based on the section_ [_Download and build macOS Installers | OpenCore Legacy Patcher_](https://dortania.github.io/OpenCore-Legacy-Patcher/INSTALLER.html#creating-the-installer) _by Dortania._
