@@ -112,6 +112,7 @@ There are many more commands to explore and you may use the linked documentation
 ### Links
 
 * Introduction to basic commands: [How to Use UEFI Interactive Shell and Its Common Commands](https://linuxhint.com/use-uefi-interactive-shell-and-its-common-commands/#9)
+* [Dualbooting with Linux - Identifying your UEFI paths and devices | OpenCore Multiboot](https://dortania.github.io/OpenCore-Multiboot/oc/linux.html#method-c-chainloading-the-kernel-must-support-efistub)
 * [Getting a copy of your DSDT via UEFI Shell | Getting Started With ACPI](https://dortania.github.io/Getting-Started-With-ACPI/Manual/dump.html#uefi-shell)
 * Official UEFI Manual: [Specifications | Unified Extensible Firmware Interface Forum](https://uefi.org/specifications)
   * **All UEFI Shell commands:** [**UEFI Shell Specification Version 2.2**](http://www.uefi.org/sites/default/files/resources/UEFI\_Shell\_2\_2.pdf)****
