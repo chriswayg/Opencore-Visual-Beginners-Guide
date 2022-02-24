@@ -1,5 +1,5 @@
 ---
-description: Articles that are not directly related to the Beginners Guide
+description: Articles that are intended for optional background reading
 ---
 
 # Hackintosh Opinions
