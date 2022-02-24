@@ -4,6 +4,8 @@ description: Olarila - a commercialized BlackBox distro with unmaintainable SSDT
 
 # Olarila - Not Recommended
 
+## Olarila - a commercialized BlackBox distro with unmaintainable SSDT/DSDT
+
 I still see far too many people recommending Olarila. _**Let me explain why I think using any of Olarila's preconfigured distros or EFIs is a bad idea.**_ It's not just because the distro with the included tools could theoretically contain malware.
 
 _It's mainly because Olarila will try to draw you into their commercialized ecosystem and make you dependant on their hard to maintain configuration!_ - How do they do that? If you download any of their preconfigured OpenCore EFIs and analyze them you will notice a pattern which we have observed with the Clover based _Beast_ tools in the past as well: far too many quirks are enabled, far too many kexts are loaded and enabled, unnecessary boot arguments and drivers are added. All this makes troubleshooting and maintenance much harder, even though it might provide inexperienced newcomers more likelihood of an initial install success.
