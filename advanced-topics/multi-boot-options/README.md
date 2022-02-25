@@ -1,10 +1,10 @@
 # Multi-Boot Options
 
-## How to multi-boot macOS via OpenCore and Windows without affecting Windows at all?
+## How to multi-boot macOS and Windows  without affecting Windows?
 
 ### Use case: i9-10900 Esports Gaming System & Final Cut Pro Editing
 
-Scenario: He is into professional Esports (Valorant) up to the national level and cannot allow OpenCore multi-booting to have any _(potential or real)_ effect on Windows at all. The Windows install is highly optimized and frequently reinstalled from scratch with very specific graphics and licensing settings. Any appearance of a hardware change after the optimized install can potentially mess things up, which he already experienced with a change to the Nvidia driver settings of the GeForce 1650 Super. On the macOS side requirements are simple: boot into macOS mainly for Final Cut Pro, Logic Pro and Adobe CC. No special requirements for exact Bootcamp like behaviour when rebooting. Getting a dGPU that is optimized for both macOS and Esports with live streaming is still a challenge. Therefore currently on MacOS only iGPU is used on two 1080p monitors. A RX 6600 XT would be a good option to fulfill all requirements.
+Scenario: The user is into professional Esports (Valorant) up to the national level and cannot allow OpenCore multi-booting to have any _(potential or real)_ effect on Windows at all. The Windows install is highly optimized and frequently reinstalled from scratch with very specific graphics and licensing settings. Any appearance of a hardware change after the optimized install can potentially mess things up, which he already experienced with a change to the Nvidia driver settings of the GeForce 1650 Super. On the macOS side requirements are simple: boot into macOS mainly for Final Cut Pro, Logic Pro and Adobe CC. No special requirements for exact Bootcamp like behavior when rebooting. _(Getting a dGPU that is optimized for both macOS and Esports with live streaming is still a challenge. Therefore currently on MacOS, only iGPU is used driving two 1080p monitors. A RX 6600 XT would be a good option to fulfill all requirements.)_
 
 ### Four practical options to boot into Windows
 
@@ -41,7 +41,7 @@ OpenCore > Kernel > Quirks > CustomSMBIOSGuid = NO
 
 ![Booting Windows via OpenCore like Bootcamp - HWiNFO64](../../.gitbook/assets/HWinfo-windows-via-opencore.PNG)
 
-**a) TECHNICAL DETAILS**
+**TECHNICAL DETAILS of the OPENCORE DEFAULT MODE**
 
 > * All the modifications applied (to ACPI, NVRAM, SMBIOS, etc.) are supposed to be operating system agnostic, i.e. apply equally regardless of the OS booted. This enables Boot Camp software experience on Windows. ...
 > * Windows may need to be reactivated. To avoid it consider setting SystemUUID to the original firmware UUID. Be aware that it may be invalid on old firmware, i.e., not random. If there still are issues, consider using HWID or KMS38 license or making the use Custom UpdateSMBIOSMode. Other nuances of Windows activation are out of the scope of this document and can be found online.
@@ -50,11 +50,11 @@ OpenCore > Kernel > Quirks > CustomSMBIOSGuid = NO
 
 Many other interactions with Windows are mentioned in the [Configuration.pdf](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf) _(OpenCore Reference Manual)_ when searching the document.
 
-**b) EFFECT OF OPENCORE ON WINDOWS (ACPI)**
+**EFFECT OF OPENCORE ON WINDOWS (ACPI)**
 
 __[_Xiasl_](https://github.com/ic005k/Xiasl) found that four additional SSDT tables (as configured in OpenCore) had been loaded before loading Windows. As these tables all used conditionals like `If (_OSI ("Darwin"))` they did not have any apparent effect upon Windows. But a custom patched DSDT could cause a BSOD when booting Windows through OpenCore, as reported by users. Theoretically badly programmed SSDT patches could cause issues as well.
 
-**c) EFFECT OF OPENCORE ON WINDOWS (HWiNFO64)**
+**EFFECT OF OPENCORE ON WINDOWS (HWiNFO64)**
 
 When examining the differences on Windows using [HWiNFO64](https://www.hwinfo.com/download/) the following differences were noted: Windows loaded like it was installed on a Mac in Bootcamp with mainboard manufacturer name of Acidanthera and Mac serial numbers.
 
@@ -64,7 +64,7 @@ This table illustrates how Windows perceives the hardware depending on boot mode
 
 |                                    |                                        |                                         |
 | ---------------------------------- | -------------------------------------- | --------------------------------------- |
-|                                    | **OpenCore Boot**                      | **Custom, rEFInd, BIOS Boot**           |
+|                                    | **OpenCore Default Boot**              | **OC-Custom, rEFInd, BIOS Boot**        |
 | _**MAINBOARD**_                    |                                        |                                         |
 | **Mainboard Manufacturer**         | _Acidanthera_                          | _Gigabyte Technology Co., Ltd._         |
 | **Mainboard Name**                 | _Mac-ABBBBBBBBBBBBBB5_                 | _B360 M AORUS PRO_                      |
@@ -107,18 +107,20 @@ PlatformInfo > SMBIOS > UpdateSMBIOSMode = Custom
 OpenCore > Kernel > Quirks > CustomSMBIOSGuid = YES
 ```
 
-**a) TECHNICAL DETAILS**
+![Booting Windows via OpenCore Custom-Mode - HWiNFO64](../../.gitbook/assets/HWinfo-windows-via-refind.PNG)
+
+**TECHNICAL DETAILS of the OPENCORE CUSTOM-MODE**
 
 > `UpdateSMBIOSMode Custom` — WriteSMBIOStables to work around firmware overwriting SMBIOS contents at ExitBootServices. ...\
 > Note: A side effect of using the Custom approach that it makes SMBIOS updates exclusive to macOS, avoiding a collision with existing Windows activation and custom OEM software but potentially obstructing the operation of Apple-specific tools.\
 > `CustomSMBIOSGuid Yes` — Performs GUID patching for UpdateSMBIOSMode Custom mode.\
 > _(Quotes are from the official OpenCore Reference Manual 0.7.8.:)_
 
-**b) EFFECT OF OPENCORE-CUSTOM-MODE ON WINDOWS (ACPI)**
+**EFFECT OF OPENCORE CUSTOM-MODE ON WINDOWS (ACPI)**
 
 __[_Xiasl_](https://github.com/ic005k/Xiasl) found that four additional SSDT tables (as configured in OpenCore) had been loaded before loading Windows. As these tables all used conditionals like `If (_OSI ("Darwin"))` they did not have any apparent effect upon Windows. But a custom patched DSDT could cause a BSOD when booting Windows through OpenCore, as reported by one user. Theoretically badly programmed SSDT patches could cause issues as well.
 
-**c) EFFECT OF OPENCORE-CUSTOM-MODE ON WINDOWS (HWiNFO64)**
+**EFFECT OF OPENCORE CUSTOM-MODE ON WINDOWS (HWiNFO64)**
 
 When examining the differences on Windows using HWiNFO64 the following was noted: Windows appeared to load completely unchanged from loading Windows via rEFInd or via BIOS direct. No Mac specifics leaked into Windows.
 
@@ -126,15 +128,15 @@ _**See details in Table 1**_
 
 ### 3. Booting Windows via rEFInd
 
-This boots Windows in a way which is completely separate from OpenCore and rEFInd will have no effect on Windows. When selecting the Mac Option in rEFInd, OpenCore is chain-loaded.
+This boots Windows in a way which is completely separate from OpenCore and rEFInd will have no effect on Windows. When selecting the macOS/OpenCore option in rEFInd, OpenCore is chain-loaded.
 
-Configuration and installation of rEFInd will be discussed in the [next Chapter](create-refind-boot.md).
+Configuration and installation of rEFInd will be discussed in the [next Chapter](create-refind-booter.md).
 
-**a) EFFECT OF rEFInd ON WINDOWS (ACPI)**
+**EFFECT OF rEFInd ON WINDOWS (ACPI)**
 
 _Xiasl_ found no additional SSDT tables, as rEFInd makes no such changes.
 
-**b) EFFECT OF rEFInd ON WINDOWS (HWiNFO64)**
+**EFFECT OF rEFInd ON WINDOWS (HWiNFO64)**
 
 When examining the differences on Windows using HWiNFO64 the following was noted: Windows loaded completely unchanged from loading Windows via BIOS direct, as rEFInd makes no changes. No Mac specifics are able to leak into Windows.
 
@@ -142,9 +144,9 @@ _**See details in Table 1**_
 
 ### 4. Booting Windows via BIOS Boot Menu
 
-This boots Windows in a way which is completely separate as no other booters are involved. OpenCore is on the macOS drive and will only load when its disk is selected.
+This boots Windows in a way which is completely separate as no other boot loaders are involved. OpenCore is on the macOS drive and will only load when its disk is selected.
 
-**a) EFFECT OF BIOS ON WINDOWS (ACPI & HWiNFO64)**
+**EFFECT OF BIOS ON WINDOWS (ACPI & HWiNFO64)**
 
 Since Windows loads via BIOS direct, the macOS disk has no effect at all upon the Windows ACPI tables or upon the Windows configuration. No Mac specifics are able to leak into Windows.
 
@@ -152,9 +154,9 @@ _**See details in Table 1**_
 
 ### Advantages and disadvantages:
 
-For the initially described Esports Gaming & Final Cut Pro Editing use case, only the rEFInd or the BIOS Boot Menu options are safe. But for most people booting Windows via OpenCore (Option 1 or 2) are the recommended choices.
+For the initially described Esports Gaming & Final Cut Pro Editing use case, only the rEFInd or the BIOS Boot Menu options are completely safe. But for most people booting Windows via OpenCore Option 1 or 2 are the recommended choices.
 
 1. If you want the BootCamp experience with Windows, use Option 1, as intended by the OpenCore developers. No changes to your Config.plist are necessary. You will be able to use the _Apple BootCamp_ utility and the _Startup Disk_ to switch between Windows and macOS. Windows might need to be re-activated or may be difficult to activate. Some Windows apps might require your action due to the apparent hardware change.
 2. If you want Windows (largely) unaffected by OpenCore, use Option 2 with Custom Mode. Make the required changes to your Config.plist and check that none of your SSDTs or Quirks impact Windows. Some of the BootCamp style integration between OpenCore and Windows might be lost.
-3. If you want to be absolutely sure that even a misconfigured OpenCore cannot effect your Windows configuration, use Option 3 with rEFInd and follow the installation guide below. The macOS _StartUp Disk_ setting will no be able to influence which operating system is started by rEFInd, but for example different versions of macOS on the same computer can still be set via StartUp disk.
+3. If you want to be absolutely sure that even a misconfigured OpenCore cannot effect your Windows configuration, use Option 3 with rEFInd and follow the installation guide in the [next chapter](create-refind-booter.md). The macOS _StartUp Disk_ setting will no be able to influence which operating system is started by rEFInd, but for example different versions of macOS on the same computer can still be set via StartUp disk.
 4. If you don't want to bother with installing rEFInd, but still want to be absolutely sure that even a misconfigured OpenCore cannot _a_ffect your Windows configuration, use Option 4 with BIOS F12 Boot. You might forget to press the F12 button on time and boot to the wrong OS. In some setups with iGPU and a macOS disabled dGPU, this option is quite cumbersome and prone to user error.

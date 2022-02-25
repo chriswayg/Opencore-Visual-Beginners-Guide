@@ -1,6 +1,8 @@
-# Create rEFInd BOOT
+# Create rEFInd BOOTer
 
-## Create rEFInd BOOT for OpenCore
+## Create rEFInd BOOT folder for OpenCore
+
+With this guide you will install rEFInd on the same EFI partition and into the same EFI folder as OpenCore. rEFInd will give you the choice of loading Windows directly or macOS via OpenCore. The advantage of loading Windows this way is, that it makes it impossible for OpenCore to interfere with the Windows configuration. Almost all rEFInd files are self-contained in the preconfigured BOOT folder.
 
 ### rEFInd installation
 
@@ -9,11 +11,12 @@
 * Proper BIOS settings for OpenCore as described in the [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/).
 * One disk with a self-contained UEFI Windows installation.
 * One disk with a self-contained macOS installation, with the OpenCore boot-loader located on the same macOS disk.
-* Both Windows and macOS can successfully boot from the BIOS boot menu and from OpenCore.
+* Ensure that Windows can successfully boot from the BIOS boot-menu and that macOS can successfully boot via OpenCore.
+* OpenCore can be configured with its boot menu or with the OpenCanopy GUI. You may also hide OpenCore and set macOS as default. It is recommended to at least hide the Windows option in OpenCore.
 
 ### TL;DR
 
-If you do not want to create the rEFInd folder from scratch, you may use my preconfigured rEFInd BOOT folder. For security, you can verify the included binary from ( `refind-bin-0.13.2.zip` from [rEFInd Boot Manager](https://www.rodsbooks.com/refind/) for authenticity using a SHA1 hash tool.
+If you do not want to create the rEFInd BOOT folder from scratch, you may use my preconfigured rEFInd BOOT folder. You can verify the included `BOOTx64.efi (refind_x64.efi)` binary  which originates from `refind-bin-0.13.2.zip` for authenticity by using a SHA1 hash tool. The original files can be downloaded from [SourceForge](https://sourceforge.net/projects/refind/) for comparison.
 
 ```
 BOOTx64.efi  refind_x64.efi  b02ff7452a1c70ec527908b902cff4f63a8728b7
@@ -22,30 +25,31 @@ BOOTx64.efi  refind_x64.efi  b02ff7452a1c70ec527908b902cff4f63a8728b7
 * Download the compressed rEFInd BOOT folder and unzip it: [BOOT.zip · chriswayg/hackintosh-opencore · GitHub](https://github.com/chriswayg/hackintosh-opencore/blob/master/rEFInd-BOOT-folder/BOOT.zip)
 * Backup your active EFI, or use a separate USB drive for testing.
 * Delete the current BOOT folder and copy the rEFInd BOOT folder to your EFI folder.
-* If needed, open the rEFInd configuration `refind.conf` and adjust some settings. Settings are documented in `refind.conf-sample` and on with some important settings explained below.
+* If needed, open the rEFInd configuration `refind.conf` and adjust some settings. Settings are documented in `refind.conf-sample` with some important settings explained below.
 * Optionally create a tools folder in `EFI/tools` and copy `OpenShell.efi` from OpenCore into it renaming it to `shellx64.efi`
-* Your EFI folder should now look like this:
+* Your EFI folder should now look similar to this:
 
 ![OpenCore EFI folder with rEFInd added](../../.gitbook/assets/291343C7-A9EB-4E17-9D9F-3A7D192DBC94.png)
+
+### Manually create the rEFInd BOOT folder
 
 ### Get rEFInd
 
 * Documentation: [The rEFInd Boot Manager](http://www.rodsbooks.com/refind/)
 * Download: [rEFInd download | SourceForge.net](https://sourceforge.net/projects/refind/)
-  * `refind-bin-0.13.2.zip or newer`
-* Download a compatible UEFI Shell: (optional)
-  * [edk2/Shell\_Full.efi](https://github.com/tianocore/edk2/blob/UDK2018/EdkShellBinPkg/FullShell/X64/Shell\_Full.efi)
+  * `refind-bin-0.13.2.zip` or newer
+* Download and copy a compatible UEFI Shell: (optional)
 
 ### Setup rEFInd with OpenCore
 
 ![](../../.gitbook/assets/78FF573F-364A-4764-9885-824777CB38D0.png)
 
-* Copy `icons refind_x64.efi refind.conf-sample` as shown above to EFI/BOOT/
+* copy `icons` , `refind_x64.efi` and `refind.conf-sample` as shown above to `EFI/BOOT/`
 * delete all icons except `mouse.png`
 * delete `BOOTx64.efi`
 * rename `refind_x64.efi` to `BOOTx64.efi`
 * copy `refind.conf-sample` to `refind.conf`
-* Update the refind.conf configuration as shown below (without comments)
+* Update the `refind.conf` configuration as shown below
 
 ```
 # refind.conf
@@ -53,11 +57,10 @@ BOOTx64.efi  refind_x64.efi  b02ff7452a1c70ec527908b902cff4f63a8728b7
 
 timeout    5
 use_nvram  false
-
-hideui hints,arrows,badges
+hideui     hints,arrows,badges
 
 resolution    1920 1080
-enable_mouse
+#enable_mouse
 #mouse_speed  4
 
 use_graphics_for  osx, linux, windows
@@ -80,7 +83,7 @@ include theme-minimal-black/theme.conf
 
 ### Theme rEFInd-minimal-black
 
-* Download the theme rEFInd-minimal-black [GitHub - chriswayg/rEFInd-minimal-black: A stunningly clean black theme for the rEFInd UEIF boot manager.](https://github.com/chriswayg/rEFInd-minimal-black)
+* Download the theme rEFInd-minimal-black [rEFInd-minimal-black: A stunningly clean black theme for the rEFInd UEIF boot manager.](https://github.com/chriswayg/rEFInd-minimal-black)
 * Rename `theme-minimal-black-master` to `theme-minimal-black`
 * Delete `README.md` and `screenshot.png`
 * Update the config as shown below
@@ -88,9 +91,9 @@ include theme-minimal-black/theme.conf
 ```
 # A minimal dark refind theme
 
-icons_dir     theme-minimal-black/icons
-banner        theme-minimal-black/background.png
-banner_scale  fillscreen
+icons_dir       theme-minimal-black/icons
+banner          theme-minimal-black/background.png
+banner_scale    fillscreen
 
 selection_big   theme-minimal-black/selection_big.png
 selection_small theme-minimal-black/selection_small.png
@@ -100,20 +103,21 @@ selection_small theme-minimal-black/selection_small.png
 
 ### Configurations with comments
 
-#### refind.conf with some comments
+#### refind.conf with some additional comments
 
-Check the `refind.conf-sample` for the fully commented version
+Check the `refind.conf-sample` for the original fully commented version
 
 ```
 # refind.conf
 # Configuration file for the rEFInd boot menu
 
 # Timeout in seconds for the main menu screen.
+# Setting the timeout to 0 disables automatic booting.
 timeout 5
 
 # Whether to store rEFInd's rEFInd-specific variables in NVRAM
 # - setting it to true seemed to interfere with OpenCore
-# - only the last booted entry is saved in a text file
+# - the last booted entry is saved in a text file when not using nvram
 use_nvram false
 
 # Hide user interface elements for personal preference or to increase
@@ -156,7 +160,7 @@ resolution 1920 1080
 #   grub    - The GRUB (Legacy or 2) boot loader
 #   windows - Microsoft Windows
 # Default value: osx
-# - this setting whould not be changed
+# - keep this setting as is!
 
 use_graphics_for osx, linux, windows
 
@@ -188,7 +192,7 @@ use_graphics_for osx, linux, windows
 #                     (or similar) program
 #  netboot          - launch the ipxe.efi tool for network (PXE) booting
 # Default is shell,memtest,gdisk,apple_recovery,windows_recovery,mok_tool,about,hidden_tags,shutdown,reboot,firmware,fwupdate
-#- shell icon will only be shown if found in the tools folder
+# - the shell icon will only be shown if found in the tools folder
 
 showtools  shell, reboot, shutdown, about
 
@@ -202,7 +206,7 @@ scanfor internal, manual
 
 # Files that should NOT be included as EFI boot loaders (on the
 # first line of the display).
-# - this ensures that these are not shown as additional boot options
+# - this ensures that these efis are not shown as additional boot options
 
 dont_scan_files /EFI/BOOT/BOOTx64.efi, /EFI/OC/OpenCore.efi
 
@@ -222,7 +226,7 @@ menuentry "macOS" {
 }
 
 # the theme configuration is loaded from this file.
-# - Change if you use a different thenm
+# - Change if you use a different theme
 include theme-minimal-black/theme.conf
 ```
 
@@ -251,7 +255,7 @@ selection_small theme-minimal-black/selection_small.png
 
 ### Versions
 
-* Windows 10 21H1
-* macOS Mojave 10.14.6
-* OpenCore 0.7.8
-* rEFInd 0.13.2
+* rEFInd 0.13.2 (this does not change often)
+* OpenCore 0.7.8 (the BOOT folder should work without changes in future OpenCore versions)
+* macOS Mojave 10.14.6 (any OpenCore bootable version should work)
+* Windows 10 21H1 (presumably Windows 11 works just as well)
