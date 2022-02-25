@@ -28,7 +28,7 @@ This boots Windows in a way which is completely separate as no other booters are
 
 Each option has advantages and disadvantages. What you choose depends on your use case.
 
-#### 1. Booting Windows via OpenCore like Bootcamp (Dortania default)
+### 1. Booting Windows via OpenCore like Bootcamp (Dortania default)
 
 This sets up Windows in a way which makes it behave like it is installed via Bootcamp on a real Mac. macOS and Windows can interact via _Startup Disk_ and _Bootcamp_ utilities to determine the OS to boot next.
 
@@ -96,7 +96,7 @@ This table illustrates how Windows perceives the hardware depending on boot mode
 | Slot Type                          | PCI Express                            | PCI Express                             |
 | Slot Usage                         | _Empty_                                | _In use_                                |
 
-#### 2. Booting Windows via OpenCore Custom-Mode
+### 2. Booting Windows via OpenCore Custom-Mode
 
 This boots Windows in a way which makes SMBIOS updates exclusive to macOS only, avoiding a collision with existing Windows activation and custom software, but BootCamp specific tools like the OS switcher in Windows might not work any more. When booting macOS through OpenCore, no significant changes were observed.
 
@@ -124,11 +124,11 @@ When examining the differences on Windows using HWiNFO64 the following was noted
 
 _**See details in Table 1**_
 
-#### 3. Booting Windows via rEFInd
+### 3. Booting Windows via rEFInd
 
 This boots Windows in a way which is completely separate from OpenCore and rEFInd will have no effect on Windows. When selecting the Mac Option in rEFInd, OpenCore is chain-loaded.
 
-Configuration of rEFInd will be discussed in the next Chapter.
+Configuration and installation of rEFInd will be discussed in the [next Chapter](create-refind-boot.md).
 
 **a) EFFECT OF rEFInd ON WINDOWS (ACPI)**
 
@@ -140,7 +140,7 @@ When examining the differences on Windows using HWiNFO64 the following was noted
 
 _**See details in Table 1**_
 
-#### 4. Booting Windows via BIOS Boot Menu
+### 4. Booting Windows via BIOS Boot Menu
 
 This boots Windows in a way which is completely separate as no other booters are involved. OpenCore is on the macOS drive and will only load when its disk is selected.
 
