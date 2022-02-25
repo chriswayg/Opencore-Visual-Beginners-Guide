@@ -39,7 +39,7 @@ PlatformInfo > SMBIOS > UpdateSMBIOSMode = Create
 OpenCore > Kernel > Quirks > CustomSMBIOSGuid = NO
 ```
 
-![Booting Windows via OpenCore like Bootcamp - HWiNFO64](../.gitbook/assets/HWinfo-windows-via-opencore.PNG)
+![Booting Windows via OpenCore like Bootcamp - HWiNFO64](../../.gitbook/assets/HWinfo-windows-via-opencore.PNG)
 
 **a) TECHNICAL DETAILS**
 
@@ -128,7 +128,7 @@ _**See details in Table 1**_
 
 This boots Windows in a way which is completely separate from OpenCore and rEFInd will have no effect on Windows. When selecting the Mac Option in rEFInd, OpenCore is chain-loaded.
 
-Configuration of rEFInd will be discussed below.
+Configuration of rEFInd will be discussed in the next Chapter.
 
 **a) EFFECT OF rEFInd ON WINDOWS (ACPI)**
 
