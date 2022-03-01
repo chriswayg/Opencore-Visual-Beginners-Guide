@@ -22,11 +22,12 @@ If you do not want to create the rEFInd BOOT folder from scratch, you may use my
 BOOTx64.efi  refind_x64.efi  b02ff7452a1c70ec527908b902cff4f63a8728b7
 ```
 
-* Download the compressed rEFInd BOOT folder and unzip it: [BOOT.zip · chriswayg/hackintosh-opencore · GitHub](https://github.com/chriswayg/hackintosh-opencore/blob/master/rEFInd-BOOT-folder/BOOT.zip)
 * Backup your active EFI, or use a separate USB drive for testing.
-* Delete the current BOOT folder and copy the rEFInd BOOT folder to your EFI folder.
+* Download the compressed rEFInd BOOT folder with _tools_ and unzip it: [rEFInd-BOOT-folder.zip · chriswayg/hackintosh-opencore · GitHub](https://github.com/chriswayg/hackintosh-opencore/blob/master/rEFInd-BOOT-folder.zip)
+* Delete the current `EFI/BOOT` folder and copy the rEFInd `BOOT` folder into your EFI folder to `EFI/BOOT` .
+* Optionally copy the `tools` folder with the UEFI Shell to `EFI/tools.` _(The `shellx64.efi` file is a renamed `OpenShell.efi` from_ [_OpenCore 0.7.8_](https://github.com/acidanthera/OpenCorePkg/releases) _with SHA1: `44056c64bb05a22d02ed362cc36e6d4e04417e36`.)_
 * If needed, open the rEFInd configuration `refind.conf` and adjust some settings. Settings are documented in `refind.conf-sample` with some important settings explained below.
-* Optionally create a tools folder in `EFI/tools` and copy `OpenShell.efi` from OpenCore into it renaming it to `shellx64.efi`
+* You may delete `screenshot.png`, `README.md` and the `.conf-sample` files.
 * Your EFI folder should now look similar to this:
 
 ![OpenCore EFI folder with rEFInd added](../../.gitbook/assets/291343C7-A9EB-4E17-9D9F-3A7D192DBC94.png)
@@ -38,7 +39,7 @@ BOOTx64.efi  refind_x64.efi  b02ff7452a1c70ec527908b902cff4f63a8728b7
 * Documentation: [The rEFInd Boot Manager](http://www.rodsbooks.com/refind/)
 * Download: [rEFInd download | SourceForge.net](https://sourceforge.net/projects/refind/)
   * `refind-bin-0.13.2.zip` or newer
-* Download and copy a compatible UEFI Shell: (optional)
+* Download and copy a compatible UEFI Shell (optional)
 
 ### Setup rEFInd with OpenCore
 
@@ -49,31 +50,32 @@ BOOTx64.efi  refind_x64.efi  b02ff7452a1c70ec527908b902cff4f63a8728b7
 * delete `BOOTx64.efi`
 * rename `refind_x64.efi` to `BOOTx64.efi`
 * copy `refind.conf-sample` to `refind.conf`
-* Update the `refind.conf` configuration as shown below
+* Update the `refind.conf` configuration as shown below and adapt it for your use
 
 ```
 # refind.conf
 # Configuration file for the rEFInd boot menu
 
-timeout    5
-use_nvram  false
-hideui     hints,arrows,badges
+timeout      5
+use_nvram    false
 
-resolution    1920 1080
-#enable_mouse
-#mouse_speed  4
+#resolution   1920 1080
 
-use_graphics_for  osx, linux, windows
-showtools         reboot, shutdown, about
-scanfor           internal, manual
+use_graphics_for   osx, linux, windows
+showtools          shell, reboot, shutdown, about
+scanfor            internal, manual
 
-dont_scan_files    /EFI/BOOT/BOOTx64.efi, /EFI/OC/OpenCore.efi
-default_selection  macOS
+dont_scan_files    /EFI/BOOT/BOOTx64.efi, /EFI/OC/OpenCore.efi, /EFI/Microsoft/Boot/bootmgfw.efi
+default_selection  OpenCore
 
-menuentry "macOS" {
+menuentry "Windows" {
+    loader /EFI/Microsoft/Boot/bootmgfw.efi
+}
+
+menuentry "OpenCore" {
     ostype   "MacOS"
     graphics "on"
-    icon     /EFI/BOOT/theme-minimal-black/icons/os_mac.png
+    icon     /EFI/BOOT/theme-minimal-black/icons/os_opencore.png
     volume   "EFI"
     loader   /EFI/OC/OpenCore.efi
 }
@@ -81,16 +83,20 @@ menuentry "macOS" {
 include theme-minimal-black/theme.conf
 ```
 
+* You may delete the `.conf-sample` file.
+
 ### Theme rEFInd-minimal-black
 
-* Download the theme rEFInd-minimal-black [rEFInd-minimal-black: A stunningly clean black theme for the rEFInd UEIF boot manager.](https://github.com/chriswayg/rEFInd-minimal-black)
+* Adding a theme is highly recommended as the default theme of rEFInd looks horrible. There are many other attractive themes on GitHub such as the light version of this minimal theme.
+* Download [theme-minimal-black: A stunningly clean black theme for the rEFInd UEIF boot manager - Hackintosh edition](https://github.com/chriswayg/theme-minimal-black/archive/refs/heads/master.zip).
 * Rename `theme-minimal-black-master` to `theme-minimal-black`
-* Delete `README.md` and `screenshot.png`
-* Update the config as shown below
+* You may delete `screenshot.png` and `README.md`
+* Update the theme.config as shown below:
 
 ```
 # A minimal dark refind theme
 
+hideui          hints, arrows, badges
 icons_dir       theme-minimal-black/icons
 banner          theme-minimal-black/background.png
 banner_scale    fillscreen
@@ -103,7 +109,7 @@ selection_small theme-minimal-black/selection_small.png
 
 ### Configurations with comments
 
-#### refind.conf with some additional comments
+#### refind.conf with comments
 
 Check the `refind.conf-sample` for the original fully commented version
 
@@ -120,25 +126,9 @@ timeout 5
 # - the last booted entry is saved in a text file when not using nvram
 use_nvram false
 
-# Hide user interface elements for personal preference or to increase
-# security:
-#  banner      - the rEFInd title banner (built-in or loaded via "banner")
-#  label       - boot option text label in the menu
-#  singleuser  - remove the submenu options to boot macOS in single-user
-#                or verbose modes; affects ONLY macOS
-#  safemode    - remove the submenu option to boot macOS in "safe mode"
-#  hwtest      - the submenu option to run Apple's hardware test
-#  arrows      - scroll arrows on the OS selection tag line
-#  hints       - brief command summary in the menu
-#  editor      - the options editor (+, F2, or Insert on boot options menu)
-#  badges      - device-type badges for boot options
-#  all         - all of the above
-# Default is none of these (all elements active)
-
-hideui hints,arrows,badges
-
 # Set the screen's video resolution.
 # - change this to your preferred UI resolution
+# - or comment out for automatic resolution settiing by rEFInd
 resolution 1920 1080
 
 # This does not work as well as the mouse in OpenCore
@@ -208,14 +198,22 @@ scanfor internal, manual
 # first line of the display).
 # - this ensures that these efis are not shown as additional boot options
 
-dont_scan_files /EFI/BOOT/BOOTx64.efi, /EFI/OC/OpenCore.efi
+dont_scan_files    /EFI/BOOT/BOOTx64.efi, /EFI/OC/OpenCore.efi, /EFI/Microsoft/Boot/bootmgfw.efi
 
 # Set the default menu selection.
 # - change this to 'Microsoft' if you want to make Windows the default
 # - comment out if you want rEFInd to boot the last used OS
 default_selection macOS
 
-# Manual configuration stanza. 
+# Manual configuration stanzas. 
+
+# this will normally be found automatically by rEFInd
+# Use this to giove it a more meaningful name than 'Microsoft'
+menuentry "Windows" {
+    loader /EFI/Microsoft/Boot/bootmgfw.efi
+}
+
+
 # - if preffered rename this to 'OpenCore' and use a OpenCore icon
 menuentry "macOS" {
     ostype "MacOS"
@@ -234,7 +232,13 @@ include theme-minimal-black/theme.conf
 
 ```
 # A minimal dark refind theme
-# - leave as is; no changes are needed here.
+
+# Hide user interface elements for personal preference or to increase
+# security:
+#  arrows      - scroll arrows on the OS selection tag line
+#  hints       - brief command summary in the menu
+#  badges      - device-type badges for boot options
+hideui hints, arrows, badges
 
 # Set the name of a subdirectory in which icons are stored. 
 icons_dir theme-minimal-black/icons
@@ -256,6 +260,6 @@ selection_small theme-minimal-black/selection_small.png
 ### Versions
 
 * rEFInd 0.13.2 (this does not change often)
-* OpenCore 0.7.8 (the BOOT folder should work without changes in future OpenCore versions)
-* macOS Mojave 10.14.6 (any OpenCore bootable version should work)
-* Windows 10 21H1 (presumably Windows 11 works just as well)
+* OpenCore 0.7.8 (the rEFInd BOOT folder should work without changes in future OpenCore versions)
+* macOS Mojave 10.14.6 (any OpenCore bootable macOS version should work)
+* Windows 10 - 21H1 (presumably Windows 11 works just as well)
