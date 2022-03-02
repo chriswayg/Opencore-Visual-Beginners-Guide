@@ -12,11 +12,11 @@ With this guide you will install rEFInd on the same EFI partition and into the s
 * One disk with a self-contained UEFI Windows installation.
 * One disk with a self-contained macOS installation, with the OpenCore boot-loader located on the same macOS disk.
 * Ensure that Windows can successfully boot from the BIOS boot-menu and that macOS can successfully boot via OpenCore.
-* OpenCore can be configured with its boot menu or with the OpenCanopy GUI. You may also hide OpenCore and set macOS as default. It is recommended to at least hide the Windows option in OpenCore.
+* OpenCore can be configured with its boot menu or with the OpenCanopy GUI. You may also hide disable the OpenCore Picker and set macOS as default. It is recommended to at least hide the Windows option in OpenCore.
 
 ### TL;DR
 
-If you do not want to create the rEFInd BOOT folder from scratch, you may use my preconfigured rEFInd BOOT folder. You can verify the included `BOOTx64.efi (refind_x64.efi)` binary  which originates from `refind-bin-0.13.2.zip` for authenticity by using a SHA1 hash tool. The original files can be downloaded from [SourceForge](https://sourceforge.net/projects/refind/) for comparison.
+You may use my preconfigured rEFInd BOOT folder to get started quickly. You can verify the included `BOOTx64.efi (refind_x64.efi)` binary  which originates from `refind-bin-0.13.2.zip` for authenticity by using a SHA1 hash tool. The original files can be downloaded from [SourceForge](https://sourceforge.net/projects/refind/) for comparison.
 
 ```
 BOOTx64.efi  refind_x64.efi  b02ff7452a1c70ec527908b902cff4f63a8728b7
@@ -34,12 +34,13 @@ BOOTx64.efi  refind_x64.efi  b02ff7452a1c70ec527908b902cff4f63a8728b7
 
 ### Manually create the rEFInd BOOT folder
 
+Create the rEFInd BOOT folder from scratch by downloading rEFInd, a theme and customizing your configuration.
+
 ### Get rEFInd
 
 * Documentation: [The rEFInd Boot Manager](http://www.rodsbooks.com/refind/)
 * Download: [rEFInd download | SourceForge.net](https://sourceforge.net/projects/refind/)
   * `refind-bin-0.13.2.zip` or newer
-* Download and copy a compatible UEFI Shell (optional)
 
 ### Setup rEFInd with OpenCore
 
@@ -106,6 +107,12 @@ selection_small theme-minimal-black/selection_small.png
 ```
 
 * move the `theme-minimal-black` folder into BOOT
+
+#### Enable UEFI Shell (optional)
+
+* Download a copy of a [compatible UEFI Shell](https://wiki.archlinux.org/title/Unified\_Extensible\_Firmware\_Interface#UEFI\_Shell), preferably the version that is found in the _Tools_ folder of the  [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.7.8) Release.
+* Create a `tools` folder in `EFI/tools.` Copy `OpenShell.efi` into `EFI/tools`.
+* Rename `OpenShell.efi` to `shellx64.efi`
 
 ### Configurations with comments
 

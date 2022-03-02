@@ -26,3 +26,4 @@
 
 * [Hackintosh Opinions](hackintosh-opinions/README.md)
   * [Olarila - Not Recommended](hackintosh-opinions/olarila-not-recommended.md)
+  * [Tips & Tricks](hackintosh-opinions/tips-and-tricks.md)
