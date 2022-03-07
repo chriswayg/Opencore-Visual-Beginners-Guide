@@ -20,7 +20,7 @@ If you have Haswell (Intel 4th Gen) HD Graphics or newer, just use the iGPU, as 
 
 ### Under US$50
 
-These cards should work up to Monterey, but a Fake ID is needed. Certain kinds of DRM, which depend on hardware acceleration, will not be available. The [R7 cards](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html) have not been as commonly used in hackintosh systems and may have unforeseen issues.
+These cards should work up to Monterey. Certain kinds of DRM, which depend on hardware acceleration, will not be available. The [R7 cards](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html) , which will need a Fake ID, have not been used as commonly in hackintosh systems and may therefore have unforeseen issues.
 
 * [R7 250 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=m570.l1313&\_nkw=R7+250&\_sacat=27386\&LH\_TitleDesc=0&\_odkw=R7+240&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=50)
 * [R7 240 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=m570.l1313&\_nkw=R7+240&\_sacat=27386\&LH\_TitleDesc=0&\_odkw=HD+7750&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=50)
