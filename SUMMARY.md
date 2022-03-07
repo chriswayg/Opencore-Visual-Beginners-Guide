@@ -22,6 +22,7 @@
   * [acpiview - command](advanced-topics/opencore-uefi-shell/acpiview.md)
 * [Multi-Boot Options](advanced-topics/multi-boot-options/README.md)
   * [Create rEFInd BOOTer](advanced-topics/multi-boot-options/create-refind-booter.md)
+* [Low End GPUs](advanced-topics/low-end-gpus.md)
 
 ***
 
