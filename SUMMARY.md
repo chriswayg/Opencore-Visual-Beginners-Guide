@@ -5,7 +5,7 @@
 * [Intro & Hardware](README.md)
 * [Create EFI & Config - OCAuxiliaryTools](step-by-step/oc-auxiliary-tools.md)
 * [Create macOS Installer - OCLP](step-by-step/create-macos-installer-using-oclp.md)
-* [Install & Postinstall](step-by-step/install-postinstall/README.md)
+* [Install & Postinstall](step-by-step/install-postinstall.md)
   * [USB Mapping](step-by-step/install-postinstall/usb-mapping.md)
 * [Debug & Upgrade OpenCore](step-by-step/oc-auxiliary-tools-upgrade.md)
 * [Hackintosh Checklist](step-by-step/hackintosh-checklist.md)

@@ -47,5 +47,3 @@ The _example hardware_ is similar to the internals of a [mid-2020 iMac](https://
 * GPU: Sapphire RX 560 _(or other AMD Polaris)_
 
 ![Sapphire Pulse Radeon RX 560 4G](.gitbook/assets/11267\_00\_RX560\_PULSE\_4GBGDDR5\_DP\_HDMI\_DVI\_PCIE\_FBC\_5May17.jpg)
-
-Using specific example hardware is for the purpose of illustrating the workflow using the recommended tools. Presumably your hardware will differ, which means that your configuration will likely differ in each section. Do not just copy the values shown for this example, but look up the recommended values in the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)!
