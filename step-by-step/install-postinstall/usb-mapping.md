@@ -82,3 +82,5 @@ The `UTBMap.kext` will also require the companion [USBToolBox.kext ](https://git
 #### Add kexts to OpenCore
 
 Using _OCAuxiliaryTools_ you will now add `USBToolBox.kext` **and** `UTBMap.kext` to your OpenCore `EFI/OC/Kexts`. Remove any other USB related kexts first.&#x20;
+
+_`XhciPortLimit - Enable`_ was previously used to patch the XCHI port limit to a higher value. Make sure to check that `XhciPortLimit`in Kernel > Quirks is _**disabled**_! After configuring a proper USB map, it is not needed any more, and since Big Sur 11.3 the `XhciPortLimit` Quirk is not used at all, because it has been causing crashes. __&#x20;
