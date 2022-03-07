@@ -12,7 +12,7 @@ The following can be found on eBay which are listed as compatible in the [GPU Bu
 
 ### Under US$35
 
-If you have Haswell (Intel 4th Gen) HD Graphics or newer, just use the iGPU, as these Nvidia cards are actually slower. These will only work up to Big Sur, unless additional patches are installed with OCLP. Also certain kinds of DRM, which depend on hardware acceleration, will not be available.
+If you have Haswell (Intel 4th Gen) HD Graphics or newer, just use the iGPU, as these Nvidia cards are actually slower. These card will only work up to Big Sur, unless additional patches are installed with OCLP. Also certain kinds of DRM, which depend on hardware acceleration, will not be available.
 
 * [GT 730 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_nkw=GT+730&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1\&LH\_BIN=1&\_sop=12&\_udhi=35) (must be GK 208)
 * [GT 710 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_nkw=gt+710&\_sacat=27386&\_sop=12&\_udhi=35\&rt=nc\&LH\_BIN=1) (must be GK 208)
