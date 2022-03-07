@@ -1,8 +1,10 @@
 # Create EFI & Config - OCAuxiliaryTools
 
+This guide uses specific [example 10th Gen Intel hardware](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/step-by-step/intro-hardware#example-hardware) for the purpose of illustrating the workflow of OCAuxiliaryTools tools. Presumably your hardware will differ, which means that your configuration will probably differ in each section. Do not just copy the settings shown for this example, but look up the recommended settings in the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) in the section relevant for your CPU architecture.
+
 ## Using OpenCore Auxiliary Tools to Create EFI & Config
 
-* _OCAuxiliaryTools_ is an excellent configuration and update utility. It will be used to create the complete OpenCore EFI folder including the Config.plist. (You may use this alongside a plist editor such as [PlistEDPlus](https://github.com/ic005k/PlistEDPlus)).
+* _OCAuxiliaryTools_ is an excellent configuration and update utility. It will be used to create the complete OpenCore EFI folder including the Config.plist. _(You may use this alongside a plist editor such as_ [_Xplist_](https://github.com/ic005k/PlistEDPlus)_)_.
 * If you are following this example, but are using different hardware, just open the relevant sections for _your CPU generation_ in [config.plist Setup | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/#creating-your-config-plist) alongside _OCAuxiliaryTools._&#x20;
 * Download & install [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) and launch the _OCAuxiliaryTools_ application.
 
