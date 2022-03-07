@@ -4,6 +4,8 @@ description: Low End GPUs for a Low End Hackintosh (Spring 2022)
 
 # Low End GPUs
 
+![Sapphire Radeon RX 550 Pulse](../.gitbook/assets/rx550\_pulse\_4gb\_800x500\_03.png)
+
 Sometimes people need a dedicated GPU for a really low-end system which is CPU compatible, but may not have a compatible iGPU _(Nehalem to Sandy Bridge for example)_ for recent macOS versions.
 
 The following can be found on eBay which are listed as compatible in the [GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html#polaris-10-and-20-series):
