@@ -75,7 +75,7 @@ Optionally display the _Preselection_ for your CPU platform, especially if you h
 
 Since we are installing Big Sur or Monterey for this example, we do not enable the hacky _XhciPortLimit setting_ any more: _"With macOS 11.3 (Big Sur) and newer,_ [_XhciPortLimit is broken resulting in boot loops_](https://github.com/dortania/bugtracker/issues/162)_."_
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (4) (1).png>)
 
 * Again just hover with the mouse over each option to read the explanation from the OpenCore reference documentation. Alternatively right click over an option and select _Show Tips_ to see the tip in a tool window.
 

@@ -18,7 +18,7 @@ With _OpenCore Legacy Patcher_ _(OCLP)_, the new GUI includes a convenient downl
 
 So to start off, you'll want to grab the latest _OpenCore-Patcher-GUI.app.zip_ from:
 
-* [OpenCore Legacy Patcher Release Apps](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)
+* [OpenCore Legacy Patcher Release Apps](https://github.com/dortania/OpenCore-Legacy-Patcher/releases/latest)
 
 For this guide, we'll be using the standard **OpenCore-Patcher (GUI)**. Once downloaded, open the app and you should be greeted with this menu:
 

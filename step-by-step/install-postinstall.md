@@ -1,36 +1,32 @@
 # Install & Postinstall
 
-## Install
+### Install
 
-* Enable the BIOS settings optimal for macOS: [Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#intel-bios-settings)
-* Follow the [Installation Process](https://dortania.github.io/OpenCore-Install-Guide/installation/installation-process.html#installation-process) from the OpenCore Install Guide
+* Enable the BIOS settings optimal for macOS: [Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#intel-bios-settings).
+* Follow the [Installation Process](https://dortania.github.io/OpenCore-Install-Guide/installation/installation-process.html#installation-process) from the OpenCore Install Guide.
 
-## Post Install
+### Post Install
 
-* Follow [OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/)
-* With the new _USBToolbox_, USB Mapping has become easier, but it should be done on Windows. Follow the Guide for [USB Mapping](install-postinstall/usb-mapping.md). _(With this method there is no more need for_ [_USBInjectAll.kext_](https://dortania.github.io/OpenCore-Post-Install/usb/system-preparation.html#system-preparation) _or checking for_ [_ACPI renames_](https://dortania.github.io/OpenCore-Post-Install/usb/system-preparation.html#checking-what-renames-you-need)_.)_
-* If USB mapping on macOS is preferred _Hackintool_ could also be used as a GUI alternative to [_USBMap_](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html), but mapping on macOS has become more difficult since Big Sur.
+* Generally follow [OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/). On a modern desktop system this is less involved than on a laptop, which requires considerably more work.
+* You can do [USB Port mapping on macOS](install-postinstall/usb-port-mapping.md) with _Hackintool_ which is a nice GUI alternative to [USBMap](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html).
+* Alternatively you can use _USBToolbox_ on Windows, which made USB port mapping easier. Follow the Guide for [USB Mapping on Windows](install-postinstall/usb-port-mapping.md). _(With this method there is no more need for_ [_USBInjectAll.kext_](https://dortania.github.io/OpenCore-Post-Install/usb/system-preparation.html#system-preparation) _or checking for_ [_ACPI renames_](https://dortania.github.io/OpenCore-Post-Install/usb/system-preparation.html#checking-what-renames-you-need)_)._
 * After everything works, debug settings should be changed back to normal.
 
-## Related GUI tools
+### Related GUI tools
 
-### PlistEDPlus
+#### Xplist
 
-* [PlistEDPlus](https://github.com/ic005k/PlistEDPlus) a lightweight plist editor with rich features.
+* [Xplist](https://github.com/ic005k/Xplist) a lightweight plist editor with rich features
 
 ![](../images/plist\_ed\_plus.png)
 
-### Hackintool
+### Versions used
 
-* [Hackintool](https://github.com/headkaze/Hackintool) completely supports vanilla installs, is open source and is popular in the German hackintosh community.
-* useful for system information, iGPU configuration and USB mapping:
+This guide was written between January and March 2022 and tested with the current release versions of each tool. Even though the basic steps will remain the same, some details and screenshots will change during subsequent updates of _OpenCore_, _OCAuxiliaryTools, OCLP and Hackintool_. Always check the most recent version of the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) and verify that OCAuxiliaryTools is supporting the latest version of OpenCore.
 
-![](../images/hackintool.png)
-
-## Versions used
-
-This guide was written in January 2022 and tested with the current release versions of each tool. Even though the basic steps will remain the same, some details will change during subsequent updates of _OpenCore_, _OCAuxiliaryTools_ and _TINU_. Always check the most recent version of the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) and verify that OCAuxiliaryTools is supporting the latest version of OpenCore.
-
-* OpenCore 0.7.7
-* OCAuxiliaryTools 20220110 for OpenCore 0.7.7
+* OpenCore 0.7.7 to 0.7.9
+* OCAuxiliaryTools 20220110 to 20220202
+* OCLP 0.4.2
 * TINU 3.0.1
+* Hackintool v3.8.4
+* USBToolBox 0.1.1

@@ -6,13 +6,14 @@
 * [Create EFI & Config - OCAuxiliaryTools](step-by-step/oc-auxiliary-tools.md)
 * [Create macOS Installer - OCLP](step-by-step/create-macos-installer-using-oclp.md)
 * [Install & Postinstall](step-by-step/install-postinstall.md)
-  * [USB Mapping](step-by-step/install-postinstall/usb-mapping.md)
+  * [USB Port Mapping](step-by-step/install-postinstall/usb-port-mapping.md)
 * [Debug & Upgrade OpenCore](step-by-step/oc-auxiliary-tools-upgrade.md)
 * [Hackintosh Checklist](step-by-step/hackintosh-checklist.md)
 
 ## 📙 Alternatives
 
 * [Create macOS Installer - TINU](alternatives/create-installer-using-tinu.md)
+* [USB Mapping on Windows](alternatives/usb-mapping-on-windows.md)
 
 ## 📘 Advanced Topics
 
