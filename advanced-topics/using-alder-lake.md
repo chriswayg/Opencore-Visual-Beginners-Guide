@@ -18,13 +18,13 @@ Essentially follow the [Desktop Comet Lake | OpenCore Install Guide](https://dor
 
 Mostly Z690 and a few B660M, but no Hackintosh seen yet with H610 or H670. Gigabyte and Asus have been used in the great majority of observed systems. macOS on Alder Lake laptops is not possible, due to the unsupported iGPU.
 
-* Gigabyte Z690I AORUS ULTRA DDR4 - Mini-ITX
 * Gigabyte Z690i Aorus Ultra DDR4 - Mini-ITX
 * Gigabyte Z690 UD DDR4 - ATX
 * Gigabyte Z690 Aorus Elite DDR5 - ATX
 * Gigabyte Z690 Aorus Elite AX DDR4 - ATX
 * Gigabyte Z690 Aorus Pro DDR5 - ATX
 * Gigabyte Z690 AERO G DDR4 (plus Thunderbolt card) - ATX
+* Gigabyte Z690 Gaming X DDR4 - ATX
 * ASUS Z690 ProArt Creator WiFi (Thunderbolt 4) DDR5 - ATX
 * ASUS ROG STRIX Z690-A GAMING WIFI D4 DDR4 - ATX
 * ASUS ROG STRIX Z690-F GAMING WIFI DDR5 - ATX
@@ -55,7 +55,7 @@ All currently available Alder Lake Core-i-x-12xxx CPUs should work.
 * Sapphire RX 6900 XT Special Edition
 * Yeston Radeon RX560 4GB GDDR5
 * AMD Radeon RX 570
-* Sapphire RX 580
+* Sapphire Pulse RX 580
 
 #### Recommended GPUs
 
@@ -67,9 +67,10 @@ The only two recommended SMBIOS on Alder Lake - `MacPro7,1` and `iMacPro1,1` - r
 
 #### SSDs actually used
 
-* WD SN850 PCIe 4.0 NVMe SSD 1TB
+* WD Black SN850 PCIe 4.0 NVMe SSD 1TB
 * WD Black SN750 SE NVMe SSD 1TB
-* WD Blue SN550 NVMe 1TB
+* WD Black SN750 NVMe SSD 500GB
+* WD Blue SN550 NVMe SSD 1TB
 * PNY CS1031 256GB&#x20;
 
 Some Samsung NVMe drives may still have problems: [SSD boot time tests · dortania](https://github.com/dortania/bugtracker/issues/192).
@@ -287,6 +288,7 @@ I researched more in-depth about the specifics which might differ from a Comet L
 * User Build: [ASRock Z690 Steel Legend (WiFi 6E)](https://www.tonymacx86.com/threads/asrock-z690-steel-legend-wifi-6e.317456/) nice guide including CPU ID explanation.
 * User Build: [Gigabyte Z690 ELITE AX D4 + i9-12900K + AMD RX 6600 XT](https://www.tonymacx86.com/threads/gigabyte-z690-elite-ax-d4-i9-12900k-amd-rx-6600-xt.318584/)
 * User Build: [ ](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/)Gigabyte Z690I AORUS ULTRA [Intel 12th Gen CPU i5-12400 (low cost)](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/) clean, minimal configuration.
+* User Build: [Gigabyte Z690 Gaming X DDR4 - i7 12700K - AMD RX 580](https://www.tonymacx86.com/threads/felbos-build-gigabyte-z690-gaming-x-ddr4-i7-12700k-amd-rx-580.319197/)
 
 The _Golden Builds_ are well documented and would help those who buy the same motherboard and CPU. - Yet, I am not satisfied just copying a configuration, since I might buy different hardware and I should be able to understand every part of the Config to maintain it longterm. Also you should use the tools recommended on r/hackintosh.
 
