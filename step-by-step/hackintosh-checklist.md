@@ -92,14 +92,14 @@ Test with _Blackmagic Disk Speedtest_
 
 #### USB
 
-Use _USBMap_
+Check with USBToolBox / Hackintool
 
 Test external drives with _Blackmagic Disk Speedtest_
 
 * [ ] USB 2 ports
 * [ ] USB 2 on USB 3 ports
 * [ ] USB 3 and 3.1 ports (check transfer speed during copy)
-* [ ] USB C ports
+* [ ] USB Type-C ports
 * [ ] SD Card Reader
 * [ ] Camera (Photo Booth, Facetime, Zoom)
 * [ ] Fingerprint reader
@@ -191,7 +191,7 @@ additional checks relevant for Notebooks including MacBooks with Legacy Patchers
 * Metal benchmark: [Geekbench](https://www.geekbench.com)
 * Disk Speedtest: [‎Blackmagic Disk Speed Test](https://apps.apple.com/us/app/blackmagic-disk-speed-test/id425264550)
 * Battery checker: [coconutBattery](https://www.coconut-flavour.com/coconutbattery/) useful for Laptops
-* USB Port Mapper: [USBMap](https://github.com/corpnewt/USBMap) or [USBToolBox](https://github.com/USBToolBox/tool)
+* USB Port Mapper: [USBToolBox](https://github.com/USBToolBox/tool) or Hackintool
 * System Info: [Hackintool](https://github.com/headkaze/Hackintool)
 * IORegistryExplorer [IORegistryClone](https://github.com/khronokernel/IORegistryClone/blob/master/ioreg-302.zip)
 * CPU Torture Test: [Prime95](https://www.mersenne.org/download/)
