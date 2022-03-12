@@ -47,3 +47,5 @@ The _example hardware_ is similar to the internals of a [mid-2020 iMac](https://
 * GPU: Sapphire RX 560 _(or other AMD Polaris)_
 
 ![Sapphire Pulse Radeon RX 560 4G](.gitbook/assets/11267\_00\_RX560\_PULSE\_4GBGDDR5\_DP\_HDMI\_DVI\_PCIE\_FBC\_5May17.jpg)
+
+![](.gitbook/assets/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

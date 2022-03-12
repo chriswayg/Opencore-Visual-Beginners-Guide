@@ -40,7 +40,7 @@ For this example, we'll assume you'll need an installer. Selecting this option w
 
 ![](../create-installer/images/OCLP-GUI-Installer-Download-Listed-Products.png)
 
-Since _OCLP only supports Big Sur and newer_, only those entries will be shown. For this example, we'll select macOS 12.1 Monterey as that's the latest public release at the time of writing. This will download and install the macOS installer to your applications folder.
+Since _OCLP only supports Big Sur and newer_, only those entries will be shown. For this example, we'll select macOS 12.1 Monterey. This will download and save the macOS installer to your _Applications_ folder.
 
 * **Downloading the Installer**
 
