@@ -100,4 +100,4 @@ If you have Windows already installed on the same system, you may prefer to use 
 
 _This guide is loosely based on the USB mapping help file found inside Hackintool v3.8.4. I adapted it from Clover to OpenCore, changed the workflow and made some minor corrections._
 
-![](../../.gitbook/assets/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
+![](../../images/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

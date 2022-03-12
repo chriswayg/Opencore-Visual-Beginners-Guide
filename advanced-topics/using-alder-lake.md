@@ -6,7 +6,7 @@ description: Some prior hackintosh experience is recommended
 
 ## OpenCore Alder Lake (12th-Gen Intel) Hackintosh Guidance
 
-![](../.gitbook/assets/Intel-Alder-Lake-Desktop-CPU.png)
+![](../images/Intel-Alder-Lake-Desktop-CPU.png)
 
 What can we learn from existing successful OpenCore Alder Lake desktop builds? I looked at almost every documented system on the major English and German hackintosh sites. In this article I will share the key points that I noticed when looking at these builds, documentation and configurations. This is just a very preliminary guide, since Dortania does not have an _OpenCore Alder Lake Guide_ yet.&#x20;
 
@@ -324,4 +324,4 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 * A kext for Alder Lake currently in development: an _**experimental**_ Lilu plugin that optimizes Alder Lake's heterogeneous core configuration: [GitHub - b00t0x/CpuTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild)
 * Discussion and relevant links in the comments: [Request for an initial version of a Dortania OpenCore Guide for Alder Lake · Issue #257 · dortania/bugtracker · GitHub](https://github.com/dortania/bugtracker/issues/257)
 
-![](../.gitbook/assets/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
+![](../images/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

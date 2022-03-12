@@ -88,7 +88,7 @@ You should name each port with a clear location _Name_. For this purpose type in
 
 Press `"K"` to build the kext in the `dist` folder:
 
-![Building UTBMap.kext](../.gitbook/assets/USBToolbox-05.PNG)
+![Building UTBMap.kext](<../.gitbook/assets/USBToolbox-05 (1).PNG>)
 
 The `UTBMap.kext` will also require the companion [USBToolBox.kext ](https://github.com/USBToolBox/kext)to be [downloaded](https://github.com/USBToolBox/kext/releases) and added to your OpenCore EFI. The advantage of utilizing the USBToolBox.kext is among others, that it does not require the _Model Identifier_ to be specified in the USB map. Read the USBToolBox documentation for details.
 
@@ -106,4 +106,4 @@ Note: _XhciPortLimit - Enable_ was previously used to patch the XCHI port limit 
 
 * Thanks to the developer of this excellent tool[ Dhinak G](https://github.com/dhinakg) who also pointed out some issues with the original version of this guide on r/hackintosh.
 
-![](../.gitbook/assets/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
+![](../images/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

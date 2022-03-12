@@ -18,7 +18,7 @@
 
 * [Xplist](https://github.com/ic005k/Xplist) a lightweight plist editor with rich features
 
-![](../images/plist\_ed\_plus.png)
+![](../images/0F2F399B-9E45-4984-AAD4-4C256666EA31.png)
 
 ### Versions used
 
@@ -31,4 +31,4 @@ This guide was written between January and March 2022 and tested with the curren
 * Hackintool v3.8.4
 * USBToolBox 0.1.1
 
-![](../.gitbook/assets/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
+![](../images/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

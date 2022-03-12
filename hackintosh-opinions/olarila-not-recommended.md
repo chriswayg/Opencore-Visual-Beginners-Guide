@@ -14,7 +14,7 @@ _It's mainly because Olarila will try to draw you into their commercialized ecos
 
 The distinguishing mark of the _Olarila_ method though, is their huge, all-in-one SSDT or DSDT. For example, in the preconfigured, undocumented Coffee Lake `SSDT-OLARILA.aml` there are hundreds of lines of code additional to what is found in the four well documented SSDTs which are recommended by the [Desktop Coffee Lake | Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#acpi). Additionally the modular approach of the Dortania guide is far superior with regards to troubleshooting and maintenance, than a huge blob of code in one bin binary file which is barely documented when disassembled.
 
-![Disassembled SSDT-OLARILA.aml](<../.gitbook/assets/image (1) (1).png>)
+![Disassembled SSDT-OLARILA.aml](../.gitbook/assets/CE134F3D-4891-493E-88D2-BB920FD35A43.png)
 
 **How do they commercialize their methodology?** By bombarding every user with recommendations for US$30 or US$50 donations for gaining specialized support and individualized DSDT editing, which can only be done by very few highly experienced people, like the main Olarila admin:
 
@@ -44,4 +44,4 @@ _Why are injections or patches not suitable for "DSDT"? - Since it is the main t
 
 _... If you notice, Olarila recommend users to use **"RunMe.app"**. Indirectly you share all the information regarding hardware, serial number, uuid, and even ioreg. While it's just a hackintosh machine, we need to make sure our privacy is more important than the hackintosh issues. Therefore, reading and understand is important before doing something."_
 
-![](../.gitbook/assets/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
+![](../images/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

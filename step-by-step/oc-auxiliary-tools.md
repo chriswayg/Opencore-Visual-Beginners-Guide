@@ -8,7 +8,7 @@ This guide uses specific [example 10th Gen Intel hardware](https://chriswayg.git
 * If you are following this example, but are using different hardware, just open the relevant sections for _your CPU generation_ in [config.plist Setup | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/#creating-your-config-plist) alongside _OCAuxiliaryTools._&#x20;
 * Download & install [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) and launch the _OCAuxiliaryTools_ application.
 
-![OCAuxiliaryTools initial Window](../images/download\_ocat.png)
+![OCAuxiliaryTools initial Window](../images/3575E5DF-F24E-424B-91D1-A6DE63814FD0.png)
 
 * Select _Menu -> Edit -> Database_ or click the _Database_ button
 
@@ -18,17 +18,17 @@ This guide uses specific [example 10th Gen Intel hardware](https://chriswayg.git
 
 Select the relevant configuration and click the _Generate EFI_ button
 
-![Base Configuration Selection Dialog](../images/select\_configuration.png)
+![Base Configuration Selection Dialog](../images/99F402D7-F6EF-4254-9EF8-D05D4A954D0D.png)
 
 This will generate the EFI folder with the most recent official release version of OpenCore on your desktop. The `Config.plist` will open in _OCAuxiliaryTools_ for editing.
 
-![](../images/generate\_efi\_folder.png)
+![](../images/CB9D65DD-CF5D-45CF-B17E-15E332B81A4D.png)
 
 ### ACPI
 
 In [ACPI - Add](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi) uncheck what is not needed (as shown below)
 
-![ACPI - Add Section](../images/acpi\_add.png)
+![ACPI - Add Section](../images/5C853968-AF4D-4A41-82C8-8C026C661520.png)
 
 * For example we may not need [SSDT-PMC](https://dortania.github.io/Getting-Started-With-ACPI/Universal/nvram) in Comet Lake any more, as the NVRAM works without it.
 * Check the relevant section of the [Desktop Comet Lake | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi) for more details.
@@ -36,17 +36,17 @@ In [ACPI - Add](https://dortania.github.io/OpenCore-Install-Guide/config.plist/c
 
 In [ACPI - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi), uncheck _ResetLogoStatus_. (_'It is enabled by default in sample.plist. This Quirk didn't exist at the time the OpenCore Install Guide was written, so it's unknown if it's a requirement. Most likely it's not.' @5T33Z0_)
 
-![ACPI Quirks Section](../images/acpi\_quirks.png)
+![ACPI Quirks Section](../images/E21E45C9-18A3-45C5-88B3-A47532DC416A.png)
 
 **You can hover with your mouse over each option to see the explanation from the official OpenCore reference manual.** This is a really helpful feature of _OCAuxiliaryTools_, as it enables you to quickly understand options which are only clearly explained in the very detailed [OpenCore Reference Manual](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf) document:
 
-![Configuration.pdf](../images/opencore\_configuration\_doc.png)
+![Configuration.pdf](../images/84D4C438-E879-4223-8188-5B07AD228994.png)
 
 ### Booter
 
 No changes in [Booter](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#booter)
 
-![Booter - Quirks Section](../images/booter.png)
+![Booter - Quirks Section](../images/7564699D-B406-47DD-9DC0-84C8B0B64624.png)
 
 ### Device Properties
 
@@ -54,7 +54,7 @@ In [Device Properties](https://dortania.github.io/OpenCore-Install-Guide/config.
 
 Therefore change `AAPL,ig-platform-id` to `0300913E`
 
-![Device Properties - Add Section](../images/device\_properties.png)
+![Device Properties - Add Section](../images/165B9B4D-BCC3-46A4-8B18-111E42665292.png)
 
 * Note, that keys which start with a **#** are commented out and will not be used by OpenCore
 
@@ -64,7 +64,7 @@ In the [Kernel](https://dortania.github.io/OpenCore-Install-Guide/config.plist/c
 
 * Click on the **\[...]** button to open the most common kexts available within _OCAuxiliaryTools_. Just drag-and-drop `IntelMausi.kext` into the app window. It will automatically be added to the Config.plist and enabled.
 
-![Kernel Add Section](../images/kernel\_add.png)
+![Kernel Add Section](../images/55355DB7-6F2D-4F24-8BFC-5800E0C427DB.png)
 
 * Add any additional kexts, if needed by clicking on the **\[+]** button for kexts downloaded from elsewhere.
 * For changing the order of the kexts, select a kext and click on the **\[<]** and **\[>]** buttons to move the kext up or down which will determine the order in which they are loaded.
@@ -83,21 +83,21 @@ Since we are installing Big Sur or Monterey for this example, we do not enable t
 
 In the section [Misc - Boot ](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#misc)you may choose PickerVariant _GoldenGate_ for the OpenCore booter GUI
 
-![](../images/misc\_boot.png)
+![](../images/D8683333-AE5B-4B40-8080-8C250635E4C2.png)
 
 In the [Misc - Debug](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#debug) section: _DisplayLevel_ click the _Select_ button and enable _Debug\_\_Warn_ and _Debug\_\_Error_
 
-![Misc - Debug Section](../images/misc\_debug.png)
+![Misc - Debug Section](../images/AFCE311B-E30A-42D9-B444-60FA8FF10AF4.png)
 
 * By default the EFI created by _OCAuxiliaryTools_ uses the most recent _release_ version of OpenCore. If you want to show additional debug information change `Target` to `67` and switch to the _debug_ version of OpenCore, which will be explained at the end of this guide.
 
 In the [Misc - Security](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#security) section change _SecureBootModel_ to _Default_ if installing macOS Big Sur or newer.
 
-![Misc - Security Section](../images/misc\_security.png)
+![Misc - Security Section](../images/659E0BE9-E9E4-4891-8926-9B1C2C35FC4E.png)
 
 In [Misc - Tools](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#tools), click the **\[…]** button and add `OpenShell.efi` by dragging it into the list
 
-![Misc - Tools Section](../images/misc\_tools.png)
+![Misc - Tools Section](../images/F6F138BE-1213-4E15-A134-301C2976EB54.png)
 
 ### NVRAM
 
@@ -106,7 +106,7 @@ In [NVRAM - Add](https://dortania.github.io/OpenCore-Install-Guide/config.plist/
 * Add the following string in `boot-args` for debugging and for audio: `-v debug=0x100 keepsyms=1 alcid=1`
 * Change `prev-lang:kbd` to use a `String` and input `en-US:0` (or your language code) instead of using the HEX value.
 
-![NVRAM - Add Section](../images/nvram\_add.png)
+![NVRAM - Add Section](../images/C536D267-8562-4E9E-B64D-A2F3E657F996.png)
 
 ### Platform Info
 
@@ -114,7 +114,7 @@ In the [Platform Info - Generic](https://dortania.github.io/OpenCore-Install-Gui
 
 * Click _Generate_ (near the _SystemProductName_ field)
 
-![Platform Info - Generic Section](../images/platform\_info.png)
+![Platform Info - Generic Section](../images/70ECF443-7726-4777-8CC1-5AA067AE5D70.png)
 
 * Also check the serial on the [Apple Support](https://checkcoverage.apple.com/us/en/) webpage.
 * You should see _“… we’re unable to check coverage for this serial number”_ or something similar in your language. This is the response you want, because your Hackintosh should not reuse someone else’s existing serial from a real Mac.
@@ -124,7 +124,7 @@ In the [Platform Info - Generic](https://dortania.github.io/OpenCore-Install-Gui
 
 No changes needed in the [UEFI](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#uefi) section
 
-![UEFI Drivers Section](../images/uefi.png)
+![UEFI Drivers Section](../images/2117C7AB-88C0-4001-9050-082F0D7A5A52.png)
 
 * You can add additional drivers using the **\[+]** or **\[…]** button.
 * The OpenCanopy boot GUI should work out-of-the-box as _OCAuxiliaryTools_ activates it by default.
@@ -137,4 +137,4 @@ No changes needed in the [UEFI](https://dortania.github.io/OpenCore-Install-Guid
 
 Several **additional features of OCAuxiliaryTools** will be discussed on the page **** [**Debug and Upgrade OpenCore**](oc-auxiliary-tools-upgrade.md)**.**
 
-![](../.gitbook/assets/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
+![](../images/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
