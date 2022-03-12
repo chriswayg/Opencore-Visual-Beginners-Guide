@@ -105,3 +105,5 @@ Note: _XhciPortLimit - Enable_ was previously used to patch the XCHI port limit 
 #### Credits
 
 * Thanks to the developer of this excellent tool[ Dhinak G](https://github.com/dhinakg) who also pointed out some issues with the original version of this guide on r/hackintosh.
+
+![](../.gitbook/assets/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

@@ -1,5 +1,7 @@
 # Multi-Boot Options
 
+##
+
 ## How to multi-boot macOS and Windows  without affecting Windows?
 
 ### Use case: i9-10900 Esports Gaming System & Final Cut Pro Editing
@@ -160,3 +162,5 @@ For the initially described Esports Gaming & Final Cut Pro Editing use case, onl
 2. If you want Windows (largely) unaffected by OpenCore, use Option 2 with Custom Mode. Make the required changes to your Config.plist and check that none of your SSDTs or Quirks impact Windows. Some of the BootCamp style integration between OpenCore and Windows might be lost.
 3. If you want to be absolutely sure that even a misconfigured OpenCore cannot effect your Windows configuration, use Option 3 with rEFInd and follow the installation guide in the [next chapter](create-refind-booter.md). The macOS _StartUp Disk_ setting will no be able to influence which operating system is started by rEFInd, but for example different versions of macOS booted by OpenCore on the same computer can still be set via StartUp disk.
 4. If you don't want to bother with installing rEFInd, but still want to be absolutely sure that even a misconfigured OpenCore cannot _a_ffect your Windows configuration, use Option 4 with the BIOS Boot Menu. You might forget to press the correct key on time and boot to the wrong OS. In some setups with iGPU and a macOS disabled dGPU, this option is quite cumbersome and prone to user error.
+
+![](../../.gitbook/assets/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
