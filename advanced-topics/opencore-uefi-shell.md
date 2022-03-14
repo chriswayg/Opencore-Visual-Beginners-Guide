@@ -119,4 +119,4 @@ There are many more commands to explore and you may use the linked documentation
     * see from page 87 for command reference
   * Thousands of pages: [UEFI Specification Version 2.9 (March 2021)](https://uefi.org/sites/default/files/resources/UEFI\_Spec\_2\_9\_2021\_03\_18.pdf)
 
-![](../images/by-nc-license.png) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
+![](../.gitbook/assets/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

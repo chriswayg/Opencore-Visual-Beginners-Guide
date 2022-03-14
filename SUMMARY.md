@@ -29,4 +29,5 @@
 
 * [Hackintosh Opinions](hackintosh-opinions/README.md)
   * [Olarila - Not Recommended](hackintosh-opinions/olarila-not-recommended.md)
-  * [Tips & Tricks](hackintosh-opinions/tips-and-tricks.md)
+  * [Hack Studio SFF](hackintosh-opinions/hack-studio-sff.md)
+  * [Tips & Tricks (WIP)](hackintosh-opinions/tips-and-tricks.md)
