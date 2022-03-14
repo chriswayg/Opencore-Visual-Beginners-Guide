@@ -8,7 +8,7 @@ description: Z690 miniITX, i9-12900K, RX 6900 XT, RAM 64GB, 1TB NVMe, Lian Li DA
 
 ### Comparison of Specifications
 
-### Mac Studio US$4,000
+### Mac Studio Ultra US$4,000
 
 [Mac Studio - Technical Specifications - Apple](https://www.apple.com/mac-studio/specs/)
 
@@ -24,7 +24,7 @@ description: Z690 miniITX, i9-12900K, RX 6900 XT, RAM 64GB, 1TB NVMe, Lian Li DA
 * PSU: 370 Watts
 * SFF: 4 liter case (20 cm x 20 cm base x 10 cm height)
 
-### Hack Studio US$3,500
+### Hack Studio Ultra US$3,500
 
 [Hack Studio - Saved Part List - PCPartPicker](https://pcpartpicker.com/user/chriswayg/saved/#view=YvRKqs)
 
@@ -88,9 +88,11 @@ The M1 scales almost linearly with doubling the CPU core count from M1 Max to M1
 
 * [Barefeats: M1 Max 16 versus Intel 16](https://barefeats.com/m1-max-16-vs-intel-16.html) The M1 Max does perform better in real world benchmarks than the raw Geekbench Metal scores suggest. With 80% scaling, the M1 Ultra with 64 cores should therefore be able to outperform the RX 6900 XT in some important applications.
 
-### Proposed Alder Lake SFF Hardware for a Hack Studio
+### Proposed Alder Lake SFF Hardware for a Hack Studio Ultra
 
-[Hack Studio - Saved Part List - PCPartPicker](https://pcpartpicker.com/user/chriswayg/saved/#view=YvRKqs) US$3,500
+[Hack Studio Ultra - PCPartPicker](https://pcpartpicker.com/user/chriswayg/saved/#view=YvRKqs) US$3,500
+
+See also: [Hack Studio Max - PCPartPicker](https://pcpartpicker.com/user/chriswayg/saved/#view=rhvjnQ) US$1,800
 
 * **MB: Z690 miniITX**
   * [ROG STRIX Z690-I GAMING WIFI mini ITX DDR5](https://rog.asus.com/motherboards/rog-strix/rog-strix-z690-i-gaming-wifi-model/)
