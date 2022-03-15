@@ -1,7 +1,3 @@
----
-description: Olarila - a commercialized BlackBox distro with unmaintainable SSDT/DSDT
----
-
 # Olarila - Not Recommended
 
 ## Olarila - a commercialized BlackBox distro with unmaintainable SSDT/DSDT

@@ -1,6 +1,14 @@
+---
+description: Copy this into a Markdown editor and verify each point.
+---
+
 # Hackintosh Checklist
 
 ## What's working?
+
+**Working:** check-mark. **Not Working:** bold.&#x20;
+
+**Not Tested:** leave as-is. **Not applicable:** Strikethrough or delete.&#x20;
 
 ### Desktop and General
 
@@ -46,7 +54,7 @@
 #### Audio
 
 * [ ] Audio out (see in _Audio MIDI Setup_)
-* [ ] Audio in&#x20;
+* [ ] Audio in
 * [ ] Frontpanel audio connectors
 * [ ] Audio over HDMI
 * [ ] Audio quality
@@ -79,6 +87,8 @@ Test with _Blackmagic Disk Speedtest_
 
 #### Sensors
 
+In HWMonitorSMC2
+
 * [ ] CPU
 * [ ] GPU
 * [ ] Battery
@@ -89,13 +99,14 @@ Test with _Blackmagic Disk Speedtest_
 
 * [ ] Option/Command correctly mapped in macOS
   * For PC Keyboards swap in: _System Preferences_ -> Keyboard -> Modifier Keys
-* [ ] Fn keys working
+  * Press _Spacebar_ and the key left of the Spacebar. This should show Spotlight
+* [ ] Fn keys working (Audio Volume keys, etc.)
 
 #### USB
 
-Check with USBToolBox / Hackintool
+Check with _USBToolBox_ or _Hackintool_ (shows connection speed)
 
-Test external drives with _Blackmagic Disk Speedtest_
+Test external drive speed with _AJA System Test Lite_
 
 * [ ] USB 2 ports
 * [ ] USB 2 on USB 3 ports
@@ -143,7 +154,7 @@ additional checks relevant for Notebooks including MacBooks with Legacy Patchers
 
 #### Audio
 
-* [ ] Internal Speakers&#x20;
+* [ ] Internal Speakers
 * [ ] Internal Microphone
 * [ ] 3.5 mm Jack Headphones
 * [ ] 3.5 mm Jack Microphone
@@ -172,36 +183,6 @@ additional checks relevant for Notebooks including MacBooks with Legacy Patchers
 * [ ] Touchpad basic functions
 * [ ] Touchpad Gestures
 
-### OpenCore Boot Key Combinations
 
-* [Mac startup key combinations](https://support.apple.com/en-us/HT201255).
-* Enable `KeySupport` & `PollAppleHotKeys` in _Config.plist_.
-* For PC keyboard: enable `KeySwap`.
-* Keys can be pressed after power on or when OpenCore Picker is shown.
-  * CMD+V — verbose mode.
-  * CMD+S — single user mode.
-  * CMD+R — boot into macOS recovery partition.
-  * CMD+OPT+P+R — reset NVRAM.
-  * OPT or ESC or Zero — at startup to show OpenCore Picker.
-  * CTRL+ENTER at highlighted boot picker to set default boot option.
 
-### Tools for Checking
-
-* Menu Bar SIP Detector: [menu bar app that displays the current status of SIP](https://github.com/ITzTravelInTime/MenuBarSIPDetector)
-* GLview: [OpenGL Extensions Viewer](http://www.realtech-vr.com/home/glview)
-* Metal benchmark: [Geekbench](https://www.geekbench.com)
-* Disk Speedtest: [‎Blackmagic Disk Speed Test](https://apps.apple.com/us/app/blackmagic-disk-speed-test/id425264550)
-* Battery checker: [coconutBattery](https://www.coconut-flavour.com/coconutbattery/) useful for Laptops
-* USB Port Mapper: [USBToolBox](https://github.com/USBToolBox/tool) or Hackintool
-* System Info: [Hackintool](https://github.com/headkaze/Hackintool)
-* IORegistryExplorer [IORegistryClone](https://github.com/khronokernel/IORegistryClone/blob/master/ioreg-302.zip)
-* CPU Torture Test: [Prime95](https://www.mersenne.org/download/)
-* CPU power usage monitoring: [Intel Power Gadget](https://www.intel.com/content/www/us/en/developer/articles/tool/power-gadget.html)
-* Hardware Monitor: [HWMonitor](https://github.com/RehabMan/OS-X-FakeSMC-kozlek) and [HWMonitorSMC2](https://github.com/CloverHackyColor/HWMonitorSMC2)
-
-### Links
-
-* [OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/)
-  * covers iGPU, Audio, Sleep, Power Management, USB mapping, NVRAM, Security, Battery, Multibooting, DRM, iMessage, etc.
-
-![](../.gitbook/assets/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
+[![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/) __ I make this checklist available under public domain [(CC0)](https://creativecommons.org/share-your-work/public-domain/cc0/)

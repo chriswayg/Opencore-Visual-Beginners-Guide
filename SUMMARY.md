@@ -8,7 +8,8 @@
 * [Install & Postinstall](step-by-step/install-postinstall.md)
   * [USB Port Mapping](step-by-step/install-postinstall/usb-port-mapping.md)
 * [Debug & Upgrade OpenCore](step-by-step/oc-auxiliary-tools-upgrade.md)
-* [Hackintosh Checklist](step-by-step/hackintosh-checklist.md)
+* [Hackintosh Checklist](step-by-step/hackintosh-checklist/README.md)
+  * [Checklist Tools](step-by-step/hackintosh-checklist/checklist-tools.md)
 
 ## 📙 Alternatives
 
