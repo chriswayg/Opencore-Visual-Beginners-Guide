@@ -8,39 +8,40 @@
 
 * [ ] Correct OS choices shown in OpenCore Menu/GUI
 * [ ] Keyboard shortcuts working (see details below in _OpenCore Boot Key Combinations_)
-  * CMD+V — verbose mode.
+  * CMD+V — verbose mode _(check KeySwap)_
 * [ ] NVRAM working: [Verifying if you have working NVRAM](https://dortania.github.io/OpenCore-Post-Install/misc/nvram.html#verifying-if-you-have-working-nvram)
   * Apple -> System Preferences -> Startup Disk (uses NVRAM).
 * [ ] Security (especially SIP) use _Menu Bar SIP Detector_
-* [ ] FileVault
-* [ ] Windows 10/Linux Boot
+* [ ] FileVault (if used)
+* [ ] Windows 10 and/or Linux Multi-Boot
 * [ ] Recovery (macOS) Boot
-* [ ] Serial Number: ensure that it does not exist elsewhere, [Check Apple Coverage](https://checkcoverage.apple.com/us/en/)
+* [ ] Serial Number: ensure that it does not exist elsewhere, [Check Apple Coverage](https://checkcoverage.apple.com/us/en/) _(and not uploaded to Github)_
 
 #### Display
 
 * [ ] Display via HDMI
 * [ ] Display via DisplayPort
 * [ ] Display via DVI
-* [ ] Resolution
+* [ ] Native Resolution
 * [ ] Refresh rates
 * [ ] Multimonitor displays
 
 #### Graphics Acceleration
 
 * [ ] dGPU dedicated GPU
-  * In _Terminal_: `gfxutil -f GFX0` or check in IORegistryExplorer
+  * In _Terminal_: `gfxutil -f GFX0` or check in _IORegistryExplorer_
 * [ ] iGPU internal GPU
-  * In _Terminal_: `gfxutil -f IGPU` or check in IORegistryExplorer
-* [ ] QE/CI (full acceleration requires both Quartz Extreme and Core Image)
+  * In _Terminal_: `gfxutil -f IGPU` or check in _IORegistryExplorer_
+* [ ] QE/CI _(full acceleration requires both Quartz Extreme and Core Image)_
   * Check for transparent menu bar and fast smooth UI.
-* [ ] VDA (Video Decode Acceleration framework)
-  * _Hackintool_ -> System -> System -> VDA Decoder (should show 'fully supported')
+* [ ] VDA _(Video Decode Acceleration framework)_
+  * _Hackintool -> System -> System -> VDA Decoder_ (should show '_fully supported_')
 * [ ] Metal
   * _System Information_ -> Graphics/Displays -> Metal: Supported
   * _GLView_
   * _Geekbench_ -> Compute -> Metal
 * [ ] Intel Quick Sync, H.264 & HEVC (H.265) hardware decoding/encoding
+* [ ] dGPU hardware acceleration
 
 #### Audio
 
