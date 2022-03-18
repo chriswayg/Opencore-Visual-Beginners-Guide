@@ -15,7 +15,7 @@ description: Checklist Tools, Boot Key Combinations, and Links
 * System Info: [Hackintool](https://github.com/headkaze/Hackintool)
 * IORegistryExplorer [IORegistryClone](https://github.com/khronokernel/IORegistryClone/blob/master/ioreg-302.zip)
 * CPU Torture Test: [Prime95](https://www.mersenne.org/download/)
-* CPU power usage monitoring: [Intel Power Gadget](https://www.intel.com/content/www/us/en/developer/articles/tool/power-gadget.html)
+* CPU monitoring: [Intel Power Gadget](https://www.intel.com/content/www/us/en/developer/articles/tool/power-gadget.html)
 * Hardware Monitor: [HWMonitorSMC2](https://github.com/CloverHackyColor/HWMonitorSMC2)
 
 ### OpenCore Boot Key Combinations

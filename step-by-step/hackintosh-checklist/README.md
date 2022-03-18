@@ -49,6 +49,7 @@ description: Copy this into a Markdown editor and verify each point.
   * _GLView_
   * _Geekbench_ -> Compute -> Metal
 * [ ] Intel Quick Sync, H.264 & HEVC (H.265) hardware decoding/encoding
+  * _Intel Power Gadget > GFX_ (green line) check while exporting H.264 from FCPX
 * [ ] dGPU hardware acceleration
 
 #### Audio
@@ -61,14 +62,16 @@ description: Copy this into a Markdown editor and verify each point.
 
 #### Sleep & Power
 
+Use _Energy Saver > Restore Defaults_
+
+* [ ] Check Hibernate Mode: `pmset -g | grep hibernatemode`
+* [ ] Shutdown (from Apple menu)
+* [ ] Restart (from Apple menu)
 * [ ] Manual Sleep (Apple menu -> Sleep)
+* [ ] [Press and hold power button for 1.5 seconds](https://support.apple.com/en-us/HT201236), select Sleep
 * [ ] Auto Sleep (_System Preferences_ -> Energy Saver)
 * [ ] Wake by keyboard
 * [ ] Wake by mouse/trackpad
-* [ ] Sleep by [Press and hold power button for 1.5 seconds](https://support.apple.com/en-us/HT201236)
-* [ ] Sleep/Wake (using both `hibernatemode` 0 and 25)
-* [ ] Shutdown (from Apple menu)
-* [ ] Restart (from Apple menu)
 
 #### CPU
 
@@ -79,7 +82,7 @@ description: Copy this into a Markdown editor and verify each point.
 
 #### Disk
 
-Test with _Blackmagic Disk Speedtest_
+Test with _AJA System Test Lite_
 
 * [ ] NVMe SSD (PCIe Gen3 or Gen4 speeds)
 * [ ] SATA SSD
@@ -87,11 +90,10 @@ Test with _Blackmagic Disk Speedtest_
 
 #### Sensors
 
-In HWMonitorSMC2
+Check with HWMonitorSMC2
 
 * [ ] CPU
 * [ ] GPU
-* [ ] Battery
 * [ ] SSD, NVMe, HD
 * [ ] Fans
 
@@ -140,7 +142,7 @@ Test external drive speed with _AJA System Test Lite_
 #### OS Features
 
 * [ ] iMessage, FaceTime, App Store, iTunes Store
-* [ ] DRM support (iTunes Movies, Apple TV+, Amazon Prime and Netflix, and others)
+* [ ] DRM support _(iTunes Movies, Apple TV+. Amazon Prime and Netflix, and others - test in Safari. Requires Polaris or newer GPU.)_
 
 ### Laptop Specific
 
