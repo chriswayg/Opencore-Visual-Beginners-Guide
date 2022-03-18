@@ -78,7 +78,7 @@ Ocasionally you may need to remove a kext (or driver) which is not needed any mo
 ### Upgrading OpenCore, Drivers and Resources
 
 * On the right side of the above shown dialog window, the relevant files to be upgraded should already be selected automatically in the OpenCore file table
-* On the right side of the dialog there is a new drop down menu to _Choose OpenCore Version:_ select "Latest Version", then "Get OpenCore", it will automatically update to the latest available release version, and it will intelligently adapt to the Config.plist parameters of that version.
+* On the same side there is also a new drop down menu to _Choose OpenCore Version:_ select _"Latest Version"_, then click _"Get OpenCore"._ It will automatically update to the latest available release version of OpenCore, and it will intelligently adapt to the Config.plist parameters of that version.
 * Click _Update OpenCore to the latest version_. This is optional for the current stable version of OpenCore, but is recommended if you are using the OpenCore DEV version.
 * Then press the _Start Sync_ button.
 
