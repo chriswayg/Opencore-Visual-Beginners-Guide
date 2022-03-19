@@ -6,6 +6,8 @@ description: (still a work in progress page - just a list of future topics)
 
 * How to stop all macOS Update / Upgrade notifications.
 * Site Search all Dortania Guides.
+  * For example in Google: `site:dortania.github.io XhciPortLimit`
+  * [site:dortania.github.io XhciPortLimit - Google Search](https://www.google.com/search?q=site%3Adortania.github.io+XhciPortLimit)
 * Search before Upgrade macOS: Links.
 * More ways to download macOS. MacRecoveryX.
 * Hackintosh Tools Evaluation 2022.

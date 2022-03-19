@@ -14,7 +14,7 @@ You may have never used the OpenCore UEFI Shell before. Here is a little Hackint
 
 You have access to the builtin _OpenShell.efi_ which is intended for fixing and troubleshooting. - Press the _space bar_ and then select _OpenShell_ from the OpenCore boot menu or the GUI:
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (4).png>)
 
 You will be greeted with a _Mapping table_ showing partitions named FS0, FS1, FS2, etc.&#x20;
 
@@ -34,7 +34,7 @@ In this example you can more easily find a USB drive partition (_FS0 and FS1_) b
 
 Next use the command `devtree -b` to look for the location of the EFI partition on the main macOS drive. As my screenshots come from within a Parallels VM, the device names are different than what will be displayed on a Hackintosh. Under Mojave-0 the first _FAT File System_ should be our EFI partition. The handle is `B7`.
 
-![](<../.gitbook/assets/image (1) (1) (1).png>)
+![](<../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 On a Hackintosh, you will likely see the name of the storage drive manufacturer, for example _Kingston_ or _WDC_, which will make the partition handles easier to locate.&#x20;
 
