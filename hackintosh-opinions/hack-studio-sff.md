@@ -65,21 +65,21 @@ In raw CPU performance the M1 Ultra is about 50% faster than the i9-12900K, whic
 #### Geekbench GPU Metal
 
 * [Metal Benchmarks - Geekbench Browser](https://browser.geekbench.com/metal-benchmarks)
-* [Mac13,2 - M1 Ultra](https://browser.geekbench.com/v5/compute/4425838)
+* [Geekbench Search - Geekbench Browser](https://browser.geekbench.com/search?k=v5\_compute\&page=3\&q=m1+ultra\&utf8=%E2%9C%93)
 * RX 6900 XT - 160187
-* M1 Ultra 64 Cores - 103162 (80% scaling)
+* M1 Ultra 64 Cores - 104000 (81% scaling)
 * RX 6600 XT - 83812
-* **M1 Ultra 48 Cores - 83714** (extrapolated)
+* **M1 Ultra 48 Cores - 91000** (94% scaling)
 * M1 Max 32 Cores - 64265
 
 #### Geekbench GPU OpenCl
 
 * [OpenCL Benchmarks - Geekbench Browser](https://browser.geekbench.com/opencl-benchmarks)
-* [Mac13,2 - M1 Ultra](https://browser.geekbench.com/v5/compute/4418592)
+* [Geekbench Search - Geekbench Browser](https://browser.geekbench.com/search?k=v5\_compute\&page=3\&q=m1+ultra\&utf8=%E2%9C%93)
 * RX 6900 XT - 169247
-* M1 Ultra 64 Cores - 85800 (76% scaling)
+* M1 Ultra 64 Cores - 86000 (76% scaling)
 * RX 6600 XT - 81741
-* **M1 Ultra 48 Cores** - **71175** (extrapolated)
+* **M1 Ultra 48 Cores** - **72000** (85% scaling)
 * M1 Max 32 Cores - 56550
 
 #### Benchmarks and scaling
@@ -127,6 +127,7 @@ An i7-12700 might be more suitable for this case with a 240 mm cooler. - If the 
 More real world benchmarks as they become available:
 
 * [M1 Ultra vs Intel & NVIDIA - Did Apple FAKE Performance?](https://www.youtube.com/watch?v=hQqtYqT-Me8)
+* [$4,000 M1 Ultra 48 Core Mac Studio: IN DEPTH Benchmark and Testing](https://www.youtube.com/watch?v=ZHSij9WREC4)
 
 
 
