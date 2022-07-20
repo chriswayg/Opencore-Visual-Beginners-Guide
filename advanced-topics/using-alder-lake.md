@@ -16,7 +16,7 @@ Essentially follow the [Desktop Comet Lake | OpenCore Install Guide](https://dor
 
 #### Motherboards
 
-Mostly Z690 and a few B660M, but no Hackintosh seen yet with H610 or H670. Gigabyte and Asus have been used in the great majority of observed systems. macOS on Alder Lake laptops is not possible, due to the unsupported iGPU.
+Mostly Z690 and a few B660M and H610, but no Hackintosh seen yet with H670. Gigabyte and Asus have been used in the great majority of observed systems. macOS on Alder Lake laptops is not possible, due to the unsupported iGPU.
 
 * Gigabyte Z690i Aorus Ultra DDR4 - Mini-ITX
 * Gigabyte Z690 UD DDR4 - ATX
@@ -35,12 +35,13 @@ Mostly Z690 and a few B660M, but no Hackintosh seen yet with H610 or H670. Gigab
 * ASRock Z690 Pro RS DDR4 - ATX
 * ASRock Z690 Steel Legend WiFi 6E DDr4 - ATX
 * ASRock B660M-HDV DDR4 - microATX
-* MSI PRO Z690-A DD5 - ATX
+* MSI PRO Z690-A DDR5 - ATX
+* MSI PRO H610M-B DDR4 - microATX
 
 #### CPUs actually used
 
-* i5-12400, i5-12400F
-* i5-12600K, i5 12600KF
+* i3-12100
+* i5-12400, i5-12400F, i5-12600K, i5 12600KF
 * i7-12700K, i7-12700KF
 * i9-12900K&#x20;
 
@@ -189,8 +190,9 @@ The kexts used are essentially the same as the ones used for Comet Lake:
 **Other common kexts used on Alder Lake:**
 
 * [`RestrictEvents.kext`](https://github.com/acidanthera/RestrictEvents) - Lilu Kernel extension for blocking unwanted processes causing compatibility issues on different hardware. - Is needed when enabling E-cores due to large core count and makes showing the proper CPU name possible.
-* [`CPUFriend.kext`](https://github.com/acidanthera/CPUFriend) - A Lilu plug-in for dynamic power management data injection. Used with `CpuFriendDataProvider.kext` which can be created according to the instructions here: [CPUFriend/Instructions](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md)
-  * Partial XCPM (XNU CPU Power Management) compatibility is available, but frequency vector tuning (through CPUFriend) will be [required](https://github.com/dortania/bugtracker/issues/190). _(Vit, 22-01-09)_
+* [`CPUFriend.kext`](https://github.com/acidanthera/CPUFriend) - A Lilu plug-in for dynamic power management data injection. Used with `CpuFriendDataProvider.kext` which can be created according to the instructions here: [CPUFriend/Instructions](https://github.com/acidanthera/CPUFriend/blob/master/Instructions.md). It is important to add this as without is the GeekBench score will be far below the normal performance of the CPU.
+  * Partial XCPM (XNU CPU Power Management) compatibility is available, but frequency vector tuning (through _CPUFriend_) will be [required](https://github.com/dortania/bugtracker/issues/190). _(Vit, 22-01-09)_
+  * related info here: [XCPM configuration has severe CPU limitations](https://github.com/dortania/bugtracker/issues/190)
 * An Ethernet kext. Commonly found on Z690:
   * ``[`LucyRTL8125Ethernet.kext`](https://github.com/Mieze/LucyRTL8125Ethernet) - A macOS driver for Realtek RTL8125 2.5GBit Ethernet Controllers.
 * [USBWakeFixup](https://github.com/osy/USBWakeFixup) is needed to fix keyboard wakeup support, but may cause [compatibility issues](https://github.com/osy/USBWakeFixup/issues/14) with Bluetooth. Works with SSDT-USBW.
@@ -281,7 +283,8 @@ I researched more in-depth about the specifics which might differ from a Comet L
 * [ASRock Z690 Pro RS with i5 12600k](https://www.reddit.com/r/hackintosh/comments/rps44y/asrock\_z690\_pro\_rs\_with\_i5\_12600k/)
 * [ASRock B660M-HDV + i5-12400 (RX570/GT710) (BigSur)](https://www.reddit.com/r/hackintosh/comments/sa6h01/asrock\_b660mhdv\_i512400\_rx570gt710\_bigsur/)
 * [Success: Asrock B660M-HDV & i5-12400F](https://www.reddit.com/r/hackintosh/comments/sa87ax/success\_asrock\_b660mhdv\_i512400f/)
-* [Z690 SFF, Asus Z690-i Strix ITX, Intel i7-12700k, AMD RX 6900 XT, 32GB G.Skill 6000Mhz DDR5, Meshlicious Case, Fully Water Cooled](https://www.reddit.com/r/hackintosh/comments/ucnsob/z690\_sff\_fully\_water\_cooled\_bone\_crusher\_asus/)
+* [Z690 SFF, Asus Z690-i Strix ITX, Intel i7-12700k, AMD RX 6900 XT, 32GB G.Skill 6000Mhz DDR5, Meshlicious Case](https://www.reddit.com/r/hackintosh/comments/ucnsob/z690\_sff\_fully\_water\_cooled\_bone\_crusher\_asus/)
+* [i3-12100 + MSI H610M-B + MSI Radeon RX5500XT](https://www.reddit.com/r/hackintosh/comments/ud4n59/succeed\_install\_macos\_monterey\_1231\_on\_i3\_12100/)
 
 #### Golden and User Builds on TM
 
@@ -318,8 +321,8 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 ### Search Links
 
 * To be able to see the various successes of Alder Lake  on _r/hackintosh_ enter the following in the search box for Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)``
-  * Another example with B660M:  [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
-* On TM search for: [Z690 User Builds](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)[ ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date)
+  * Another example with B660M:  [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)Also try H610.
+* On TM search for: [Z690 User Builds](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)[ ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date) (login required to search)
 * Or search for _Alder Lake_ for general info on each hackintosh site
 
 ## More Info
