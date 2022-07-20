@@ -127,7 +127,9 @@ Therefore in **BIOS > Advanced CPU Settings** configure accordingly:
 
 ### OpenCore Config.plist Configuration
 
-Use the latest version of [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases/), at least 0.7.7
+Use the latest version of [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases/), at least 0.8.2
+
+A starter Config.plist for Alder Lake can be found here: [GitHub - luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE: Basic EFI with Opencore for Intel Alder Lake Processors (12th Gen)](https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE)
 
 #### ACPI -> Add
 
@@ -279,16 +281,19 @@ I researched more in-depth about the specifics which might differ from a Comet L
 * [ASRock Z690 Pro RS with i5 12600k](https://www.reddit.com/r/hackintosh/comments/rps44y/asrock\_z690\_pro\_rs\_with\_i5\_12600k/)
 * [ASRock B660M-HDV + i5-12400 (RX570/GT710) (BigSur)](https://www.reddit.com/r/hackintosh/comments/sa6h01/asrock\_b660mhdv\_i512400\_rx570gt710\_bigsur/)
 * [Success: Asrock B660M-HDV & i5-12400F](https://www.reddit.com/r/hackintosh/comments/sa87ax/success\_asrock\_b660mhdv\_i512400f/)
+* [Z690 SFF, Asus Z690-i Strix ITX, Intel i7-12700k, AMD RX 6900 XT, 32GB G.Skill 6000Mhz DDR5, Meshlicious Case, Fully Water Cooled](https://www.reddit.com/r/hackintosh/comments/ucnsob/z690\_sff\_fully\_water\_cooled\_bone\_crusher\_asus/)
 
 #### Golden and User Builds on TM
 
 * Discussion: [Z690 Chipset and Alder Lake CPUs](https://www.tonymacx86.com/threads/z690-chipset-and-alder-lake-cpus.316618/)
-* Golden Build: [Gigabyte Z690 Aero G + i5-12600K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/gigabyte-z690-aero-g-i5-12600k-amd-rx-6800-xt.317179/)
-* Golden Build: [Asus Z690 ProArt Creator WiFi (Thunderbolt 4) + i7-12700K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/asus-z690-proart-creator-wifi-thunderbolt-4-i7-12700k-amd-rx-6800-xt.318311/)
+* Golden Build 1: [Gigabyte Z690 Aero G + i5-12600K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/gigabyte-z690-aero-g-i5-12600k-amd-rx-6800-xt.317179/)
+* Golden Build 2: [Asus Z690 ProArt Creator WiFi (Thunderbolt 4) + i7-12700K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/asus-z690-proart-creator-wifi-thunderbolt-4-i7-12700k-amd-rx-6800-xt.318311/)
+* Golden Build 3: [MSI PRO Z690 A DDR4 + i7-12700K + AMD RX 580](https://www.tonymacx86.com/threads/msi-pro-z690-a-ddr4-i7-12700k-amd-rx-580.319149/)
 * User Build: [ASRock Z690 Steel Legend (WiFi 6E)](https://www.tonymacx86.com/threads/asrock-z690-steel-legend-wifi-6e.317456/) nice guide including CPU ID explanation.
 * User Build: [Gigabyte Z690 ELITE AX D4 + i9-12900K + AMD RX 6600 XT](https://www.tonymacx86.com/threads/gigabyte-z690-elite-ax-d4-i9-12900k-amd-rx-6600-xt.318584/)
 * User Build: [ ](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/)Gigabyte Z690I AORUS ULTRA [Intel 12th Gen CPU i5-12400 (low cost)](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/) clean, minimal configuration.
 * User Build: [Gigabyte Z690 Gaming X DDR4 - i7 12700K - AMD RX 580](https://www.tonymacx86.com/threads/felbos-build-gigabyte-z690-gaming-x-ddr4-i7-12700k-amd-rx-580.319197/)
+* User Build: [Gigabyte Z690 Gaming X DDR4 - i7 12700KF - AMD RX 6600XT](https://www.tonymacx86.com/threads/gigabyte-z690-gaming-x-ddr4-i7-12700kf-amd-rx-6600xt.320434/)
 
 The _Golden Builds_ are well documented and would help those who buy the same motherboard and CPU. - Yet, I am not satisfied just copying a configuration, since I might buy different hardware and I should be able to understand every part of the Config to maintain it longterm. Also you should use the tools recommended on r/hackintosh.
 
@@ -314,7 +319,7 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 
 * To be able to see the various successes of Alder Lake  on _r/hackintosh_ enter the following in the search box for Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)``
   * Another example with B660M:  [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
-* On TM search for: [Z690 User Builds ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date)
+* On TM search for: [Z690 User Builds](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)[ ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date)
 * Or search for _Alder Lake_ for general info on each hackintosh site
 
 ## More Info
