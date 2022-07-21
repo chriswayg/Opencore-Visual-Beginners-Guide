@@ -1,5 +1,5 @@
 ---
-description: Low End dedicated GPUs for a Low End Hackintosh (Summe 2022)
+description: Low End dedicated GPUs for a Low End Hackintosh (Summer 2022)
 ---
 
 # Low End GPUs
