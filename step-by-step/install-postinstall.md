@@ -8,6 +8,7 @@
 ### Post Install
 
 * Generally follow [OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/). On a modern desktop system this is less involved than on a laptop, which requires considerably more work.
+* In the [Misc - Security](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#security) section ScanPolicy `0` allows all. To set up a more restrictive policy this could be changed to the OpenCore default `17760515` or a custom value which you can create with this nice online tool: [ScanPolicy Generator](https://oc-scanpolicy.vercel.app)
 * You can do [USB Port mapping on macOS](install-postinstall/usb-port-mapping.md) with _Hackintool_ which is a nice GUI alternative to [USBMap](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html).
 * Alternatively you can use _USBToolbox_ on Windows, which made USB port mapping easier. Follow the Guide for [USB Mapping on Windows](install-postinstall/usb-port-mapping.md). _(With this method there is no more need for_ [_USBInjectAll.kext_](https://dortania.github.io/OpenCore-Post-Install/usb/system-preparation.html#system-preparation) _or checking for_ [_ACPI renames_](https://dortania.github.io/OpenCore-Post-Install/usb/system-preparation.html#checking-what-renames-you-need)_)._
 * After everything works, debug settings should be changed back to normal.
