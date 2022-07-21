@@ -21,10 +21,18 @@
 
 ![](../images/sync\_success.png)
 
-* Once everything works you can switch back to the _release_ version by taking essentially the same steps:
-  * Select _Menu -> Edit -> OpenCore DEBUG_ - This will uncheck _OpenCore DEBUG_ in the Menu.
-  * Select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button.
-  * Press the _Start Sync_ button.
+#### Back to release version
+
+Once everything works, switch back to the _release_ version by taking essentially the same steps:
+
+* Select _Menu -> Edit -> OpenCore DEBUG_ - This will uncheck _OpenCore DEBUG_ in the Menu.
+* Select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button.
+* Press the _Start Sync_ button.
+* Also revert relevant debug settings in Config.plist:
+  * `AppleDebug = NO`
+  * `ApplePanic = NO`
+  * `Target = 0`
+* In order to remove any remaining effects of the debug session, also `Reset NVRAM` (then check the correct BIOS boot order and set your default boot volume in OpenCore)
 
 ## Upgrade OpenCore and Kexts
 
