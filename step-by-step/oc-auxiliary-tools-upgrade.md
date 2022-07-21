@@ -2,7 +2,10 @@
 
 ## Switch to the Debug Version of OpenCore
 
+
+
 * Launch OCAuxiliaryTools and open the relevant Config.plist.
+* Modify the Config.plist debug settings as described here: [OpenCore Debugging | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html)
 
 ![](../images/ocat\_kexts.png)
 
