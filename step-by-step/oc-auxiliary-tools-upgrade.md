@@ -8,9 +8,9 @@
 
 * If you encounter problems during booting, you should utilize the _debug_ version of OpenCore. As explained previously in the _Misc_ section, make sure you have activated debugging and then _Select Menu -> Edit -> OpenCore DEBUG_
 
-![](../images/menu\_debug.png)
+![](<../.gitbook/assets/image (3).png>)
 
-* Next, select _Menu -> Edit -> Synchronize OC Main Programn_ or click the _Sync OC main program_ button.
+* Next, select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button.
 
 ![](../images/sync\_debug.png)
 
@@ -20,7 +20,7 @@
 
 * Once everything works you can switch back to the _release_ version by taking essentially the same steps:
   * Select _Menu -> Edit -> OpenCore DEBUG_ - This will uncheck _OpenCore DEBUG_ in the Menu.
-  * Select _Menu -> Edit -> Synchronize OC Main Programn_ or click the _Sync OC main program_ button.
+  * Select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button.
   * Press the _Start Sync_ button.
 
 ## Upgrade OpenCore and Kexts
@@ -42,7 +42,7 @@ It is recommended to perform the upgrade first on a USB-stick and then transfer 
 
 ![](../images/backup\_efi.png)
 
-* Select _Menu -> Edit -> Sync OC Main Program_. - If your Config.plist is outdated, you should see some OC Validate warnings indicated by a red exclamation mark on the OC Validate button.
+* Select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button. - If your Config.plist is outdated, you should see some OC Validate warnings indicated by a red exclamation mark on the OC Validate button.
 
 ![](../images/upgrade\_load\_config.png)
 
@@ -64,7 +64,7 @@ It is recommended to perform the upgrade first on a USB-stick and then transfer 
 
 Ocasionally you may need to remove a kext (or driver) which is not needed any more for the newest version of OpenCore or which has been replaced with another. Deleting kexts in the _Kernel -> Add_ section will remove them from the Config.plist, but not from the disk. Since _OCAuxiliaryTools_ automatically syncs changes on disk with the kext list in Config.plist, it is easier to just delete them from the disk. From the _Kernel - Add_ section select _Menu -> File -> Browse_ to show your current kexts in the Finder. Then delete any outdated kext.
 
-* Next, select _Menu -> Edit -> Synchronize OC Main Programn_ or click the _Sync OC main program_ button.
+* Next, select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button.
 
 ![](../images/upgrade\_open\_sync.png)
 
@@ -86,7 +86,7 @@ Ocasionally you may need to remove a kext (or driver) which is not needed any mo
 
 *   If you check back in the _Sync_ window, all OpenCore files should now be marked green.
 
-    ![](../images/upgrade\_complete.png)
+    <img src="../images/upgrade_complete.png" alt="" data-size="original">
 
 ### NOTES
 

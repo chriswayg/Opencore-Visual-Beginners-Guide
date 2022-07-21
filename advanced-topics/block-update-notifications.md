@@ -77,7 +77,7 @@ This Notification has been appearing on many different versions of macOS even af
 
 * System _Preferences > Software Updates > Advanced_ activate the items you wish to update
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (3) (1).png>)
 
 #### Reenable the Firewall Rule blocking Software Updates
 
