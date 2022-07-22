@@ -31,6 +31,7 @@ description: Miscellaneous Hackintosh Tips & Tricks and ideas (still a work in p
 #### Other Tips & Tricks Topics (miscellaneous ideas)
 
 * Hackintosh Tools Evaluation 2022
+* Guide for Upgrading macOS (minor point upgrades and major version upgrades)
 * Boot Variables for macOS
 * Clone USB drive / SSD drive together with EFI (CCC & Script or Super Duper & Script)
 * Semi-Automated testing script of a finished/upgraded hackintosh.
