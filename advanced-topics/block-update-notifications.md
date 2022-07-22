@@ -18,7 +18,7 @@ If you have previously used _Lulu_ or are using the _Little Snitch_ firewall, yo
 
 The obvious first step is to completely disable all updates in _System Preferences_, but surprisingly this alone does not stop the clickable notifications.
 
-![](<../.gitbook/assets/image (8) (1).png>)
+![](<../.gitbook/assets/image (1) (2).png>)
 
 #### Updates Ready to Install - still appears
 
@@ -54,7 +54,7 @@ This Notification has been appearing on many different versions of macOS even af
 
 * In System _Preferences > Software Updates > Advanced_ - make sure that all software update settings are set to disabled
 
-![](<../.gitbook/assets/image (12).png>)
+![](<../.gitbook/assets/image (1) (3).png>)
 
 #### Wait for the timeout, you should see:
 
@@ -90,7 +90,7 @@ This Notification has been appearing on many different versions of macOS even af
 
 * System _Preferences > Software Updates > Advanced_ deactivate all automatic updates again
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (12).png>)
 
 Note: this method may still not be idiot proof if a user uses System Preferences directly: I have seen the _Monterey 12.3 Software Update_ actually re-appear inside System Preferences after a while in spite of software updates being blocked by the firewall. This may be due to initial caching of the update information. - If you know of ways to make it even more idiot proof, please let me know in the comments.
 

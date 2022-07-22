@@ -23,8 +23,8 @@
 * [BIOS Settings Explained](advanced-topics/bios-settings-explained.md)
 * [OpenCore UEFI Shell](advanced-topics/opencore-uefi-shell.md)
   * [acpiview - command](advanced-topics/opencore-uefi-shell/acpiview.md)
-* [Multi-Boot Options](advanced-topics/multi-boot-options/README.md)
-  * [Create rEFInd BOOTer](advanced-topics/multi-boot-options/create-refind-booter.md)
+* [Dual-Boot Options](advanced-topics/dual-boot-options/README.md)
+  * [Create rEFInd BOOTer](advanced-topics/dual-boot-options/create-refind-booter.md)
 * [Block Update Notifications](advanced-topics/block-update-notifications.md)
 * [Low End GPUs](advanced-topics/low-end-gpus.md)
 
