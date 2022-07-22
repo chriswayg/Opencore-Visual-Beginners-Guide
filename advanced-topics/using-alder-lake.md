@@ -308,6 +308,7 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 * [kreactnative/Z690-12900K-RX6600XT-DDR5-Monterey: Hackintosh EFI For 12900K Gigabyte Z690 Aorus Pro](https://github.com/kreactnative/Z690-12900K-RX6600XT-DDR5-Monterey)
 * [H3C4T0M8/Hackintosh-Gigabyte-z690-UD-DDR4-OpenCore](https://github.com/H3C4T0M8/Hackintosh-Gigabyte-z690-UD-DDR4-OpenCore)
 * [jiangyurui/ROG-STRIX-Z690-A-GAMING-WIFI-HACKINTOSH-BIOS](https://github.com/jiangyurui/ROG-STRIX-Z690-A-GAMING-WIFI-HACKINTOSH-BIOS)
+* [Juan-VC/Hackintosh-ASUS-Z690-P-WIFI](https://github.com/Juan-VC/Hackintosh-ASUS-Z690-P-WIFI)
 
 ### hackintosh-forum.de
 
