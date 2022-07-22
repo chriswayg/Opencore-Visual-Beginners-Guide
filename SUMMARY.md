@@ -7,7 +7,8 @@
 * [Create macOS Installer - OCLP](step-by-step/create-macos-installer-using-oclp.md)
 * [Install & Postinstall](step-by-step/install-postinstall.md)
   * [USB Port Mapping](step-by-step/install-postinstall/usb-port-mapping.md)
-* [Debug & Upgrade OpenCore](step-by-step/oc-auxiliary-tools-upgrade.md)
+* [Use Debug Versions](step-by-step/oc-auxiliary-tools-debug.md)
+* [Upgrade OpenCore](step-by-step/oc-auxiliary-tools-upgrade.md)
 * [Hackintosh Checklist](step-by-step/hackintosh-checklist/README.md)
   * [Checklist Tools](step-by-step/hackintosh-checklist/checklist-tools.md)
 
