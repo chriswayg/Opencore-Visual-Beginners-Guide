@@ -1,5 +1,5 @@
 ---
-description: (still a work in progress)
+description: Miscellaneous Hackintosh Tips & Tricks and ideas (still a work in progress)
 ---
 
 # Tips & Tricks (WIP)
@@ -19,15 +19,16 @@ description: (still a work in progress)
 * [How to download macOS from Apple's official download locations (3 methods) : hackintosh](https://www.reddit.com/r/hackintosh/comments/efjy5g/how\_to\_download\_macos\_from\_apples\_official/)
 * [MacRecoveryX](https://github.com/AngeloAvv/MacRecoveryX)
 
-#### Other Tips & Tricks Topics
+#### Other Tips & Tricks Topics (miscellaneous ideas)
 
 * Hackintosh Tools Evaluation 2022
-* Beginners should avoid...
 * Boot Variables for macOS
 * Clone USB drive / SSD drive together with EFI (CCC & Script or Super Duper & Script)
-  * test with script
 * Semi-Automated testing script of a finished/upgraded hackintosh.
-* Hackintosh, anonymous CC Credit Card for adding a payment methods (?!)
+* Windows or Linux version of the Beginners Guide
+* Automated Linux hardware analysis tool for Hackintosh compatibility checking
+* Anonymous CC Credit Card for adding a payment method to AppleID (?!)
+* Beginners should avoid...
 * Virtualization notes. Proxmox etc.
 
 ![](../images/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
