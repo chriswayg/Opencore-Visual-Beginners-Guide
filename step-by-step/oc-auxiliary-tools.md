@@ -12,7 +12,7 @@ This guide uses specific [example 10th Gen Intel hardware](https://chriswayg.git
 
 * Select _Menu -> Edit -> Database_ or click the _Database_ button
 
-![](../images/menu\_database.png)
+![Edit Menu](<../.gitbook/assets/image (8).png>)
 
 * Check which [Platform Info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo) is relevant for your hardware. For this example we will use `iMac20,1`
 

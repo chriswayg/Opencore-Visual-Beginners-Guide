@@ -18,7 +18,7 @@ If you have previously used _Lulu_ or are using the _Little Snitch_ firewall, yo
 
 The obvious first step is to completely disable all updates in _System Preferences_, but surprisingly this alone does not stop the clickable notifications.
 
-![](<../.gitbook/assets/image (8).png>)
+![](<../.gitbook/assets/image (8) (1).png>)
 
 #### Updates Ready to Install - still appears
 
@@ -64,7 +64,7 @@ This Notification has been appearing on many different versions of macOS even af
 
 #### Allow most apps (minimizes unnecessary firewall prompts)
 
-![](<../.gitbook/assets/image (9).png>)
+![](<../.gitbook/assets/image (9) (1).png>)
 
 #### Manually Check for App Updates and/or macOS Updates
 
