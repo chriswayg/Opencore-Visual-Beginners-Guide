@@ -19,6 +19,15 @@ description: Miscellaneous Hackintosh Tips & Tricks and ideas (still a work in p
 * [How to download macOS from Apple's official download locations (3 methods) : hackintosh](https://www.reddit.com/r/hackintosh/comments/efjy5g/how\_to\_download\_macos\_from\_apples\_official/)
 * [MacRecoveryX](https://github.com/AngeloAvv/MacRecoveryX)
 
+#### Add OpenCore version to Config.plist
+
+* Add the OpenCore version inside Config.plist as a comment
+* This will facilitate keeping track of different versions of EFIs, especially since the OpenCore version cannot be seen inside a backed up EFI folder
+* It should also help during upgrades when looking for differences between the versions
+* Disadvantage is that the version number cannot be automatically updated
+
+![](<../.gitbook/assets/image (1).png>)
+
 #### Other Tips & Tricks Topics (miscellaneous ideas)
 
 * Hackintosh Tools Evaluation 2022

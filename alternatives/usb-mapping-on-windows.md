@@ -16,7 +16,7 @@ Get USBToolbox from [Releases · USBToolBox/tool](https://github.com/USBToolBox/
 
 Launch `USBToolBox/dist/Windows.exe` and you will see the following terminal command window:
 
-![USBToolBox Main Menu](<../.gitbook/assets/image (1) (1).png>)
+![USBToolBox Main Menu](<../.gitbook/assets/image (1) (1) (1).png>)
 
 ### Discover Ports
 

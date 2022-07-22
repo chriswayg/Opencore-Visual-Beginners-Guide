@@ -1,6 +1,6 @@
 # Dual-Boot Options
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 ## How to dual-boot macOS and Windows  without affecting Windows?
 

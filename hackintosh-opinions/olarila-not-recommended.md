@@ -10,7 +10,7 @@ _It's mainly because Olarila will try to draw you into their commercialized ecos
 
 The distinguishing mark of the _Olarila_ method though, is their huge, all-in-one SSDT or DSDT. For example, in the preconfigured, undocumented Coffee Lake `SSDT-OLARILA.aml` there are hundreds of lines of code additional to what is found in the four well documented SSDTs which are recommended by the [Desktop Coffee Lake | Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#acpi). Additionally the modular approach of the Dortania guide is far superior with regards to troubleshooting and maintenance, than a huge blob of code in one bin binary file which is barely documented when disassembled.
 
-![Disassembled SSDT-OLARILA.aml](<../.gitbook/assets/image (1) (1) (1).png>)
+![Disassembled SSDT-OLARILA.aml](<../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 **How do they commercialize their methodology?** By bombarding every user with recommendations for US$30 or US$50 donations for gaining specialized support and individualized DSDT editing, which can only be done by very few highly experienced people, like the main Olarila admin:
 
