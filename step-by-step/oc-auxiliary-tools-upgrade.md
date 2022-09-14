@@ -27,11 +27,11 @@ It is recommended to perform the upgrade first on a USB-stick and then transfer 
 
 ![](../images/upgrade\_initial\_warnings.png)
 
-* Close the _OC Validate_ dialog. Because the _Save_ button is grayed out, make and reverse a change by (for example) clicking twice on _ACPI -> Quirks -> NormalizeHeaders_ so that the _Save_ button will turn blue. Now click the _Save_ button, which will update the Config.plist and get rid of all or most of the shown errors.
+* Close the _OC Validate_ dialog. Click the _Save_ button, which will update the Config.plist and get rid of all or most of the shown errors.
 
 ![](../images/upgrade\_remaining\_warnings.png)
 
-* Correct any remaining erros as indicated by OC Validate. The OC Validate button will change from red into a checkmark. This should be sufficient for updating your Config.plist.
+* Correct any remaining errors as indicated by OC Validate. The OC Validate button will change from red into a checkmark. This should be sufficient for updating your Config.plist.
 
 ![](../images/upgrade\_no\_warnings.png)
 
@@ -39,7 +39,7 @@ It is recommended to perform the upgrade first on a USB-stick and then transfer 
 
 ### Upgrading Kexts
 
-Ocasionally you may need to remove a kext (or driver) which is not needed any more for the newest version of OpenCore or which has been replaced with another. Deleting kexts in the _Kernel -> Add_ section will remove them from the Config.plist, but not from the disk. Since _OCAuxiliaryTools_ automatically syncs changes on disk with the kext list in Config.plist, it is easier to just delete them from the disk. From the _Kernel - Add_ section select _Menu -> File -> Browse_ to show your current kexts in the Finder. Then delete any outdated kext.
+Occasionally you may need to remove a kext (or driver) which is not needed any more for the newest version of OpenCore or which has been replaced with another. Deleting kexts in the _Kernel -> Add_ section will remove them from the Config.plist, but not from the disk. Since _OCAuxiliaryTools_ automatically syncs changes on disk with the kext list in Config.plist, it is easier to just delete them from the disk. From the _Kernel - Add_ section select _Menu -> File -> Browse_ to show your current kexts in the Finder. Then delete any outdated kext.
 
 * Next, select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button.
 
@@ -50,13 +50,12 @@ Ocasionally you may need to remove a kext (or driver) which is not needed any mo
 * Click on _Check for Kexts Updates_. This will download the latest available kexts.
 * Click on _Update Kexts_, which will update the kexts in your EFI folder.
 
-![](../images/upgrade\_kexts.png)
+![(this screenshot does not yet show the Choose OpenCore Version Menu)](../images/upgrade\_kexts.png)
 
 ### Upgrading OpenCore, Drivers and Resources
 
 * On the right side of the above shown dialog window, the relevant files to be upgraded should already be selected automatically in the OpenCore file table
-* On the same side there is also a new drop down menu to _Choose OpenCore Version:_ select _"Latest Version"_, then click _"Get OpenCore"._ It will automatically update to the latest available release version of OpenCore, and it will intelligently adapt to the Config.plist parameters of that version.
-* Click _Update OpenCore to the latest version_. This is optional for the current stable version of OpenCore, but is recommended if you are using the OpenCore DEV version.
+* On the same side there is a new drop down menu to _Choose OpenCore Version:_ select _"Latest Version"_, then click _"Get OpenCore"._ It will automatically update to the latest available release version of OpenCore, and it will intelligently adapt to the Config.plist parameters of that version.
 * Then press the _Start Sync_ button.
 
 ![](../images/upgrade\_success.png)
