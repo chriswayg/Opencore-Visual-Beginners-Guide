@@ -44,12 +44,13 @@ description: Copy this into a Markdown editor and verify each point.
   * Check for transparent menu bar and fast smooth UI.
 * [ ] VDA _(Video Decode Acceleration framework)_
   * _Hackintool -> System -> System -> VDA Decoder_ (should show '_fully supported_')
+  * Or use `VDADecoderChecker`
 * [ ] Metal
   * _System Information_ -> Graphics/Displays -> Metal: Supported
   * _GLView_
   * _Geekbench_ -> Compute -> Metal
 * [ ] Intel Quick Sync, H.264 & HEVC (H.265) hardware decoding/encoding
-  * _Intel Power Gadget > GFX_ (green line) check while exporting H.264 from FCPX
+  * _Intel Power Gadget > GFX_ (green line) check while exporting H.264 from FCP-X
 * [ ] dGPU hardware acceleration
 
 #### Audio
@@ -64,7 +65,7 @@ description: Copy this into a Markdown editor and verify each point.
 
 Use _Energy Saver > Restore Defaults_
 
-* [ ] Check Hibernate Mode: `pmset -g | grep hibernatemode`
+* [ ] Check Hibernate Mode (desktop `0`, laptop `3`): `pmset -g | grep hibernatemode`
 * [ ] Shutdown (from Apple menu)
 * [ ] Restart (from Apple menu)
 * [ ] Manual Sleep (Apple menu -> Sleep)
@@ -142,7 +143,7 @@ Test external drive speed with _AJA System Test Lite_
 #### OS Features
 
 * [ ] iMessage, FaceTime, App Store, iTunes Store
-* [ ] DRM support _(iTunes Movies, Apple TV+. Amazon Prime and Netflix, and others - test in Safari. Requires Polaris or newer GPU.)_
+* [ ] DRM support _(iTunes Movies, Apple TV+. Amazon Prime and Netflix, and others - test in Safari. Requires AMD Polaris or newer GPU.)_
 
 ### Laptop Specific
 
