@@ -17,6 +17,7 @@ description: Checklist Tools, Boot Key Combinations, and Links
 * CPU Torture Test: [Prime95](https://www.mersenne.org/download/)
 * CPU monitoring: [Intel Power Gadget](https://www.intel.com/content/www/us/en/developer/articles/tool/power-gadget.html)
 * Hardware Monitor: [HWMonitorSMC2](https://github.com/CloverHackyColor/HWMonitorSMC2)
+* Hardware Decode Acceleration: [VDADecoderChecker](https://i.applelife.ru/2019/05/451893\_10.12\_VDADecoderChecker.zip)
 
 ### OpenCore Boot Key Combinations
 
