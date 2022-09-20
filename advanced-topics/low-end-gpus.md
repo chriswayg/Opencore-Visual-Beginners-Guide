@@ -10,7 +10,7 @@ Sometimes people need a dedicated GPU for a really low-end system which is CPU c
 
 The following can be found on eBay which are listed as compatible in the [GPU Buyers Guide](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html#polaris-10-and-20-series):
 
-### Lowest End Nvidia (under US$35)
+### Lowest End Nvidia (under US$30)
 
 If you have Haswell (Intel 4th Gen) HD Graphics or newer, just use the iGPU, as these Nvidia cards are actually slower. These cards will only work up to Big Sur, unless additional patches are installed with OCLP. Also certain kinds of DRM, which depend on hardware acceleration, will not be available.
 
@@ -18,7 +18,7 @@ If you have Haswell (Intel 4th Gen) HD Graphics or newer, just use the iGPU, as 
 * [GT 710 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_nkw=gt+710&\_sacat=27386&\_sop=12&\_udhi=35\&rt=nc\&LH\_BIN=1) (must be GK 208)
 * [K600 Quadro in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=p2334524.m570.l1311&\_nkw=k600+quadro&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1&\_odkw=RX+560&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=35)
 
-### Lowest End AMD (under US$50)
+### Lowest End AMD (under US$40)
 
 These cards should work up to Monterey. Certain kinds of DRM, which depend on hardware acceleration, will not be available. The [R7 cards](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html) , which will need a Fake ID, have not been used as commonly in hackintosh systems and may therefore have unforeseen issues.
 
@@ -43,7 +43,7 @@ A correct Baffin-core RX 550 can be tricky to find, as often it is not easy to a
   * [ASUS PH-RX550-4G-M7](https://www.asus.com/Motherboards-Components/Graphics-Cards/All-series/PH-RX550-4G-M7)
   * MSI - Looks like all are Lexa.
 
-### Polaris under US$100
+### Polaris under US$80
 
 Prices for the RX 560 have become much more attractive in recent months, which makes them the best overall choice for low cost cards.
 
@@ -51,7 +51,7 @@ Prices for the RX 560 have become much more attractive in recent months, which m
 * [RX 550 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=m570.l1313&\_nkw=RX+550&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1&\_odkw=RX+460&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=100) (must be Baffin)
 * [RX 560 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_nkw=RX%20560&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1\&LH\_BIN=1&\_sop=12&\_udhi=100\&rt=nc)
 
-### Polaris under US$150
+### Polaris under US$100
 
 Prices for RX 570/580 have also come down to more attractive levels providing about twice the performance of the RX 560
 
