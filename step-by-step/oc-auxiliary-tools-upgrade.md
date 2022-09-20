@@ -42,27 +42,35 @@ It is recommended to perform the upgrade first on a USB-stick and then transfer 
 Occasionally you may need to remove a kext (or driver) which is not needed any more for the newest version of OpenCore or which has been replaced with another. Deleting kexts in the _Kernel -> Add_ section will remove them from the Config.plist, but not from the disk. Since _OCAuxiliaryTools_ automatically syncs changes on disk with the kext list in Config.plist, it is easier to just delete them from the disk. From the _Kernel - Add_ section select _Menu -> File -> Browse_ to show your current kexts in the Finder. Then delete any outdated kext.
 
 * Next, select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button.
-
-![](../images/upgrade\_open\_sync.png)
-
 * In this dialog window we see Kexts on the left and OpenCore files on the right with indicators which files will need to be updated: Green = up-to-date, Red = outdated, Gray = link to repo is missing. You can add a repo link for kexts in _Settings -> Kext Update URL -> \[+]_.
+
+<figure><img src="../.gitbook/assets/Screen Shot 2022-09-20 at 6.25.11 PM.png" alt=""><figcaption><p>three kexts need to be updated in this example</p></figcaption></figure>
+
+* Click on the _Settings_ Button_,_ referring to: _`The way to get the download link for Kext upgrade`_ and ensure that `Accessing the GitHub API` is checked, as shown below.
+
+<figure><img src="../.gitbook/assets/Screen Shot 2022-09-20 at 6.05.25 PM (1).png" alt=""><figcaption></figcaption></figure>
+
 * We will start with the kexts. Therefore, click _Select All_ or individually mark the checkboxes for kexts you want to update (otherwise they will be ignored).
 * Click on _Check for Kexts Updates_. This will download the latest available kexts.
 * Click on _Update Kexts_, which will update the kexts in your EFI folder.
 
-![(this screenshot does not yet show the Choose OpenCore Version Menu)](../images/upgrade\_kexts.png)
+<figure><img src="../.gitbook/assets/Screen Shot 2022-09-20 at 6.35.23 PM.png" alt=""><figcaption><p>kexts fully updated to the current stable versions</p></figcaption></figure>
+
+* If you want to use the develeopment versions of the kexts instead, select the DEV checkbox first.&#x20;
 
 ### Upgrading OpenCore, Drivers and Resources
 
 * On the right side of the above shown dialog window, the relevant files to be upgraded should already be selected automatically in the OpenCore file table
-* On the same side there is a new drop down menu to _Choose OpenCore Version:_ select _"Latest Version"_, then click _"Get OpenCore"._ It will automatically update to the latest available release version of OpenCore, and it will intelligently adapt to the Config.plist parameters of that version.
+* On the same side there is a drop down menu to _Choose OpenCore Version:_ select _"Latest Version"_, then click _"Get OpenCore"._ It will automatically update to the latest available release version of OpenCore, and it will intelligently adapt to the Config.plist parameters of that version.
 * Then press the _Start Sync_ button.
 
-![](../images/upgrade\_success.png)
+<figure><img src="../.gitbook/assets/Screen Shot 2022-09-20 at 6.42.50 PM.png" alt=""><figcaption></figcaption></figure>
 
 *   If you check back in the _Sync_ window, all OpenCore files should now be marked green.
 
-    <img src="../images/upgrade_complete.png" alt="" data-size="original">
+
+
+    <figure><img src="../images/upgrade_complete.png" alt=""><figcaption></figcaption></figure>
 
 ### NOTES
 
