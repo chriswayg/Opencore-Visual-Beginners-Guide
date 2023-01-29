@@ -8,7 +8,7 @@ description: Some prior hackintosh experience is recommended
 
 ![](../images/Intel-Alder-Lake-Desktop-CPU.png)
 
-What can we learn from existing successful OpenCore Alder Lake desktop builds? I looked at almost every documented system on the major English and German hackintosh sites. In this article I will share the key points that I noticed when looking at these builds, documentation and configurations. This is just a very preliminary guide, since Dortania does not have an _OpenCore Alder Lake Guide_ yet.&#x20;
+What can we learn from existing successful OpenCore Alder Lake desktop builds? I looked at almost every documented system on the major English and German hackintosh sites. In this article I will share the key points that I noticed when looking at these builds, documentation and configurations. This is just a very preliminary guide, since Dortania does not have an _OpenCore Alder Lake Guide_ yet.
 
 Essentially follow the [Desktop Comet Lake | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html) and incorporate the insights listed below. As always, do not just copy an EFI which you might find in other people's documentation. It may not work, is hard to maintain and is against the rules of [r/hackintosh](https://www.reddit.com/r/hackintosh/). Create your own EFI based on the guide.
 
@@ -43,7 +43,7 @@ Mostly Z690 and a few B660M and H610, but no Hackintosh seen yet with H670. Giga
 * i3-12100
 * i5-12400, i5-12400F, i5-12600K, i5 12600KF
 * i7-12700K, i7-12700KF
-* i9-12900K&#x20;
+* i9-12900K
 
 All currently available Alder Lake Core-i-x-12xxx CPUs should work.
 
@@ -72,14 +72,14 @@ The only two recommended SMBIOS on Alder Lake - `MacPro7,1` and `iMacPro1,1` - r
 * WD Black SN750 SE NVMe SSD 1TB
 * WD Black SN750 NVMe SSD 500GB
 * WD Blue SN550 NVMe SSD 1TB
-* PNY CS1031 256GB&#x20;
+* PNY CS1031 256GB
 
 Some Samsung NVMe drives may still have problems: [SSD boot time tests · dortania](https://github.com/dortania/bugtracker/issues/192).
 
 #### Wifi Cards actually used
 
 * Fenvi FV-T919 WiFi / Bluetooth Wireless Card
-* Fenvi M.2 NGFF BCM94360NG Wifi / Bluetooth 4.0 Network Card&#x20;
+* Fenvi M.2 NGFF BCM94360NG Wifi / Bluetooth 4.0 Network Card
 
 The recommendations from the [Wireless Buyers Guide](https://dortania.github.io/Wireless-Buyers-Guide/) continue to apply.
 
@@ -148,7 +148,7 @@ Very similar to Comet Lake, except for the additional _SSDT-PLUG-ALT.aml_
 * `SSDT-SBUS.aml` (optional)
 * `SSDT-USBW.aml` (optional) Works with USBWakeFixup.kext to enable proper wake from sleep.
 * `SSDT-DMAC.aml` (occasionally used) As on a real MacPro 7,1 : "the DMAC Direct Memory Access Controller provides an interface between the bus and the input-output devices , share the bus with the processor to make the data transfer, speedups the memory operations by bypassing the involvement of the CPU ".
-* `SSDT-HPET.aml` (occasionally used) - Patches out IRQ conflicts. Check:  [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > HPET).
+* `SSDT-HPET.aml` (occasionally used) - Patches out IRQ conflicts. Check: [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > HPET).
 * `SSDT-DTPG.aml` (occasionally used) - Implements DTGP method that is needed by other SSDTs. Related to Thunderbolt.
 
 #### ACPI -> Patch (optional)
@@ -166,8 +166,8 @@ TableSignature  OemTableId        TableLength  Find              Replace        
   * See: [fix wake from sleep issue on _**Gigabyte** Z690_ boards](https://www.tonymacx86.com/threads/z690-chipset-and-alder-lake-cpus.316618/page-132#post-2291256).
   * _Change ADBG to XDBG_ is related to an [ACPI error](https://www.tonymacx86.com/threads/gigabyte-z690-aero-g-i5-12600k-amd-rx-6800-xt.317179/page-25#post-2291723) on **Gigabyte** Z690 boards.
   * _Change MC\_\_ to MCHC_ is also used on **ASUS** Z690 boards.
-* _HPET \_CRS to XCRS Rename_, _RTC IRQ 8 Patch_, _TIMR IRQ 0 Patch._ Check:  [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > HPET).
-* _Fix RTC \_STA bug_ (seems to be an old fix previously used in Clover which should not be necessary in OpenCore). Try instead:  [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > AWAC)
+* _HPET \_CRS to XCRS Rename_, _RTC IRQ 8 Patch_, _TIMR IRQ 0 Patch._ Check: [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > HPET).
+* _Fix RTC \_STA bug_ (seems to be an old fix previously used in Clover which should not be necessary in OpenCore). Try instead: [SSDTs: The easy way](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) (SSDTTime > AWAC)
 
 #### Booter -> Quirks
 
@@ -194,7 +194,7 @@ The kexts used are essentially the same as the ones used for Comet Lake:
   * Partial XCPM (XNU CPU Power Management) compatibility is available, but frequency vector tuning (through _CPUFriend_) will be [required](https://github.com/dortania/bugtracker/issues/190). _(Vit, 22-01-09)_
   * related info here: [XCPM configuration has severe CPU limitations](https://github.com/dortania/bugtracker/issues/190)
 * An Ethernet kext. Commonly found on Z690:
-  * ``[`LucyRTL8125Ethernet.kext`](https://github.com/Mieze/LucyRTL8125Ethernet) - A macOS driver for Realtek RTL8125 2.5GBit Ethernet Controllers.
+  * \`\`[`LucyRTL8125Ethernet.kext`](https://github.com/Mieze/LucyRTL8125Ethernet) - A macOS driver for Realtek RTL8125 2.5GBit Ethernet Controllers.
 * [USBWakeFixup](https://github.com/osy/USBWakeFixup) is needed to fix keyboard wakeup support, but may cause [compatibility issues](https://github.com/osy/USBWakeFixup/issues/14) with Bluetooth. Works with SSDT-USBW.
 * Kexts for USB mapping, depending on the use of [USBMap](https://github.com/corpnewt/USBMap) or [USBToolBox](https://github.com/USBToolBox/tool)
 
@@ -206,7 +206,7 @@ This is required for Alder Lake. The configurations universally use these settin
 
 * Emulate a Comet Lake CPU (0x0A0655)
 * As Alder Lake CPUs are not supported by macOS, the CPU ID has to be faked in the Config.plist
-* CPU ID is set to 0x0A0655 that is found in Comet Lake CPUs such as [10900, 10850, 10700, and 10400](https://www.cpu-world.com/cgi-bin/CPUID.pl?MANUF=Intel\&FAMILY=\&MODEL=\&SIGNATURE=656981\&PART=\&ACTION=Filter).&#x20;
+* CPU ID is set to 0x0A0655 that is found in Comet Lake CPUs such as [10900, 10850, 10700, and 10400](https://www.cpu-world.com/cgi-bin/CPUID.pl?MANUF=Intel\&FAMILY=\&MODEL=\&SIGNATURE=656981\&PART=\&ACTION=Filter).
 
 ```
 Cpuid1Data    55060A00000000000000000000000000`
@@ -258,7 +258,7 @@ I have seen `iMac20,1` used by some on Alder Lake, but this is the wrong choice,
 
 #### UEFI -> Output
 
-`ProvideConsoleGop Yes`&#x20;
+`ProvideConsoleGop Yes`
 
 * ASUS boards have a new aggregate GOP instance, which causes black screen during macOS first stage. This is addressed in the `ProvideConsoleGop` quirk starting with OpenCore 0.7.6. _(Vit, 22-01-09)_
 * This is enabled in OC > _Sample.plist_ and should remain enabled, not just for ASUS boards.
@@ -294,7 +294,7 @@ I researched more in-depth about the specifics which might differ from a Comet L
 * Golden Build 3: [MSI PRO Z690 A DDR4 + i7-12700K + AMD RX 580](https://www.tonymacx86.com/threads/msi-pro-z690-a-ddr4-i7-12700k-amd-rx-580.319149/)
 * User Build: [ASRock Z690 Steel Legend (WiFi 6E)](https://www.tonymacx86.com/threads/asrock-z690-steel-legend-wifi-6e.317456/) nice guide including CPU ID explanation.
 * User Build: [Gigabyte Z690 ELITE AX D4 + i9-12900K + AMD RX 6600 XT](https://www.tonymacx86.com/threads/gigabyte-z690-elite-ax-d4-i9-12900k-amd-rx-6600-xt.318584/)
-* User Build: [ ](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/)Gigabyte Z690I AORUS ULTRA [Intel 12th Gen CPU i5-12400 (low cost)](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/) clean, minimal configuration.
+* User Build:Gigabyte Z690I AORUS ULTRA [Intel 12th Gen CPU i5-12400 (low cost)](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/) clean, minimal configuration.
 * User Build: [Gigabyte Z690 Gaming X DDR4 - i7 12700K - AMD RX 580](https://www.tonymacx86.com/threads/felbos-build-gigabyte-z690-gaming-x-ddr4-i7-12700k-amd-rx-580.319197/)
 * User Build: [Gigabyte Z690 Gaming X DDR4 - i7 12700KF - AMD RX 6600XT](https://www.tonymacx86.com/threads/gigabyte-z690-gaming-x-ddr4-i7-12700kf-amd-rx-6600xt.320434/)
 
@@ -321,8 +321,8 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 
 ### Search Links
 
-* To be able to see the various successes of Alder Lake  on _r/hackintosh_ enter the following in the search box for Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)``
-  * Another example with B660M:  [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)Also try H610.
+* To be able to see the various successes of Alder Lake on _r/hackintosh_ enter the following in the search box for Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)\`\`
+  * Another example with B660M: [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)Also try H610.
 * On TM search for: [Z690 User Builds](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)[ ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date) (login required to search)
 * Or search for _Alder Lake_ for general info on each hackintosh site
 
@@ -332,5 +332,6 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 * Work-in-Progress: **Dortania OpenCore Install Guide - Alder Lake**: [OpenCore-Install-Guide/alder-lake.md · alyxferrari/OpenCore-Install-Guide · GitHub](https://github.com/alyxferrari/OpenCore-Install-Guide/blob/alderlake/config.plist/alder-lake.md) (started February 10, 2022).
 * A kext for Alder Lake currently in development: an _**experimental**_ Lilu plugin that optimizes Alder Lake's heterogeneous core configuration: [GitHub - b00t0x/CpuTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild)
 * Discussion and relevant links in the comments: [Request for an initial version of a Dortania OpenCore Guide for Alder Lake · Issue #257 · dortania/bugtracker · GitHub](https://github.com/dortania/bugtracker/issues/257)
+* Using [GitHub - luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE: Basic EFI with Opencore for Intel Alder Lake Processors (12th Gen)](https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE) together with OCAuxiliaryTools should provide a good starting point.
 
 ![](../.gitbook/assets/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
