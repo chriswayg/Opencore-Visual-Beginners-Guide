@@ -324,19 +324,25 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 
 ### Search Links
 
-* To be able to see the various successes of Alder Lake on _r/hackintosh_ enter the following in the search box for Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)\`\`
+* Search on Dortania for recent updates:
+  * Alder Lake: [site:https://dortania.github.io "alder lake" - Google Search](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fdortania.github.io+%22alder+lake%22\&client=firefox-b-d\&sxsrf=AJOqlzUstB7tFJvNpD0Cro0A8sB3zXrRvw%3A1674973927623\&ei=5xLWY\_jDJdiU2roPrcydIA\&ved=0ahUKEwi409qPlOz8AhVYilYBHS1mBwQQ4dUDCA8\&uact=5\&oq=site%3Ahttps%3A%2F%2Fdortania.github.io+%22alder+lake%22\&gs\_lcp=Cgxnd3Mtd2l6LXNlcnAQA0oECEEYAUoECEYYAFDJCli3FGDOG2gCcAB4AIABWYgBrQOSAQE1mAEAoAEBwAEB\&sclient=gws-wiz-serp)
+  * Raptor Lake: [site:https://dortania.github.io "raptor lake" - Google Search](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fdortania.github.io+%22raptor+lake%22\&client=firefox-b-d\&sxsrf=AJOqlzVLxVWDYXv9Sp0RXVN96yJgKgDz-g%3A1674973911908\&ei=1xLWY\_z0NtvL2roPvJuuGA\&ved=0ahUKEwi8vJuIlOz8AhXbpVYBHbyNCwMQ4dUDCA8\&uact=5\&oq=site%3Ahttps%3A%2F%2Fdortania.github.io+%22raptor+lake%22\&gs\_lcp=Cgxnd3Mtd2l6LXNlcnAQA0oECEEYAUoECEYYAFCuDVjtJGCOM2gBcAB4AIABXYgBiAKSAQEzmAEAoAEBwAEB\&sclient=gws-wiz-serp)
+* To be able to see the various successes on _`r/hackintosh`_ enter the following in the search box:
+  * For Alder Lake Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)\`\`
   * Another example with B660M: [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=) `-` Also try H610.
-  * For _**Raptor Lake**_, try the following search: [`flair_name:"SUCCESS" Z790`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
-* On TM search for: [Z690 User Builds](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)[ ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date) (login required to search)
-  * Or for Raptor Lake: [Z790 Posts](https://www.tonymacx86.com/search/17487968/?q=Z790\&c\[title\_only]=1\&o=date)
-* Additionally search for _Alder Lake_ or _Raptor Lake_ for general info on each of the above hackintosh sites.
+  * For Raptor Lake Z790, try the following search: [`flair_name:"SUCCESS" Z790`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
+* On TM search for: (login required to search)
+  * Alder Lake [Z690 User Builds](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)[ ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date)&#x20;
+  * Raptor Lake: [Z790 Posts](https://www.tonymacx86.com/search/17487968/?q=Z790\&c\[title\_only]=1\&o=date)
+* Additionally search for _Alder Lake_ or _Raptor Lake_ general info on each of the above hackintosh sites.
 
 ## More Info
 
 * Additional details have been discussed in this **essential technical article**: [Intel Z690 compatibility with macOS | Dortania](https://dortania.github.io/hackintosh/updates/2022/01/09/alder-lake.html)). _Vit, 2022-01-09_
+* _**Raptor Lake**_ CPU definitions have been added to Lilu 1.6.3 [Acidanthera Updates: January 2023 | Dortania](https://dortania.github.io/hackintosh/updates/2023/01/04/acidanthera-january.html)
 * Work-in-Progress: **Dortania OpenCore Install Guide - Alder Lake**: [OpenCore-Install-Guide/alder-lake.md · alyxferrari/OpenCore-Install-Guide · GitHub](https://github.com/alyxferrari/OpenCore-Install-Guide/blob/alderlake/config.plist/alder-lake.md) (started February 10, 2022).
 * A kext for Alder Lake currently in development: an _**experimental**_ Lilu plugin that optimizes Alder Lake's heterogeneous core configuration: [GitHub - b00t0x/CpuTopologyRebuild](https://github.com/b00t0x/CpuTopologyRebuild)
 * Discussion and relevant links in the comments: [Request for an initial version of a Dortania OpenCore Guide for Alder Lake · Issue #257 · dortania/bugtracker · GitHub](https://github.com/dortania/bugtracker/issues/257)
-* Using [GitHub - luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE: Basic EFI with Opencore for Intel Alder Lake Processors (12th Gen)](https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE) together with OCAuxiliaryTools should provide a good starting point.
+* Using [GitHub - luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE: Basic EFI with Opencore for Intel Alder Lake Processors (12th Gen)](https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE) together with _OCAuxiliaryTools_ should provide a good starting point.
 
 ![](../.gitbook/assets/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
