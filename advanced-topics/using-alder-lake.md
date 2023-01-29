@@ -2,9 +2,11 @@
 description: Some prior hackintosh experience is recommended
 ---
 
-# Using Alder Lake
+# Using Alder Lake (or Raptor Lake)
 
 ## OpenCore Alder Lake (12th-Gen Intel) Hackintosh Guidance
+
+Most of the topics discussed here should also work for Raptor Lake (13th-Gen Intel) CPUs, as the archtecture is very similar. So far, I merely added a few relevant links.
 
 ![](../images/Intel-Alder-Lake-Desktop-CPU.png)
 
@@ -289,12 +291,13 @@ I researched more in-depth about the specifics which might differ from a Comet L
 #### Golden and User Builds on TM
 
 * Discussion: [Z690 Chipset and Alder Lake CPUs](https://www.tonymacx86.com/threads/z690-chipset-and-alder-lake-cpus.316618/)
+* Discussion about Raptor Lake: [Z790 Chipset & Raptor Lake](https://www.tonymacx86.com/threads/z790-chipset-raptor-lake.322763/)
 * Golden Build 1: [Gigabyte Z690 Aero G + i5-12600K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/gigabyte-z690-aero-g-i5-12600k-amd-rx-6800-xt.317179/)
 * Golden Build 2: [Asus Z690 ProArt Creator WiFi (Thunderbolt 4) + i7-12700K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/asus-z690-proart-creator-wifi-thunderbolt-4-i7-12700k-amd-rx-6800-xt.318311/)
 * Golden Build 3: [MSI PRO Z690 A DDR4 + i7-12700K + AMD RX 580](https://www.tonymacx86.com/threads/msi-pro-z690-a-ddr4-i7-12700k-amd-rx-580.319149/)
 * User Build: [ASRock Z690 Steel Legend (WiFi 6E)](https://www.tonymacx86.com/threads/asrock-z690-steel-legend-wifi-6e.317456/) nice guide including CPU ID explanation.
 * User Build: [Gigabyte Z690 ELITE AX D4 + i9-12900K + AMD RX 6600 XT](https://www.tonymacx86.com/threads/gigabyte-z690-elite-ax-d4-i9-12900k-amd-rx-6600-xt.318584/)
-* User Build:Gigabyte Z690I AORUS ULTRA [Intel 12th Gen CPU i5-12400 (low cost)](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/) clean, minimal configuration.
+* User Build: Gigabyte Z690I AORUS ULTRA [Intel 12th Gen CPU i5-12400 (low cost)](https://www.tonymacx86.com/threads/success-z690i-intel-12th-gen-cpu-i5-12400-low-cost.318759/) clean, minimal configuration.
 * User Build: [Gigabyte Z690 Gaming X DDR4 - i7 12700K - AMD RX 580](https://www.tonymacx86.com/threads/felbos-build-gigabyte-z690-gaming-x-ddr4-i7-12700k-amd-rx-580.319197/)
 * User Build: [Gigabyte Z690 Gaming X DDR4 - i7 12700KF - AMD RX 6600XT](https://www.tonymacx86.com/threads/gigabyte-z690-gaming-x-ddr4-i7-12700kf-amd-rx-6600xt.320434/)
 
@@ -322,9 +325,11 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 ### Search Links
 
 * To be able to see the various successes of Alder Lake on _r/hackintosh_ enter the following in the search box for Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)\`\`
-  * Another example with B660M: [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)Also try H610.
+  * Another example with B660M: [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=) `-` Also try H610.
+  * For _**Raptor Lake**_, try the following search: [`flair_name:"SUCCESS" Z790`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
 * On TM search for: [Z690 User Builds](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)[ ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date) (login required to search)
-* Or search for _Alder Lake_ for general info on each hackintosh site
+  * Or for Raptor Lake: [Z790 Posts](https://www.tonymacx86.com/search/17487968/?q=Z790\&c\[title\_only]=1\&o=date)
+* Additionally search for _Alder Lake_ or _Raptor Lake_ for general info on each of the above hackintosh sites.
 
 ## More Info
 
