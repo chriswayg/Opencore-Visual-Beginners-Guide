@@ -290,7 +290,7 @@ I researched more in-depth about the specifics which might differ from a Comet L
 
 #### Golden and User Builds on TM
 
-* Discussion: [Z690 Chipset and Alder Lake CPUs](https://www.tonymacx86.com/threads/z690-chipset-and-alder-lake-cpus.316618/)
+* Discussion about Alder Lake: [Z690 Chipset and Alder Lake CPUs](https://www.tonymacx86.com/threads/z690-chipset-and-alder-lake-cpus.316618/)
 * Discussion about Raptor Lake: [Z790 Chipset & Raptor Lake](https://www.tonymacx86.com/threads/z790-chipset-raptor-lake.322763/)
 * Golden Build 1: [Gigabyte Z690 Aero G + i5-12600K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/gigabyte-z690-aero-g-i5-12600k-amd-rx-6800-xt.317179/)
 * Golden Build 2: [Asus Z690 ProArt Creator WiFi (Thunderbolt 4) + i7-12700K + AMD RX 6800 XT](https://www.tonymacx86.com/threads/asus-z690-proart-creator-wifi-thunderbolt-4-i7-12700k-amd-rx-6800-xt.318311/)
@@ -305,13 +305,16 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 
 #### Github
 
-* [glekner/GIGABYTE-Z690I-Hackintosh: OpenCore Hackintosh EFI For Gigabyte Z690I Aorus](https://github.com/glekner/GIGABYTE-Z690I-Hackintosh)
-* [luchina-gabriel/EFI-GIGABYTE-Z690-AORUS-ELITE-AX-12900K-RX6900XT: EFI for Hackintosh: Gigabyte Z690 Aorus Elite AX, Intel i9 12900K (8p+8e+ht), RX 6900XT, 4x 16GB DDR4 4133Mhz with XMP enabled and Fenvi BCM94360](https://github.com/luchina-gabriel/EFI-GIGABYTE-Z690-AORUS-ELITE-AX-12900K-RX6900XT)
-* [kenagt/Hackintosh-Gigabyte-Z690-UD-DDR4: EFI folder for hackintosh, Z690, 12600KF, 32GB DDR4](https://github.com/kenagt/Hackintosh-Gigabyte-Z690-UD-DDR4)
-* [kreactnative/Z690-12900K-RX6600XT-DDR5-Monterey: Hackintosh EFI For 12900K Gigabyte Z690 Aorus Pro](https://github.com/kreactnative/Z690-12900K-RX6600XT-DDR5-Monterey)
-* [H3C4T0M8/Hackintosh-Gigabyte-z690-UD-DDR4-OpenCore](https://github.com/H3C4T0M8/Hackintosh-Gigabyte-z690-UD-DDR4-OpenCore)
-* [jiangyurui/ROG-STRIX-Z690-A-GAMING-WIFI-HACKINTOSH-BIOS](https://github.com/jiangyurui/ROG-STRIX-Z690-A-GAMING-WIFI-HACKINTOSH-BIOS)
-* [Juan-VC/Hackintosh-ASUS-Z690-P-WIFI](https://github.com/Juan-VC/Hackintosh-ASUS-Z690-P-WIFI)
+* **Alder Lake Z690 Builds:**
+  * [glekner/GIGABYTE-Z690I-Hackintosh: OpenCore Hackintosh EFI For Gigabyte Z690I Aorus](https://github.com/glekner/GIGABYTE-Z690I-Hackintosh)
+  * [luchina-gabriel/EFI-GIGABYTE-Z690-AORUS-ELITE-AX-12900K-RX6900XT: EFI for Hackintosh: Gigabyte Z690 Aorus Elite AX, Intel i9 12900K (8p+8e+ht), RX 6900XT, 4x 16GB DDR4 4133Mhz with XMP enabled and Fenvi BCM94360](https://github.com/luchina-gabriel/EFI-GIGABYTE-Z690-AORUS-ELITE-AX-12900K-RX6900XT)
+  * [kenagt/Hackintosh-Gigabyte-Z690-UD-DDR4: EFI folder for hackintosh, Z690, 12600KF, 32GB DDR4](https://github.com/kenagt/Hackintosh-Gigabyte-Z690-UD-DDR4)
+  * [kreactnative/Z690-12900K-RX6600XT-DDR5-Monterey: Hackintosh EFI For 12900K Gigabyte Z690 Aorus Pro](https://github.com/kreactnative/Z690-12900K-RX6600XT-DDR5-Monterey)
+  * [H3C4T0M8/Hackintosh-Gigabyte-z690-UD-DDR4-OpenCore](https://github.com/H3C4T0M8/Hackintosh-Gigabyte-z690-UD-DDR4-OpenCore)
+  * [jiangyurui/ROG-STRIX-Z690-A-GAMING-WIFI-HACKINTOSH-BIOS](https://github.com/jiangyurui/ROG-STRIX-Z690-A-GAMING-WIFI-HACKINTOSH-BIOS)
+  * [Juan-VC/Hackintosh-ASUS-Z690-P-WIFI](https://github.com/Juan-VC/Hackintosh-ASUS-Z690-P-WIFI)
+* **Raptor Lake Z790 Builds:**
+  * [conversun/Hackintosh-MSI-Z790i-EDGE-13900K-6900XT-OpenCore: Hackintosh MSI Z790i EDGE](https://github.com/conversun/Hackintosh-MSI-Z790i-EDGE-13900K-6900XT-OpenCore)
 
 ### hackintosh-forum.de
 
@@ -324,16 +327,19 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 
 ### Search Links
 
-* Search on Dortania for recent updates:
+* Search on **Dortania** for recent updates:
   * Alder Lake: [site:https://dortania.github.io "alder lake" - Google Search](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fdortania.github.io+%22alder+lake%22\&client=firefox-b-d\&sxsrf=AJOqlzUstB7tFJvNpD0Cro0A8sB3zXrRvw%3A1674973927623\&ei=5xLWY\_jDJdiU2roPrcydIA\&ved=0ahUKEwi409qPlOz8AhVYilYBHS1mBwQQ4dUDCA8\&uact=5\&oq=site%3Ahttps%3A%2F%2Fdortania.github.io+%22alder+lake%22\&gs\_lcp=Cgxnd3Mtd2l6LXNlcnAQA0oECEEYAUoECEYYAFDJCli3FGDOG2gCcAB4AIABWYgBrQOSAQE1mAEAoAEBwAEB\&sclient=gws-wiz-serp)
   * Raptor Lake: [site:https://dortania.github.io "raptor lake" - Google Search](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fdortania.github.io+%22raptor+lake%22\&client=firefox-b-d\&sxsrf=AJOqlzVLxVWDYXv9Sp0RXVN96yJgKgDz-g%3A1674973911908\&ei=1xLWY\_z0NtvL2roPvJuuGA\&ved=0ahUKEwi8vJuIlOz8AhXbpVYBHbyNCwMQ4dUDCA8\&uact=5\&oq=site%3Ahttps%3A%2F%2Fdortania.github.io+%22raptor+lake%22\&gs\_lcp=Cgxnd3Mtd2l6LXNlcnAQA0oECEEYAUoECEYYAFCuDVjtJGCOM2gBcAB4AIABXYgBiAKSAQEzmAEAoAEBwAEB\&sclient=gws-wiz-serp)
-* To be able to see the various successes on _`r/hackintosh`_ enter the following in the search box:
-  * For Alder Lake Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)\`\`
+* To see the various successes on _**`r/hackintosh`**_ enter the following in the search box:
+  * For Alder Lake Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)
   * Another example with B660M: [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=) `-` Also try H610.
-  * For Raptor Lake Z790, try the following search: [`flair_name:"SUCCESS" Z790`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
-* On TM search for: (login required to search)
+  * For Raptor Lake Z790, use the following search: [`flair_name:"SUCCESS" Z790`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
+* On **TM** search for: (login required to search)
   * Alder Lake [Z690 User Builds](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)[ ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date)&#x20;
   * Raptor Lake: [Z790 Posts](https://www.tonymacx86.com/search/17487968/?q=Z790\&c\[title\_only]=1\&o=date)
+* On **Github**:&#x20;
+  * Alder Lake: [Search · hackintosh Z690 · GitHub](https://github.com/search?q=hackintosh+Z690)
+  * Raptor Lake: [Search · hackintosh Z790 · GitHub](https://github.com/search?q=hackintosh+Z790)
 * Additionally search for _Alder Lake_ or _Raptor Lake_ general info on each of the above hackintosh sites.
 
 ## More Info
