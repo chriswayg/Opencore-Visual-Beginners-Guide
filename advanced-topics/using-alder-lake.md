@@ -333,7 +333,7 @@ The _Golden Builds_ are well documented and would help those who buy the same mo
 * To see the various successes on _**`r/hackintosh`**_ enter the following in the search box:
   * For Alder Lake Z690: [`flair_name:"SUCCESS" Z690`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z690\&restrict\_sr=1\&sr\_nsfw=)
   * Another example with B660M: [`flair_name:"SUCCESS" B660M`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=) `-` Also try H610.
-  * For Raptor Lake Z790, use the following search: [`flair_name:"SUCCESS" Z790`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20B660M\&restrict\_sr=1\&sr\_nsfw=)``
+  * For Raptor Lake Z790, use the following search: [`flair_name:"SUCCESS" Z790`](https://www.reddit.com/r/hackintosh/search/?q=flair\_name%3A%22SUCCESS%22%20Z790\&restrict\_sr=1)
 * On **TM** search for: (login required to search)
   * Alder Lake [Z690 User Builds](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)[ ](https://www.tonymacx86.com/search/12515965/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=28\&c\[title\_only]=1\&o=date)or [Z690 Golden Builds](https://www.tonymacx86.com/search/12516092/?q=Z690\&t=post\&c\[child\_nodes]=1\&c\[nodes]\[0]=87\&c\[title\_only]=1\&o=date)&#x20;
   * Raptor Lake: [Z790 Posts](https://www.tonymacx86.com/search/17487968/?q=Z790\&c\[title\_only]=1\&o=date)
