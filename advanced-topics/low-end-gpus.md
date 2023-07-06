@@ -4,6 +4,8 @@ description: Low End dedicated GPUs for a Low End Hackintosh (Summer 2022)
 
 # Low End GPUs
 
+**Update 2023**: as graphics card prices have normalized, currently the cards with the best price performance ratio and _widest availability_ for a low end Hackintosh would be the RX 570 and RX 580 cards.
+
 ![Sapphire Radeon RX 550 Pulse](../.gitbook/assets/rx550\_pulse\_4gb\_800x500\_03.png)
 
 Sometimes people need a dedicated GPU for a really low-end system which is CPU compatible, but may not have a compatible iGPU _(Nehalem to Sandy Bridge for example)_ for recent macOS versions.
@@ -18,7 +20,7 @@ If you have Haswell (Intel 4th Gen) HD Graphics or newer, just use the iGPU, as 
 * [GT 710 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_nkw=gt+710&\_sacat=27386&\_sop=12&\_udhi=35\&rt=nc\&LH\_BIN=1) (must be GK 208)
 * [K600 Quadro in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=p2334524.m570.l1311&\_nkw=k600+quadro&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1&\_odkw=RX+560&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=35)
 
-### Lowest End AMD (under US$40)
+### Lowest End AMD (under US$50)
 
 These cards should work up to Monterey. Certain kinds of DRM, which depend on hardware acceleration, will not be available. The [R7 cards](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html) , which will need a Fake ID, have not been used as commonly in hackintosh systems and may therefore have unforeseen issues.
 
@@ -43,7 +45,7 @@ A correct Baffin-core RX 550 can be tricky to find, as often it is not easy to a
   * [ASUS PH-RX550-4G-M7](https://www.asus.com/Motherboards-Components/Graphics-Cards/All-series/PH-RX550-4G-M7)
   * MSI - Looks like all are Lexa.
 
-### Polaris under US$80
+### Polaris under US$70
 
 Prices for the RX 560 have become much more attractive in recent months, which makes them the best overall choice for low cost cards.
 
@@ -51,7 +53,7 @@ Prices for the RX 560 have become much more attractive in recent months, which m
 * [RX 550 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=m570.l1313&\_nkw=RX+550&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1&\_odkw=RX+460&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=100) (must be Baffin)
 * [RX 560 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_nkw=RX%20560&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1\&LH\_BIN=1&\_sop=12&\_udhi=100\&rt=nc)
 
-### Polaris under US$100
+### Polaris under US$90
 
 Prices for RX 570/580 have also come down to more attractive levels providing about twice the performance of the RX 560
 
@@ -77,7 +79,7 @@ The Apple M1 GPU is shown as a baseline of modern GPU performance as supplied by
 * 1931 NVIDIA GeForce GT 730
 * 1108 - NVIDIA GeForce GT 710
 * 1060 - NVIDIA Quadro K600
-* Source: [Metal Benchmarks](https://browser.geekbench.com/metal-benchmarks)****
+* Source: [Metal Benchmarks](https://browser.geekbench.com/metal-benchmarks)
 
 ### **Geekbench 5 OpenCL Benchmarks**
 
