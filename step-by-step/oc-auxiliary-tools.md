@@ -7,16 +7,18 @@ This guide uses specific [example 10th Gen Intel hardware](https://chriswayg.git
 * _OCAuxiliaryTools_ is an excellent configuration and update utility. It will be used to create the complete OpenCore EFI folder including the Config.plist. _(You may use this alongside a plist editor such as_ [_Xplist_](https://github.com/ic005k/PlistEDPlus)_)_.
 * If you are following this example, but are using different hardware, just open the relevant sections for _your CPU generation_ in [config.plist Setup | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/#creating-your-config-plist) alongside _OCAuxiliaryTools._&#x20;
 * Download & install [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) and launch the _OCAuxiliaryTools_ application.
+* _(Edit: this section of the guides needs updates, as OCAuxiliaryTools, currently at 20240001 for OpenCore 1.0.0, has somewhat changed the workflow since these screenshots were made. In the meantime I am just adding some notes in brackets)_
 
 ![OCAuxiliaryTools initial Window](../images/download\_ocat.png)
 
 * Select _Menu -> Edit -> Database_ or click the _Database_ button
+* _(Edit: this will not actually open the Database, but link to a github repo where you can download the relevant config.plist. Open this config in OCAuxiliaryTools. Then click the Save button so that OCvalidate will update  its messages accordingly.)_
 
 ![Edit Menu](<../.gitbook/assets/image (8).png>)
 
 * Check which [Platform Info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo) is relevant for your hardware. For this example we will use `iMac20,1`
 
-Select the relevant configuration and click the _Generate EFI_ button
+Select the relevant configuration and click the _Generate EFI_ button _(Edit: After opening the configuration, Select Menu -> Edit -> Database -> Generate EFI on the Desktop)_
 
 ![Base Configuration Selection Dialog](../images/select\_configuration.png)
 
@@ -136,8 +138,8 @@ No changes needed in the [UEFI](https://dortania.github.io/OpenCore-Install-Guid
 * For Alder Lake Hardware I would recommend [GitHub - luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE: Basic EFI with Opencore for Intel Alder Lake Processors (12th Gen)](https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE) as a good starting point.
 * Remember to **save your Config.plist** by clicking the _Save_ button or with Menu -> Edit -> Save.
 
-Several **additional features of OCAuxiliaryTools** will be discussed on the page **** [**Debug and Upgrade OpenCore**](oc-auxiliary-tools-upgrade.md)**.**
+Several **additional features of OCAuxiliaryTools** will be discussed on the page [**Debug and Upgrade OpenCore**](oc-auxiliary-tools-upgrade.md)**.**
 
-****
+
 
 ![](../images/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
