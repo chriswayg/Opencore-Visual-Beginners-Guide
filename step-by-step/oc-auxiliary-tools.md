@@ -7,18 +7,18 @@ This guide uses specific [example 10th Gen Intel hardware](https://chriswayg.git
 * _OCAuxiliaryTools_ is an excellent configuration and update utility. It will be used to create the complete OpenCore EFI folder including the Config.plist. _(You may use this alongside a plist editor such as_ [_Xplist_](https://github.com/ic005k/PlistEDPlus)_)_.
 * If you are following this example, but are using different hardware, just open the relevant sections for _your CPU generation_ in [config.plist Setup | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/#creating-your-config-plist) alongside _OCAuxiliaryTools._&#x20;
 * Download & install [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) and launch the _OCAuxiliaryTools_ application.
-* _(Edit: this section of the guides needs updates, as OCAuxiliaryTools, currently at 20240001 for OpenCore 1.0.0, has somewhat changed the workflow since these screenshots were made. In the meantime I am just adding some notes in brackets)_
+* _(Edit: this section of the guide needs updates, as OCAuxiliaryTools, currently at version 20240001 for OpenCore 1.0.0, has somewhat changed the workflow since these screenshots were made. In the meantime I am just adding some notes in brackets)_
 
 ![OCAuxiliaryTools initial Window](../images/download\_ocat.png)
 
 * Select _Menu -> Edit -> Database_ or click the _Database_ button
-* _(Edit: this will not actually open the Database, but link to a github repo where you can download the relevant config.plist. Open this config in OCAuxiliaryTools. Then click the Save button so that OCvalidate will update  its messages accordingly.)_
+* _(Edit: this will not actually open the Database, but link to a Github repo where you can download the relevant configuration. Open this configuration in OCAuxiliaryTools. Then click the Save button so that OCvalidate will update its messages accordingly.)_
 
 ![Edit Menu](<../.gitbook/assets/image (8).png>)
 
 * Check which [Platform Info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo) is relevant for your hardware. For this example we will use `iMac20,1`
 
-Select the relevant configuration and click the _Generate EFI_ button _(Edit: After opening the configuration, Select Menu -> Edit -> Database -> Generate EFI on the Desktop)_
+Select the relevant configuration and click the _Generate EFI_ button _(Edit: The Configuration File Database dialog has been removed. Therefore, after opening the configuration in OCAuxiliaryTools: Select Menu -> Edit -> Database -> Generate EFI on the Desktop)_
 
 ![Base Configuration Selection Dialog](../images/select\_configuration.png)
 
