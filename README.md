@@ -1,6 +1,6 @@
 # Intro & Hardware
 
-## OpenCore Visual Beginners Guide 2022
+## OpenCore Visual Beginners Guide
 
 This is intended to be a beginner friendly OpenCore guide which uses mostly GUI Tools like _OCAuxiliaryTools_ and _OCLP_ to create a vanilla hackintosh install. This should make starting out with OpenCore more accessible. Everything done by these tools is transparent to the user and allows complete customization. All downloads are from official sources, usually from the Github repos of the original developers. This guide is based on the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) by Dortania only making minimal changes when using compatible GUI tools. You do need to read, study and understand the basics of the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) first before embarking on any hackintosh project.
 
@@ -48,4 +48,4 @@ The _example hardware_ is similar to the internals of a [mid-2020 iMac](https://
 
 ![Sapphire Pulse Radeon RX 560 4G](.gitbook/assets/11267\_00\_RX560\_PULSE\_4GBGDDR5\_DP\_HDMI\_DVI\_PCIE\_FBC\_5May17.jpg)
 
-__![](<images/by-nc-license (2).svg>) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
+![](<images/by-nc-license (2).svg>) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
