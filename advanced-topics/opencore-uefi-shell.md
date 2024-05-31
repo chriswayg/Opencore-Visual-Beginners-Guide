@@ -64,7 +64,7 @@ Then type `edit Config.plist`. Scenario: Maybe you cannot boot, because you forg
 
 ![](../.gitbook/assets/EFI-shell-edit-config.png)
 
-Save the changes by pressing `Ctrl S` and then `Enter`. Exit the editor with `Ctrl Q`. To test your changes type `reset`, which will restart your Hackintosh with these new settings.
+Save the changes by pressing `Ctrl S` or `F2` and then `Enter`. Exit the editor with `Ctrl Q` or `F3` . To test your changes type `reset`, which will restart your Hackintosh with these new settings.
 
 If you are able to find your main EFI partition quickly (try `fs0:`and then `vol` first), these kind of changes can be made within less than a minute. It does take a while to learn and memorize some of the commands though.
 
@@ -115,7 +115,7 @@ There are many more commands to explore and you may use the linked documentation
 * [Dualbooting with Linux - Identifying your UEFI paths and devices | OpenCore Multiboot](https://dortania.github.io/OpenCore-Multiboot/oc/linux.html#method-c-chainloading-the-kernel-must-support-efistub)
 * [Getting a copy of your DSDT via UEFI Shell | Getting Started With ACPI](https://dortania.github.io/Getting-Started-With-ACPI/Manual/dump.html#uefi-shell)
 * Official UEFI Manual: [Specifications | Unified Extensible Firmware Interface Forum](https://uefi.org/specifications)
-  * **All UEFI Shell commands:** [**UEFI Shell Specification Version 2.2**](http://www.uefi.org/sites/default/files/resources/UEFI\_Shell\_2\_2.pdf)****
+  * **All UEFI Shell commands:** [**UEFI Shell Specification Version 2.2**](http://www.uefi.org/sites/default/files/resources/UEFI\_Shell\_2\_2.pdf)
     * see from page 87 for command reference
   * Thousands of pages: [UEFI Specification Version 2.9 (March 2021)](https://uefi.org/sites/default/files/resources/UEFI\_Spec\_2\_9\_2021\_03\_18.pdf)
 
