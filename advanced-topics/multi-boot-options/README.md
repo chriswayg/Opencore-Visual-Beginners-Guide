@@ -54,7 +54,7 @@ Many other interactions with Windows are mentioned in the [Configuration.pdf](ht
 
 **EFFECT OF OPENCORE ON WINDOWS (ACPI)**
 
-__[_Xiasl_](https://github.com/ic005k/Xiasl) found that four additional SSDT tables (as configured in OpenCore) had been loaded before loading Windows. As these tables all used conditionals like `If (_OSI ("Darwin"))` they did not have any apparent effect upon Windows. But a custom patched DSDT could cause a BSOD when booting Windows through OpenCore, as reported by users. Theoretically, badly programmed SSDT patches could cause issues as well.
+[_Xiasl_](https://github.com/ic005k/Xiasl) found that four additional SSDT tables (as configured in OpenCore) had been loaded before loading Windows. As these tables all used conditionals like `If (_OSI ("Darwin"))` they did not have any apparent effect upon Windows. But a custom patched DSDT could cause a BSOD when booting Windows through OpenCore, as reported by users. Theoretically, badly programmed SSDT patches could cause issues as well.
 
 **EFFECT OF OPENCORE ON WINDOWS (HWiNFO64)**
 
@@ -120,7 +120,7 @@ OpenCore > Kernel > Quirks > CustomSMBIOSGuid = YES
 
 **EFFECT OF OPENCORE CUSTOM-MODE ON WINDOWS (ACPI)**
 
-__[_Xiasl_](https://github.com/ic005k/Xiasl) found that four additional SSDT tables (as configured in OpenCore) had been loaded before loading Windows. As these tables all used conditionals like `If (_OSI ("Darwin"))` they did not have any apparent effect upon Windows. But a custom patched DSDT could cause a BSOD when booting Windows through OpenCore, as reported by one user. Theoretically badly programmed SSDT patches could cause issues as well.
+[_Xiasl_](https://github.com/ic005k/Xiasl) found that four additional SSDT tables (as configured in OpenCore) had been loaded before loading Windows. As these tables all used conditionals like `If (_OSI ("Darwin"))` they did not have any apparent effect upon Windows. But a custom patched DSDT could cause a BSOD when booting Windows through OpenCore, as reported by one user. Theoretically badly programmed SSDT patches could cause issues as well.
 
 **EFFECT OF OPENCORE CUSTOM-MODE ON WINDOWS (HWiNFO64)**
 

@@ -104,6 +104,6 @@ This step completes the creation of a hackintosh bootable USB drive with the mac
 
 _This portion of the guide is mostly based on the section_ [_Download and build macOS Installers | OpenCore Legacy Patcher_](https://dortania.github.io/OpenCore-Legacy-Patcher/INSTALLER.html#creating-the-installer) _by Dortania._
 
-__
+
 
 ![](../images/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

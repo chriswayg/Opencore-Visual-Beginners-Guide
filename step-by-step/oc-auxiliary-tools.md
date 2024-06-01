@@ -9,22 +9,23 @@ This guide uses specific [example 10th Gen Intel hardware](https://chriswayg.git
 * Download & install [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) and launch the _OCAuxiliaryTools_ application.
 * _(Edit: this section of the guide needs updates, as OCAuxiliaryTools, currently at version 20240001 for OpenCore 1.0.0, has somewhat changed the workflow since these screenshots were made. In the meantime I am just adding some notes in brackets)_
 
-![OCAuxiliaryTools initial Window](../images/download\_ocat.png)
+![OCAuxiliaryTools initial Window](<../.gitbook/assets/Screenshot 2024-06-01 at 10.01.08 PM.png>)
 
-* Select _Menu -> Edit -> Database_ or click the _Database_ button
-* _(Edit: this will not actually open the Database, but link to a Github repo where you can download the relevant configuration. Open this configuration in OCAuxiliaryTools. Then click the Save button so that OCvalidate will update its messages accordingly.)_
+* Click the _Database/Configuration Template_ button _(highlighted in the screenshot)_
+* This links to a [Github repo](https://github.com/5T33Z0/OC-Little-Translated/tree/main/F\_Desktop\_EFIs/Config\_Templates) where you can download the relevant configuration. _(The steps are also explained there.)_
+* _Click on_ `Config_Templates.zip` and then the _Download Raw File_ button on that Github page to download the [templates](https://raw.githubusercontent.com/5T33Z0/OC-Little-Translated/main/F\_Desktop\_EFIs/Config\_Templates/Config\_Templates.zip). Unzip the templates on your Desktop for example.
 
-![Edit Menu](<../.gitbook/assets/image (8).png>)
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-01 at 10.29.59 PM.png" alt=""><figcaption><p>Configuration Templates locally downloaded</p></figcaption></figure>
 
-* Check which [Platform Info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo) is relevant for your hardware. For this example we will use `iMac20,1`
+* Check which [Platform Info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo) is relevant for your hardware. For this example we will use `iMac20,1` and the corresponding file `Desktop_10thGen_Comet_Lake_iMac20,1.plist`
+* Open this configuration in OCAuxiliaryTools. Then click the Save button so that OCvalidate will update its messages accordingly, which should get rid of any errors.
+* _Then select Menu -> Edit -> Generate EFI on the Desktop_
 
-Select the relevant configuration and click the _Generate EFI_ button _(Edit: The Configuration File Database dialog has been removed. Therefore, after opening the configuration in OCAuxiliaryTools: Select Menu -> Edit -> Database -> Generate EFI on the Desktop)_
+![Edit Menu](<../.gitbook/assets/Screenshot 2024-06-01 at 10.34.37 PM.png>)
 
-![Base Configuration Selection Dialog](../images/select\_configuration.png)
+This will generate the EFI folder including the most recent official release version of OpenCore on your desktop. For now ignore any missing kexts (which can be added later), as all the essential ones should be included already (as shown below)
 
-This will generate the EFI folder with the most recent official release version of OpenCore on your desktop. The `Config.plist` will open in _OCAuxiliaryTools_ for editing.
-
-![](../images/generate\_efi\_folder.png)
+![](<../.gitbook/assets/Screenshot 2024-06-01 at 10.46.45 PM.png>)
 
 ### ACPI
 
@@ -38,9 +39,9 @@ In [ACPI - Add](https://dortania.github.io/OpenCore-Install-Guide/config.plist/c
 
 In [ACPI - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#acpi), uncheck _ResetLogoStatus_. (_'It is enabled by default in sample.plist. This Quirk didn't exist at the time the OpenCore Install Guide was written, so it's unknown if it's a requirement. Most likely it's not.' @5T33Z0_)
 
-![ACPI Quirks Section](../images/acpi\_quirks.png)
+![ACPI Quirks Section](<../.gitbook/assets/Screenshot 2024-06-01 at 10.53.20 PM.png>)
 
-**You can hover with your mouse over each option to see the explanation from the official OpenCore reference manual.** This is a really helpful feature of _OCAuxiliaryTools_, as it enables you to quickly understand options which are only clearly explained in the very detailed [OpenCore Reference Manual](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf) document:
+**You can hover with your mouse over each option** (or right click and _Show Tips)_ **to see the explanation from the official OpenCore reference manual.** This is a really helpful feature of _OCAuxiliaryTools_, as it enables you to quickly understand options which are only clearly explained in the very detailed [OpenCore Reference Manual](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf) document:
 
 ![Configuration.pdf](../images/opencore\_configuration\_doc.png)
 
@@ -48,7 +49,7 @@ In [ACPI - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plis
 
 No changes in [Booter](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#booter)
 
-![Booter - Quirks Section](../images/booter.png)
+![Booter - Quirks Section](<../.gitbook/assets/Screenshot 2024-06-01 at 10.56.57 PM.png>)
 
 ### Device Properties
 
@@ -56,7 +57,7 @@ In [Device Properties](https://dortania.github.io/OpenCore-Install-Guide/config.
 
 Therefore change `AAPL,ig-platform-id` to `0300913E`
 
-![Device Properties - Add Section](../images/device\_properties.png)
+![Device Properties - Add Section](<../.gitbook/assets/Screenshot 2024-06-01 at 10.59.42 PM.png>)
 
 * Note, that keys which start with a **#** are commented out and will not be used by OpenCore
 
@@ -66,7 +67,7 @@ In the [Kernel](https://dortania.github.io/OpenCore-Install-Guide/config.plist/c
 
 * Click on the **\[...]** button to open the most common kexts available within _OCAuxiliaryTools_. Just drag-and-drop `IntelMausi.kext` into the app window. It will automatically be added to the Config.plist and enabled.
 
-![Kernel Add Section](../images/kernel\_add.png)
+![Kernel Add Section](<../.gitbook/assets/Screenshot 2024-06-01 at 11.02.55 PM.png>)
 
 * Add any additional kexts, if needed by clicking on the **\[+]** button for kexts downloaded from elsewhere.
 * For changing the order of the kexts, select a kext and click on the **\[<]** and **\[>]** buttons to move the kext up or down which will determine the order in which they are loaded.
@@ -75,9 +76,9 @@ No changes in the [Kernel - Quirks](https://dortania.github.io/OpenCore-Install-
 
 Optionally display the _Preselection_ for your CPU platform, especially if you have opened an older EFI and you want to ensure that the recommended options have been enabled. The _Preselection_ feature will display those option in _**Bold-Italic**_ type without actually changing your settings. You will need to decide if the recommendations are relevant to you.&#x20;
 
-Since we are installing Big Sur or Monterey for this example, we do not enable the hacky _XhciPortLimit setting_ any more: _"With macOS 11.3 (Big Sur) and newer,_ [_XhciPortLimit is broken resulting in boot loops_](https://github.com/dortania/bugtracker/issues/162)_."_
+Since we are installing Monterey or Ventura for this example, we do not enable the hacky _XhciPortLimit setting_ any more: _"With macOS 11.3 (Big Sur) and newer,_ [_XhciPortLimit is broken resulting in boot loops_](https://github.com/dortania/bugtracker/issues/162)_."_
 
-![](<../.gitbook/assets/image (4) (1) (1).png>)
+![](<../.gitbook/assets/Screenshot 2024-06-01 at 11.08.45 PM.png>)
 
 * Again just hover with the mouse over each option to read the explanation from the OpenCore reference documentation. Alternatively right click over an option and select _Show Tips_ to see the tip in a tool window.
 
@@ -85,21 +86,21 @@ Since we are installing Big Sur or Monterey for this example, we do not enable t
 
 In the section [Misc - Boot ](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#misc)you may choose PickerVariant _GoldenGate_ for the OpenCore booter GUI
 
-![](../images/misc\_boot.png)
+![](<../.gitbook/assets/Screenshot 2024-06-01 at 11.10.58 PM.png>)
 
 In the [Misc - Debug](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#debug) section: _DisplayLevel_ click the _Select_ button and enable _Debug\_\_Warn_ and _Debug\_\_Error_
 
-![Misc - Debug Section](../images/misc\_debug.png)
+![Misc - Debug Section](<../.gitbook/assets/Screenshot 2024-06-01 at 11.14.00 PM.png>)
 
 * By default the EFI created by _OCAuxiliaryTools_ uses the most recent _release_ version of OpenCore. If you want to show additional debug information change `Target` to `67` and switch to the _debug_ version of OpenCore, which will be explained at the end of this guide.
 
-In the [Misc - Security](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#security) section change _SecureBootModel_ to _Default_ if installing macOS Big Sur or newer.
+In the [Misc - Security](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#security) section change _SecureBootModel_ to _Default_ if installing macOS Monterey or newer.
 
-![Misc - Security Section](../images/misc\_security.png)
+![Misc - Security Section](<../.gitbook/assets/Screenshot 2024-06-01 at 11.16.05 PM.png>)
 
 In [Misc - Tools](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#tools), click the **\[…]** button and add `OpenShell.efi` by dragging it into the list
 
-![Misc - Tools Section](../images/misc\_tools.png)
+![Misc - Tools Section](<../.gitbook/assets/Screenshot 2024-06-01 at 11.18.06 PM.png>)
 
 ### NVRAM
 
@@ -108,7 +109,7 @@ In [NVRAM - Add](https://dortania.github.io/OpenCore-Install-Guide/config.plist/
 * Add the following string in `boot-args` for debugging and for audio: `-v debug=0x100 keepsyms=1 alcid=1`
 * Change `prev-lang:kbd` to use a `String` and input `en-US:0` (or your language code) instead of using the HEX value.
 
-![NVRAM - Add Section](../images/nvram\_add.png)
+![NVRAM - Add Section](<../.gitbook/assets/Screenshot 2024-06-01 at 11.22.09 PM.png>)
 
 ### Platform Info
 
@@ -116,7 +117,7 @@ In the [Platform Info - Generic](https://dortania.github.io/OpenCore-Install-Gui
 
 * Click _Generate_ (near the _SystemProductName_ field)
 
-![Platform Info - Generic Section](../images/platform\_info.png)
+![Platform Info - Generic Section](<../.gitbook/assets/Screenshot 2024-06-01 at 11.25.29 PM.png>)
 
 * Also check the serial on the [Apple Support](https://checkcoverage.apple.com/us/en/) webpage.
 * You should see _“… we’re unable to check coverage for this serial number”_ or something similar in your language. This is the response you want, because your Hackintosh should not reuse someone else’s existing serial from a real Mac.
@@ -126,7 +127,7 @@ In the [Platform Info - Generic](https://dortania.github.io/OpenCore-Install-Gui
 
 No changes needed in the [UEFI](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#uefi) section
 
-![UEFI Drivers Section](../images/uefi.png)
+![UEFI Drivers Section](<../.gitbook/assets/Screenshot 2024-06-01 at 11.26.34 PM.png>)
 
 * You can add additional drivers using the **\[+]** or **\[…]** button.
 * The OpenCanopy boot GUI should work out-of-the-box as _OCAuxiliaryTools_ activates it by default.
@@ -135,10 +136,10 @@ No changes needed in the [UEFI](https://dortania.github.io/OpenCore-Install-Guid
 ### Notes
 
 * If your motherboard uses the Intel’s I225-V 2.5GBe ethernet controller, additional settings are required in the relevant sections. Just refer to the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) and use the applicable presets in _OCAuxiliaryTools_.
-* Remember to **save your Config.plist** by clicking the _Save_ button or with Menu -> Edit -> Save.
+* Remember to **save your Config.plist** by clicking the _Save_ button or with Menu -> File -> Save.
 
 Several **additional features of OCAuxiliaryTools** will be discussed on the page [**Debug and Upgrade OpenCore**](oc-auxiliary-tools-upgrade.md)**.**
 
-
+This page also serves as an unofficial introductory user guide for **OCAuxiliaryTools. It has been updated with OCAuxiliaryTools version 20240001 using OpenCore 1.0.0. As this page is only infrequently updated, newer versions may have different features or require different settings.**
 
 ![](../images/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
