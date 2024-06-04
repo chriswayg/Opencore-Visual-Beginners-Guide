@@ -11,29 +11,29 @@ OCAuxiliaryTools actually merges any changes made to the structure of the Config
 * Mount your EFI partition: _Menu -> Edit -> Mount ESP Partition,_ or click the Mount ESP button. Only mount one EFI partition at a time!
 * Then click: _Mount and open Config.plist_
 
-![](../images/mount\_efi.png)
+![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.56.12 AM.png>)
 
 It is recommended to perform the upgrade first on a USB-stick and then transfer the EFI, after you are sure that the upgrade was successful. In any case backup your EFI first before making any changes.
 
 * Select _Menu -> Edit -> Backup EFI to Desktop_ or click the _Backup EFI to Desktop_ button.
 
-![](../images/backup\_efi.png)
+![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.53.21 AM.png>)
 
 * Select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button. - If your Config.plist is outdated, you should see some OC Validate warnings indicated by a red exclamation mark on the OC Validate button.
 
-![](../images/upgrade\_load\_config.png)
+![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.35.02 AM.png>)
 
 * Clicking on the red button will show the errors.
 
-![](../images/upgrade\_initial\_warnings.png)
+![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.37.13 AM.png>)
 
 * Close the _OC Validate_ dialog. Click the _Save_ button, which will update the Config.plist and get rid of all or most of the shown errors.
 
-![](../images/upgrade\_remaining\_warnings.png)
+![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.38.05 AM.png>)
 
 * Correct any remaining errors as indicated by OC Validate. The OC Validate button will change from red into a checkmark. This should be sufficient for updating your Config.plist.
 
-![](../images/upgrade\_no\_warnings.png)
+![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.39.35 AM.png>)
 
 * Note: Any additional errors are most likely configuration errors which you need to fix on your own. Also refer to [Updating OpenCore and macOS | OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/universal/update.html) in the Dortania guide, which provides more details.
 
@@ -44,19 +44,22 @@ Occasionally you may need to remove a kext (or driver) which is not needed any m
 * Next, select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button.
 * In this dialog window we see Kexts on the left and OpenCore files on the right with indicators which files will need to be updated: Green = up-to-date, Red = outdated, Gray = link to repo is missing. You can add a repo link for kexts in _Settings -> Kext Update URL -> \[+]_.
 
-<figure><img src="../.gitbook/assets/Screen Shot 2022-09-20 at 6.25.11 PM.png" alt=""><figcaption><p>three kexts need to be updated in this example</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-05 at 12.41.15 AM.png" alt=""><figcaption><p>three kexts need to be updated in this example</p></figcaption></figure>
 
 * Click on the _Settings_ Button_,_ referring to: _`The way to get the download link for Kext upgrade`_ and ensure that `Accessing the GitHub API` is checked, as shown below.
 
-<figure><img src="../.gitbook/assets/Screen Shot 2022-09-20 at 6.05.25 PM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-05 at 12.42.05 AM.png" alt=""><figcaption></figcaption></figure>
 
 * We will start with the kexts. Therefore, click _Select All_ or individually mark the checkboxes for kexts you want to update (otherwise they will be ignored).
 * Click on _Check for Kexts Updates_. This will download the latest available kexts.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-05 at 12.43.05 AM.png" alt=""><figcaption></figcaption></figure>
+
 * Click on _Update Kexts_, which will update the kexts in your EFI folder.
 
-<figure><img src="../.gitbook/assets/Screen Shot 2022-09-20 at 6.35.23 PM.png" alt=""><figcaption><p>kexts fully updated to the current stable versions</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-05 at 12.45.44 AM.png" alt=""><figcaption><p>kexts fully updated to the current stable versions</p></figcaption></figure>
 
-* If you want to use the develeopment versions of the kexts instead, select the DEV checkbox first.&#x20;
+* If you want to use the development versions of the kexts instead, select the DEV checkbox first.&#x20;
 
 ### Upgrading OpenCore, Drivers and Resources
 
@@ -64,13 +67,13 @@ Occasionally you may need to remove a kext (or driver) which is not needed any m
 * On the same side there is a drop down menu to _Choose OpenCore Version:_ select _"Latest Version"_, then click _"Get OpenCore"._ It will automatically update to the latest available release version of OpenCore, and it will intelligently adapt to the Config.plist parameters of that version.
 * Then press the _Start Sync_ button.
 
-<figure><img src="../.gitbook/assets/Screen Shot 2022-09-20 at 6.42.50 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-05 at 12.47.54 AM.png" alt=""><figcaption></figcaption></figure>
 
 *   If you check back in the _Sync_ window, all OpenCore files should now be marked green.
 
 
 
-    <figure><img src="../images/upgrade_complete.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/Screenshot 2024-06-05 at 12.49.15 AM.png" alt=""><figcaption></figcaption></figure>
 
 ### NOTES
 
