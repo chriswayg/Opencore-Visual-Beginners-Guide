@@ -9,7 +9,7 @@ description: Checklist Tools, Boot Key Combinations, and Links
 * Menu Bar SIP Detector: [menu bar app that displays the current status of SIP](https://github.com/ITzTravelInTime/MenuBarSIPDetector)
 * GLview: [OpenGL Extensions Viewer](http://www.realtech-vr.com/home/glview)
 * Metal benchmark: [Geekbench](https://www.geekbench.com)
-* Disk Speedtest: [AJA System Test Lite](https://www.aja.com/products/aja-system-test)
+* Disk Speedtest: [AJA System Test Lite](https://www.aja.com/products/aja-system-test) or [AmorphousDiskMark](https://katsurashareware.com/amorphousdiskmark/)
 * Battery checker: [coconutBattery](https://www.coconut-flavour.com/coconutbattery/) useful for Laptops
 * USB Port Mapper: [USBToolBox](https://github.com/USBToolBox/tool) or Hackintool
 * System Info: [Hackintool](https://github.com/headkaze/Hackintool)

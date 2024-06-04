@@ -21,7 +21,7 @@ description: Copy this into a Markdown editor and verify each point.
   * Apple -> System Preferences -> Startup Disk (uses NVRAM).
 * [ ] Security (especially SIP) use _Menu Bar SIP Detector_
 * [ ] FileVault (if used)
-* [ ] Windows 10 and/or Linux Multi-Boot
+* [ ] Windows and/or Linux Multi-Boot
 * [ ] Recovery (macOS) Boot
 * [ ] Serial Number: ensure that it does not exist elsewhere, [Check Apple Coverage](https://checkcoverage.apple.com/us/en/) _(and not uploaded to Github)_
 
@@ -41,7 +41,8 @@ description: Copy this into a Markdown editor and verify each point.
 * [ ] iGPU internal GPU
   * In _Terminal_: `gfxutil -f IGPU` or check in _IORegistryExplorer_
 * [ ] QE/CI _(full acceleration requires both Quartz Extreme and Core Image)_
-  * Check for transparent menu bar and fast smooth UI.
+  * Check for transparent menu bar and fast smooth UI
+  * Hackintool -> System -> System -> _Quartz Extreme_
 * [ ] VDA _(Video Decode Acceleration framework)_
   * _Hackintool -> System -> System -> VDA Decoder_ (should show '_fully supported_')
   * Or use `VDADecoderChecker`
@@ -65,10 +66,10 @@ description: Copy this into a Markdown editor and verify each point.
 
 Use _Energy Saver > Restore Defaults_
 
-* [ ] Check Hibernate Mode (desktop `0`, laptop `3`): `pmset -g | grep hibernatemode`
+* [ ] Check Hibernate Mode (desktop `0`, laptop `3`). In Terminal: `pmset -g | grep hibernatemode`
 * [ ] Shutdown (from Apple menu)
 * [ ] Restart (from Apple menu)
-* [ ] Manual Sleep (Apple menu -> Sleep)
+* [ ] Manual Sleep (Apple menu ->  Sleep)
 * [ ] [Press and hold power button for 1.5 seconds](https://support.apple.com/en-us/HT201236), select Sleep
 * [ ] Auto Sleep (_System Preferences_ -> Energy Saver)
 * [ ] Wake by keyboard
@@ -83,11 +84,12 @@ Use _Energy Saver > Restore Defaults_
 
 #### Disk
 
-Test with _AJA System Test Lite_
+Test with _AJA System Test Lite or AmorphousDiskMark_
 
 * [ ] NVMe SSD (PCIe Gen3 or Gen4 speeds)
 * [ ] SATA SSD
 * [ ] TRIM support (_System Information_ -> SATA -> SSD drive)
+* [ ] USB Drives
 
 #### Sensors
 
@@ -126,7 +128,7 @@ Test external drive speed with _AJA System Test Lite_
 
 #### Ethernet
 
-* [ ] Gigabit LAN (_System Preferences_-> Network -> Ethernet -> Advanced -> Hardware -> Speed should be 1000baseT)
+* [ ] Gigabit LAN (_System Preferences_-> Network -> Ethernet -> Advanced -> Hardware -> Speed should be 1000baseT or more)
 * [ ] 2.5GBase-T (especially on Comet Lake and above boards)
 * [ ] 10GBase-T (Aquantia with updated firmware)
 
