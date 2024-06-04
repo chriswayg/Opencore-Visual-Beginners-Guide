@@ -36,7 +36,7 @@ For this example, we'll assume you'll need an installer. Selecting this option w
 
 ![](<../.gitbook/assets/Screenshot 2024-06-04 at 10.31.52 PM.png>)
 
-Since _OCLP only supports Big Sur and newer_, only those entries will be shown. For this example, we'll select macOS 13.6.7. This will download and save the macOS installer to your _Applications_ folder.
+Since _OCLP only supports Big Sur and newer_, only those entries will be shown. For this example, we'll select macOS 13.6. This will download and save the macOS Ventura installer to your _Applications_ folder.
 
 * **Downloading and extracting the Installer**
 
@@ -52,30 +52,24 @@ Once finished, you can proceed to write the installer onto a USB drive.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.41.37 PM.png" alt=""><figcaption></figcaption></figure>
 
-* **Select Downloaded Installer**
+* **Select downloaded Installer**
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.43.27 PM.png" alt=""><figcaption></figcaption></figure>
 
-* **Select USB drive to format**
+* **Select USB drive**
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.44.38 PM.png" alt=""><figcaption></figcaption></figure>
 
-* Note: The entire USB drive will be formatted
-
 <figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.45.09 PM.png" alt=""><figcaption></figcaption></figure>
 
-* **Flashing**
-* Now OCLP will start the installer flashing - copying macOS to the USB drive
+* **Create the installer**
+* Now OCLP will start copying macOS to the USB drive
 
 ![](<../.gitbook/assets/Screenshot 2024-06-04 at 11.51.42 PM.png>)
 
 * **Success Prompt**
 
-![](../create-installer/images/OCLP-GUI-Installer-Sucess-Prompt.png)
-
-* **Finished Flashing**
-
-![](../create-installer/images/OCLP-GUI-Installer-Finished-Script.png)
+![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.09.20 AM.png>)
 
 * You may now exit the OCLP App.
 
@@ -88,11 +82,11 @@ Once finished, you can proceed to write the installer onto a USB drive.
 
 * After authenticating, you will see the EFI partition of your USB drive in the Finder.
 
-![](../create-installer/images/EFI-USB-drive-partition.png)
+![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.21.38 AM.png>)
 
 * Drag to copy the EFI folder previously created and configured with [OCAuxiliaryTools](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/oc\_auxiliary\_tools) from the **Desktop** to the EFI partition on the USB drive.
 
-![](../create-installer/images/EFI-USB-drive-drag-EFI-folder.png)
+![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.24.26 AM.png>)
 
 This step completes the creation of a hackintosh bootable USB drive with the macOS installer and the OpenCore EFI folder on it. - You may want to add some tools such as _OCAuxiliaryTools_ and _EFI-Agent_ to the USB drive, as these will be useful during post-install configuration.
 
