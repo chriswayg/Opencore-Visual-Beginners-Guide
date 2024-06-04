@@ -5,19 +5,24 @@
 * Launch OCAuxiliaryTools and open the relevant Config.plist.
 * Modify the Config.plist debug settings as described here: [OpenCore Debugging | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html)
 
-![](../images/ocat\_kexts.png)
+![](<../.gitbook/assets/Screenshot 2024-06-04 at 11.24.45 PM.png>)
 
 * If you encounter problems during booting, you should utilize the _debug_ version of OpenCore. As explained previously in the _Misc_ section, make sure you have activated debugging and then _Select Menu -> Edit -> OpenCore DEBUG_
 
 ![](<../.gitbook/assets/image (3).png>)
 
-* Next, select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button.
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.29.52 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](../images/sync\_debug.png)
+* Next, select _Menu -> Edit -> Upgrade OpenCore and Kexts_ or click the _Upgrade OpenCore and Kexts_ button.
+* Then click: _Get the latest version of OpenCore_
+
+![](<../.gitbook/assets/Screenshot 2024-06-04 at 11.33.42 PM.png>)
 
 * Then press the _Start Sync_ button.
 
-![](../images/sync\_success.png)
+![](<../.gitbook/assets/Screenshot 2024-06-04 at 11.33.42 PM (1).png>)
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.32.26 PM.png" alt=""><figcaption></figcaption></figure>
 
 #### Back to release version
 

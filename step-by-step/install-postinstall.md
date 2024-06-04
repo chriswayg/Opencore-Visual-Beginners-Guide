@@ -38,13 +38,13 @@
 
 ### Versions used
 
-This guide was written between January and July 2022 and tested with the current release versions of each tool. Even though the basic steps will remain the same, some details and screenshots will change during subsequent updates of _OpenCore_, _OCAuxiliaryTools, OCLP and Hackintool_. Always check the most recent version of the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) and verify that OCAuxiliaryTools is still supporting the latest version of OpenCore.
+This guide was initially written in 2022 and last updated in 2024 with the then current release versions of each tool. Even though the basic steps will remain the same, some details and screenshots will change during subsequent updates of _OpenCore_, _OCAuxiliaryTools, OCLP and Hackintool_. Always check the most recent version of the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) and verify that OCAuxiliaryTools is still supporting the latest version of OpenCore.
 
-* OpenCore 0.7.7 to 0.8.2
-* OCAuxiliaryTools 20220110 to 20220227
-* OCLP 0.4.2
+* OpenCore 1.0.0
+* OCAuxiliaryTools 20240001
+* OCLP 1.5.0
 * TINU 3.0.1
-* Hackintool v3.8.4
-* USBToolBox 0.1.1
+* Hackintool v4.0.3
+* USBToolBox 0.1.1 (currently at 0.2)
 
 ![](../images/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

@@ -20,58 +20,54 @@ So to start off, you'll want to grab the latest _OpenCore-Patcher-GUI.app.zip_ f
 
 * [OpenCore Legacy Patcher Release Apps](https://github.com/dortania/OpenCore-Legacy-Patcher/releases/latest)
 
-For this guide, we'll be using the standard **OpenCore-Patcher (GUI)**. Once downloaded, open the app and you should be greeted with this menu:
+For this guide, we'll be using the standard **OpenCore-Patcher (GUI)**. Once downloaded, open the app and you should be greeted with this:
 
-![](../create-installer/images/OCLP-GUI-Main-Menu.png)
+![](<../.gitbook/assets/Screenshot 2024-06-04 at 10.26.42 PM.png>)
 
 ### Download macOS Installer
 
-First we'll want to select the _"Create macOS Installer"_ button. This will present you with 2 options:
+First click the _"Create macOS Installer"_ button. This will present you with 2 options:
 
-![](../create-installer/images/OCLP-GUI-Create-Installer-Menu.png)
+![](<../.gitbook/assets/Screenshot 2024-06-04 at 10.28.42 PM.png>)
 
-For this example, we'll assume you'll need an installer. Selecting this option will download Apple's Installer Catalogs and build a list for you to choose:
-
-* **Downloading**
-
-![](../create-installer/images/OCLP-GUI-Installer-Download-Catalog.png)
+For this example, we'll assume you'll need an installer. Selecting this option will check for available installers and build a list for you to choose:
 
 * **Listed Installers**
 
-![](../create-installer/images/OCLP-GUI-Installer-Download-Listed-Products.png)
+![](<../.gitbook/assets/Screenshot 2024-06-04 at 10.31.52 PM.png>)
 
-Since _OCLP only supports Big Sur and newer_, only those entries will be shown. For this example, we'll select macOS 12.1 Monterey. This will download and save the macOS installer to your _Applications_ folder.
+Since _OCLP only supports Big Sur and newer_, only those entries will be shown. For this example, we'll select macOS 13.6.7. This will download and save the macOS installer to your _Applications_ folder.
 
-* **Downloading the Installer**
+* **Downloading and extracting the Installer**
 
-![](../create-installer/images/OCLP-GUI-Installer-Download-Progress.png)
+![](<../.gitbook/assets/Screenshot 2024-06-04 at 10.35.13 PM.png>)
 
-* **Requesting to install**
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.13.00 PM.png" alt=""><figcaption></figcaption></figure>
 
-![](../create-installer/images/OCLP-GUI-Installer-Needs-Installing.png)
-
-* **Finished Installing**
-
-![](../create-installer/images/OCLP-GUI-Installer-Download-Finished.png)
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.40.38 PM.png" alt=""><figcaption></figcaption></figure>
 
 ### Write installer to USB drive
 
 Once finished, you can proceed to write the installer onto a USB drive.
 
-* Note: The entire USB drive will be formatted
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.41.37 PM.png" alt=""><figcaption></figcaption></figure>
+
 * **Select Downloaded Installer**
 
-![](../create-installer/images/OCLP-GUI-Installer-Select-Local-Installer.png)
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.43.27 PM.png" alt=""><figcaption></figcaption></figure>
 
-* **Select disk to format**
+* **Select USB drive to format**
 
-![](../create-installer/images/OCLP-GUI-Installer-Format-USB.png)
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.44.38 PM.png" alt=""><figcaption></figcaption></figure>
 
-Now OCLP will start the installer flashing - copying macOS to the USB drive!
+* Note: The entire USB drive will be formatted
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-06-04 at 11.45.09 PM.png" alt=""><figcaption></figcaption></figure>
 
 * **Flashing**
+* Now OCLP will start the installer flashing - copying macOS to the USB drive
 
-![](../create-installer/images/OCLP-GUI-Installer-Flashing-Process.png)
+![](<../.gitbook/assets/Screenshot 2024-06-04 at 11.51.42 PM.png>)
 
 * **Success Prompt**
 
@@ -85,10 +81,10 @@ Now OCLP will start the installer flashing - copying macOS to the USB drive!
 
 ### Copy EFI folder to USB drive
 
-* Downlaod, install and launch [EFI-Agent](https://github.com/headkaze/EFI-Agent/releases)
+* Download, install and launch [EFI-Agent](https://github.com/headkaze/EFI-Agent/releases) which gives a nice view of available EFI partitions. (Alternatively you can use OCAuxiliaryTools: _Menu -> Edit -> Mount ESP_ to accomplish the same thing._)_
 * Open _EFI Agent_ from its Menu Bar Icon and click on the downward triangle next to the USB drive you wish to use (_SanDisk Ultra_ in this example).
 
-![](../create-installer/images/EFI-Agent.png)
+![](<../.gitbook/assets/Screenshot 2024-06-04 at 10.59.24 PM.png>)
 
 * After authenticating, you will see the EFI partition of your USB drive in the Finder.
 
