@@ -6,11 +6,11 @@ description: Some prior hackintosh experience is recommended
 
 ## OpenCore Alder Lake (12th-Gen Intel) Hackintosh Guidance
 
-Most of the topics discussed here should also work for Raptor Lake (13th-Gen Intel) CPUs, as the archtecture is very similar. So far, I merely added a few relevant links.
+Most of the topics discussed here should also work for Raptor Lake (13th and 14th Gen Intel) CPUs, as the archtecture is very similar. So far, I merely added a few relevant links. Since this was written, much new experience has been gained using Alder Lake and Raptor Lake CPUs. This is therefore just a starting point which needs to be accompanied by further research.
 
 ![](../images/Intel-Alder-Lake-Desktop-CPU.png)
 
-What can we learn from existing successful OpenCore Alder Lake desktop builds? I looked at almost every documented system on the major English and German hackintosh sites. In this article I will share the key points that I noticed when looking at these builds, documentation and configurations. This is just a very preliminary guide, since Dortania does not have an _OpenCore Alder Lake Guide_ yet.
+What can we learn from existing successful OpenCore Alder Lake desktop builds? In 2022, I looked at almost every documented system on the major English and German hackintosh sites. In this article I will share the key points that I noticed when looking at these builds, documentation and configurations. This is just a very preliminary guide, since Dortania does not have an _OpenCore Alder Lake Guide_ yet.
 
 Essentially follow the [Desktop Comet Lake | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html) and incorporate the insights listed below. As always, do not just copy an EFI which you might find in other people's documentation. It may not work, is hard to maintain and is against the rules of [r/hackintosh](https://www.reddit.com/r/hackintosh/). Create your own EFI based on the guide.
 
@@ -130,9 +130,9 @@ Therefore in **BIOS > Advanced CPU Settings** configure accordingly:
 
 ### OpenCore Config.plist Configuration
 
-Use the latest version of [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases/), at least 0.8.2
+Use the latest version of [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases/), which is currently at version 1.0.0.
 
-A starter Config.plist for Alder Lake can be found here: [GitHub - luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE: Basic EFI with Opencore for Intel Alder Lake Processors (12th Gen)](https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE)
+A starter Config.plist for Alder Lake can be found here: [GitHub - luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE: Basic EFI with Opencore for Intel Alder Lake Processors (12th Gen)](https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-12THGEN-ALDER-LAKE) (link has changed).
 
 #### ACPI -> Add
 
