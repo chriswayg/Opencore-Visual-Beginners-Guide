@@ -12,8 +12,8 @@ Apple dropped Broadcom Wifi support since Sonoma, while Broadcom Wifi  worked na
 
 **1. Get kexts**
 
-* Check https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/Acidanthera and download the latest version of AMFIPass-v1.4.1-RELEASE.zip
-* Check https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/Wifi and download the latest version of IOSkywalkFamily-v1.2.0.zip and IOSkywalkFamily-v1.2.0.txt
+* Check [https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/](https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/)Acidanthera and download the latest version of AMFIPass-v1.4.1-RELEASE.zip
+* Check [https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/Wifi ](https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/Wifi)and download the latest version of IOSkywalkFamily-v1.2.0.zip and IOSkywalkFamily-v1.2.0.txt
 
 Extract and add these Kexts to your EFI folder:
 
@@ -144,7 +144,7 @@ Edit your config.plist so that it reflects these changes:
 **3. Reboot**
 
 * Reboot into OpenCore. Reset your NVRAM.
-* Download OCLP from here: https://github.com/dortania/OpenCore-Legacy-Patcher/releases
+* Download OCLP from here: [https://github.com/dortania/OpenCore-Legacy-Patcher/releases](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)
 * Reboot again into macOS, open OCLP and select Root Patching (needed after every update).
 
 **4. Activate AppleVTD**
@@ -153,7 +153,7 @@ Edit your config.plist so that it reflects these changes:
 
 4.1 Patch DMAR
 
-* use the following guide: https://dortania.github.io/Getting-Started-With-ACPI/Universal/dmar-methods/manual.html
+* use the following guide: [https://dortania.github.io/Getting-Started-With-ACPI/Universal/dmar-methods/manual.html](https://dortania.github.io/Getting-Started-With-ACPI/Universal/dmar-methods/manual.html)
 * Make sure your new patched DMAR.aml file is in your EFI Partition's `EFI/OC/ACPI` folder and also added to your `config.plist`.
 
 4.2 Edit config.plist
@@ -207,7 +207,7 @@ TableSignature is `444D4152` in the plist editor
 
 4.4 Reboot and Check AppleVTD
 
-* Download and open IORegistry Explorer https://github.com/utopia-team/IORegistryExplorer/releases
+* Download and open IORegistry Explorer [https://github.com/utopia-team/IORegistryExplorer/releases](https://github.com/utopia-team/IORegistryExplorer/releases)
 * In IOReg search for `AppleVTD`
 * If enabled, the AppleVTD property can bee seen under the AppleACPIPlatformExpert node
 
