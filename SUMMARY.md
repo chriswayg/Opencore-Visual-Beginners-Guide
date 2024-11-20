@@ -19,6 +19,7 @@
 
 ## 📘 Advanced Topics
 
+* [Broadcom Wifi on macOS Sequoia](advanced-topics/broadcom-wifi-on-macos-sequoia.md)
 * [Using Alder Lake (or Raptor Lake)](advanced-topics/using-alder-lake.md)
 * [BIOS Settings Explained](advanced-topics/bios-settings-explained.md)
 * [OpenCore UEFI Shell](advanced-topics/opencore-uefi-shell.md)
