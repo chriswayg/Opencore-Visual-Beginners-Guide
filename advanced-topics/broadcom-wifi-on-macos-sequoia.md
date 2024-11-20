@@ -6,9 +6,12 @@ description: >-
 
 # Broadcom Wifi on macOS Sequoia
 
-Apple dropped Broadcom Wifi support since Sonoma, while Broadcom Wifi  worked natively until Ventura. Tested with a Fenvi T919 card on Sequoia 15.1\
+Apple dropped Broadcom Wifi support since Sonoma, while Broadcom Wifi  worked natively until Ventura. Tested with a Fenvi T919 card on Sequoia 15.1
+
 \
 **This process involves disabling SIP and AMFI, so be warned.**
+
+<figure><img src="../.gitbook/assets/Wifi on Sequoia.png" alt=""><figcaption><p>Broadcom Wifi working on Sequoia 15.1</p></figcaption></figure>
 
 **1. Get kexts**
 
