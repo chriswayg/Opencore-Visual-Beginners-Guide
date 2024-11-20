@@ -21,7 +21,9 @@ Extract and add these Kexts to your EFI folder:
 * IOSkywalkFamily.kext
 * IO80211FamilyLegacy.kext
 
-**2. Edit config.plist** Edit your config.plist so that it reflects these changes:
+**2. Edit config.plist**&#x20;
+
+Edit your config.plist so that it reflects these changes:
 
 2.1 - Add the new kexts to your existing ones (Kernel - Add)
 
