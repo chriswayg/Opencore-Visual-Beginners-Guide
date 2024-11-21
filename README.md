@@ -26,7 +26,7 @@ Detailed Hackintosh hardware information about all compatible configurations can
 
 ### Prerequisites
 
-* An existing computer or VM running a fairly recent version of macOS (High Sierra or newer)
+* An existing computer or VM running a fairly recent version of macOS (preferably Monterey or newer)
 
 ![Showing a sample Config.plist in a plist editor.](<.gitbook/assets/Screenshot 2024-06-01 at 9.53.02 PM.png>)
 
