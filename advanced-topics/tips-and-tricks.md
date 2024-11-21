@@ -30,14 +30,14 @@ description: Miscellaneous Hackintosh Tips & Tricks and ideas (still a work in p
 
 #### Other Tips & Tricks Topics (miscellaneous ideas)
 
-* Hackintosh Tools Evaluation 2022
+* Boot Variables for macOS: [GPU related](https://dortania.github.io/GPU-Buyers-Guide/misc/bootflag.html#amd-boot-arguments)
+* Hackintosh Tools Evaluation
 * Guide for Upgrading macOS (minor point upgrades and major version upgrades)
-* Boot Variables for macOS
 * Clone USB drive / SSD drive together with EFI (CCC & Script or Super Duper & Script)
-* Semi-Automated testing script of a finished/upgraded hackintosh.
-* Windows or Linux version of the Beginners Guide
 * Automated Linux hardware analysis tool for Hackintosh compatibility checking
+* Semi-Automated testing script of a finished/upgraded hackintosh
 * Anonymous CC Credit Card for adding a payment method to AppleID (?!)
+* Windows or Linux version of the Beginners Guide
 * Beginners should avoid...
 * Virtualization notes. Proxmox etc.
 
