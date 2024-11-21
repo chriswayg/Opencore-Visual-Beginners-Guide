@@ -30,9 +30,9 @@ description: Miscellaneous Hackintosh Tips & Tricks and ideas (still a work in p
 
 #### Other Tips & Tricks Topics (TODOs for miscellaneous ideas)
 
-* Boot Variables for macOS: [GPU related](https://dortania.github.io/GPU-Buyers-Guide/misc/bootflag.html#amd-boot-arguments), add more
+* Boot Variables for macOS: [GPU related](https://dortania.github.io/GPU-Buyers-Guide/misc/bootflag.html#amd-boot-arguments) and [Common Boot Args for macOS](common-boot-args-for-macos.md), update as needed
 * Hackintosh Tools Evaluation: expand descriptions on [Checklist Tools](../step-by-step/hackintosh-checklist/checklist-tools.md)
-* Guide for Upgrading macOS (minor point upgrades and major version upgrades): expand [Upgrade OpenCore](../step-by-step/oc-auxiliary-tools-upgrade.md)
+* Guide for Upgrading macOS (minor point upgrades and major version upgrades): expand [Upgrade OpenCore](../step-by-step/oc-auxiliary-tools-upgrade.md) to include macOS upgrades
 * Clone USB drive / SSD drive together with EFI (CCC & Script or Super Duper & Script)
 * Automated Linux hardware analysis tool for Hackintosh compatibility checking
 * Semi-Automated testing script of a finished/upgraded hackintosh

@@ -26,6 +26,7 @@
   * [acpiview - command](advanced-topics/opencore-uefi-shell/acpiview.md)
 * [Dual-Boot Options](advanced-topics/multi-boot-options/README.md)
   * [Create rEFInd BOOTer](advanced-topics/multi-boot-options/create-refind-booter.md)
+* [Common Boot Args for macOS](advanced-topics/common-boot-args-for-macos.md)
 * [Block Update Notifications](advanced-topics/block-update-notifications.md)
 * [Low End GPUs](advanced-topics/low-end-gpus.md)
 * [Tips & Tricks (WIP)](advanced-topics/tips-and-tricks.md)
