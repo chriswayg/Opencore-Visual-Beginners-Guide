@@ -6,21 +6,26 @@ description: Checklist Tools, Boot Key Combinations, and Links
 
 ### Tools for Checking
 
-* Menu Bar SIP Detector: [menu bar app that displays the current status of SIP](https://github.com/ITzTravelInTime/MenuBarSIPDetector)
-* GLview: [OpenGL Extensions Viewer](http://www.realtech-vr.com/home/glview)
+* System Info: [Hackintool](https://github.com/headkaze/Hackintool)
+* Hardware Monitor: [HWMonitorSMC2](https://github.com/CloverHackyColor/HWMonitorSMC2)
 * Metal benchmark: [Geekbench](https://www.geekbench.com)
 * Disk Speedtest: [AJA System Test Lite](https://www.aja.com/products/aja-system-test) or [AmorphousDiskMark](https://katsurashareware.com/amorphousdiskmark/)
-* Battery checker: [coconutBattery](https://www.coconut-flavour.com/coconutbattery/) useful for Laptops
-* USB Port Mapper: [USBToolBox](https://github.com/USBToolBox/tool) or Hackintool
-* System Info: [Hackintool](https://github.com/headkaze/Hackintool)
-* IORegistryExplorer [IORegistryClone](https://github.com/khronokernel/IORegistryClone/blob/master/ioreg-302.zip)
+* Menu Bar SIP Detector: [menu bar app that displays the current status of SIP](https://github.com/ITzTravelInTime/MenuBarSIPDetector)
 * CPU Torture Test: [Prime95](https://www.mersenne.org/download/)
 * CPU monitoring: [Intel Power Gadget](https://www.intel.com/content/www/us/en/developer/articles/tool/power-gadget.html)
-* Hardware Monitor: [HWMonitorSMC2](https://github.com/CloverHackyColor/HWMonitorSMC2)
+* Battery checker: [coconutBattery](https://www.coconut-flavour.com/coconutbattery/) useful for Laptops
+* GLview: [OpenGL Extensions Viewer](http://www.realtech-vr.com/home/glview)
+* USB Port Mapper: [USBToolBox](https://github.com/USBToolBox/tool) or Hackintool
+* IORegistryExplorer [IORegistryClone](https://github.com/khronokernel/IORegistryClone/blob/master/ioreg-302.zip)
 * Hardware Decode Acceleration (linked from [here](https://dortania.github.io/OpenCore-Post-Install/universal/drm.html#testing-hardware-acceleration-and-decoding)): [VDADecoderChecker](https://i.applelife.ru/2019/05/451893\_10.12\_VDADecoderChecker.zip)&#x20;
 * Gfxutil  for checking GPU acceleration: [Gfxutil](https://github.com/acidanthera/gfxutil/releases) tool to work with Device Properties
+
+### General Hackintosh Tools
+
+* OCAuxiliaryTools_:_ [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) the best config.plist editor and EFI configurator&#x20;
 * EFI Mounter: [EFI Agent](https://github.com/benbaker76/EFI-Agent)
 * Plist Editor: [Xplist](https://github.com/ic005k/Xplist)
+* Open Core Legacy Patcher: [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher/releases/tag/2.1.2) for downloading macOS and updating root patches
 
 ### OpenCore Boot Key Combinations
 
