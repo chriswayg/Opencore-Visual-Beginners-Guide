@@ -18,20 +18,25 @@ description: Checklist Tools, Boot Key Combinations, and Links
 * CPU monitoring: [Intel Power Gadget](https://www.intel.com/content/www/us/en/developer/articles/tool/power-gadget.html)
 * Hardware Monitor: [HWMonitorSMC2](https://github.com/CloverHackyColor/HWMonitorSMC2)
 * Hardware Decode Acceleration (linked from [here](https://dortania.github.io/OpenCore-Post-Install/universal/drm.html#testing-hardware-acceleration-and-decoding)): [VDADecoderChecker](https://i.applelife.ru/2019/05/451893\_10.12\_VDADecoderChecker.zip)&#x20;
-* Gfxutil: [https://github.com/acidanthera/gfxutil/releases](https://github.com/acidanthera/gfxutil/releases)
+* Gfxutil  for checking GPU acceleration: [Gfxutil](https://github.com/acidanthera/gfxutil/releases) tool to work with Device Properties
+* EFI Mounter: [EFI Agent](https://github.com/benbaker76/EFI-Agent)
+* Plist Editor: [Xplist](https://github.com/ic005k/Xplist)
 
 ### OpenCore Boot Key Combinations
 
 * [Mac startup key combinations](https://support.apple.com/en-us/HT201255).
 * Enable `KeySupport` & `PollAppleHotKeys` in _Config.plist_.
 * For PC keyboard: enable `KeySwap`.
-* Keys can be pressed after power on or when OpenCore Picker is shown.
-  * CMD+V — verbose mode.
-  * CMD+S — single user mode.
-  * CMD+R — boot into macOS recovery partition.
-  * CMD+OPT+P+R — reset NVRAM.
+* Press keys after power on:
   * OPT or ESC or Zero — at startup to show OpenCore Picker.
-  * CTRL+ENTER at highlighted boot picker to set default boot option.
+  * CMD+OPT+P+R — reset NVRAM.
+* Press keys when OpenCore Picker is shown
+  * CMD+V — verbose startup.
+  * CMD+S — boot in single user mode.
+  * CMD+R — boot into macOS recovery partition.
+  * SHIFT+ENTER  — boot macOS in Safe Mode.
+  * CTRL+ENTER  — to set default boot option.
+  * SPACE  — to show more options such as NVRAM reset or UEFI Shell
 
 ### Links
 

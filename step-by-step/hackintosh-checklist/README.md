@@ -42,7 +42,7 @@ description: Copy this into a Markdown editor and verify each point.
   * In _Terminal_: `gfxutil -f IGPU` or check in _IORegistryExplorer_
 * [ ] QE/CI _(full acceleration requires both Quartz Extreme and Core Image)_
   * Check for transparent menu bar and fast smooth UI
-  * Hackintool -> System -> System -> _Quartz Extreme_
+  * Hackintool -> System -> System -> _Quartz Extreme (QE/CI)_
 * [ ] VDA _(Video Decode Acceleration framework)_
   * _Hackintool -> System -> System -> VDA Decoder_ (should show '_fully supported_')
   * Or use `VDADecoderChecker`
@@ -134,7 +134,7 @@ Test external drive speed with _AJA System Test Lite_
 
 #### Wifi & Bluetooth
 
-* [ ] Wifi transmission speed (Option Click -> Wifi menu bar icon -> check Tx Rate)
+* [ ] Wifi function and transmission speed (Option Click -> Wifi menu bar icon -> check Tx Rate)
 * [ ] Bluetooth devices (trackpad, mouse, keyboard, headset)
 * [ ] AirDrop (test with iDevices)
 * [ ] AirPlay to Mac (macOS Monterey or later, test with iOS 14 or later devices)
