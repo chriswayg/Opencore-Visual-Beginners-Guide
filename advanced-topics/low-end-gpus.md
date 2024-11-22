@@ -6,7 +6,7 @@ description: Low End natively supported dedicated GPUs for a Low End Hackintosh
 
 **Update 2023**: as graphics card prices have normalized, currently the cards with the best price performance ratio and _widest availability_ for a low end Hackintosh would be the RX 570 and RX 580 cards.
 
-![Sapphire Radeon RX 550 Pulse](../.gitbook/assets/rx550\_pulse\_4gb\_800x500\_03.png)
+![Sapphire Radeon RX 550 Pulse](../.gitbook/assets/rx550_pulse_4gb_800x500_03.png)
 
 Sometimes people need a dedicated GPU for a really low-end system which is CPU compatible, but may not have a compatible iGPU _(Nehalem to Sandy Bridge for example)_ for recent macOS versions.
 
@@ -16,17 +16,17 @@ The following can be found on eBay which are listed as compatible in the [GPU Bu
 
 If you have Haswell (Intel 4th Gen) HD Graphics or newer, just use the iGPU, as these Nvidia cards are actually slower. These cards will only work up to Big Sur, unless additional patches are installed with OCLP. Also certain kinds of DRM, which depend on hardware acceleration, will not be available.
 
-* [GT 730 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_nkw=GT+730&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1\&LH\_BIN=1&\_sop=12&\_udhi=35) (must be GK 208)
-* [GT 710 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_nkw=gt+710&\_sacat=27386&\_sop=12&\_udhi=35\&rt=nc\&LH\_BIN=1) (must be GK 208)
-* [K600 Quadro in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=p2334524.m570.l1311&\_nkw=k600+quadro&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1&\_odkw=RX+560&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=35)
+* [GT 730 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_nkw=GT+730&_sacat=27386\&LH_TitleDesc=0&_fsrp=1\&LH_BIN=1&_sop=12&_udhi=35) (must be GK 208)
+* [GT 710 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_nkw=gt+710&_sacat=27386&_sop=12&_udhi=35\&rt=nc\&LH_BIN=1) (must be GK 208)
+* [K600 Quadro in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2334524.m570.l1311&_nkw=k600+quadro&_sacat=27386\&LH_TitleDesc=0&_fsrp=1&_odkw=RX+560&_osacat=27386\&LH_BIN=1&_sop=12&_udhi=35)
 
 ### Lowest End AMD (under US$50)
 
 These cards should work up to Monterey. Certain kinds of DRM, which depend on hardware acceleration, will not be available. The [R7 cards](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/amd-gpu.html) , which will need a Fake ID, have not been used as commonly in hackintosh systems and may therefore have unforeseen issues.
 
-* [R7 250 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=m570.l1313&\_nkw=R7+250&\_sacat=27386\&LH\_TitleDesc=0&\_odkw=R7+240&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=50)
-* [R7 240 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=m570.l1313&\_nkw=R7+240&\_sacat=27386\&LH\_TitleDesc=0&\_odkw=HD+7750&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=50)
-* [HD 7750 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=m570.l1313&\_nkw=HD+7750&\_sacat=27386\&LH\_TitleDesc=0\&rt=nc&\_odkw=gt+710&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=50)
+* [R7 250 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=R7+250&_sacat=27386\&LH_TitleDesc=0&_odkw=R7+240&_osacat=27386\&LH_BIN=1&_sop=12&_udhi=50)
+* [R7 240 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=R7+240&_sacat=27386\&LH_TitleDesc=0&_odkw=HD+7750&_osacat=27386\&LH_BIN=1&_sop=12&_udhi=50)
+* [HD 7750 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=HD+7750&_sacat=27386\&LH_TitleDesc=0\&rt=nc&_odkw=gt+710&_osacat=27386\&LH_BIN=1&_sop=12&_udhi=50)
 
 Each of these cheaper cards have some advantages and potential drawbacks. Many countries outside of the US do not have such a thriving second hand market and choices might be much more limited at even higher prices.
 
@@ -49,16 +49,16 @@ A correct Baffin-core RX 550 can be tricky to find, as often it is not easy to a
 
 Prices for the RX 560 have become much more attractive in recent months, which makes them the best overall choice for low cost cards.
 
-* [RX 460 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_nkw=RX+460&\_sacat=27386\&LH\_TitleDesc=0\&LH\_BIN=1&\_sop=12&\_fsrp=1&\_udhi=100)
-* [RX 550 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=m570.l1313&\_nkw=RX+550&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1&\_odkw=RX+460&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=100) (must be Baffin)
-* [RX 560 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_nkw=RX%20560&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1\&LH\_BIN=1&\_sop=12&\_udhi=100\&rt=nc)
+* [RX 460 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_nkw=RX+460&_sacat=27386\&LH_TitleDesc=0\&LH_BIN=1&_sop=12&_fsrp=1&_udhi=100)
+* [RX 550 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=RX+550&_sacat=27386\&LH_TitleDesc=0&_fsrp=1&_odkw=RX+460&_osacat=27386\&LH_BIN=1&_sop=12&_udhi=100) (must be Baffin)
+* [RX 560 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_nkw=RX%20560&_sacat=27386\&LH_TitleDesc=0&_fsrp=1\&LH_BIN=1&_sop=12&_udhi=100\&rt=nc)
 
 ### Polaris under US$90
 
 Prices for RX 570/580 have also come down to more attractive levels providing about twice the performance of the RX 560
 
-* [RX 570 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=p2334524.m570.l1313&\_nkw=RX+570&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1&\_odkw=rx+570&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=150)
-* [RX 580 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?\_from=R40&\_trksid=p2334524.m570.l1313&\_nkw=rx+580&\_sacat=27386\&LH\_TitleDesc=0&\_fsrp=1&\_odkw=rx+570&\_osacat=27386\&LH\_BIN=1&\_sop=12&\_udhi=150)
+* [RX 570 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=RX+570&_sacat=27386\&LH_TitleDesc=0&_fsrp=1&_odkw=rx+570&_osacat=27386\&LH_BIN=1&_sop=12&_udhi=150)
+* [RX 580 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=rx+580&_sacat=27386\&LH_TitleDesc=0&_fsrp=1&_odkw=rx+570&_osacat=27386\&LH_BIN=1&_sop=12&_udhi=150)
 
 ## Benchmarks Metal & OpenCL
 
@@ -67,12 +67,14 @@ The Apple M1 GPU is shown as a baseline of modern GPU performance as supplied by
 ### **Geekbench 5 Metal Benchmarks**
 
 * 44601 - AMD Radeon RX 580&#x20;
+* 43881 - Radeon HD 7970 / R9 280X
 * 40200 - AMD Radeon RX 570&#x20;
 * 39758 - Apple M1 Pro&#x20;
 * **21066 - Apple M1 GPU**
 * 21073 - AMD Radeon RX 560
 * 19154 - AMD Radeon RX 550
 * 17883 - AMD Radeon RX 460
+* 14714 - AMD Radeon HD 7700 Verde XT
 * 6862 - Intel Iris Plus Graphics 655
 * 4550 - Intel UHD Graphics 630
 * 4041 - Intel HD Graphics 530
@@ -84,6 +86,7 @@ The Apple M1 GPU is shown as a baseline of modern GPU performance as supplied by
 ### **Geekbench 5 OpenCL Benchmarks**
 
 * 49182 - AMD Radeon RX 580 Series&#x20;
+* 41214 - Radeon HD 7970 / R9 280X
 * 41087 - Radeon RX 570 Series&#x20;
 * 35724 - Apple M1 Pro&#x20;
 * **18178 - Apple M1**
