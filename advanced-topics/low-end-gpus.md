@@ -45,32 +45,32 @@ A correct Baffin-core RX 550 can be tricky to find, as often it is not easy to a
   * [ASUS PH-RX550-4G-M7](https://www.asus.com/Motherboards-Components/Graphics-Cards/All-series/PH-RX550-4G-M7)
   * MSI - Looks like all are Lexa.
 
-### Polaris under US$70
+### Polaris under US$60
 
-Prices for the RX 560 have become much more attractive in recent months, which makes them the best overall choice for low cost cards.
+Prices for the RX 560 have become much more attractive which makes them the best overall choice for low cost cards.
 
 * [RX 460 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_nkw=RX+460&_sacat=27386\&LH_TitleDesc=0\&LH_BIN=1&_sop=12&_fsrp=1&_udhi=100)
 * [RX 550 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=RX+550&_sacat=27386\&LH_TitleDesc=0&_fsrp=1&_odkw=RX+460&_osacat=27386\&LH_BIN=1&_sop=12&_udhi=100) (must be Baffin)
-* [RX 560 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_nkw=RX%20560&_sacat=27386\&LH_TitleDesc=0&_fsrp=1\&LH_BIN=1&_sop=12&_udhi=100\&rt=nc)
+* $20 to $50 [RX 560 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_nkw=RX%20560&_sacat=27386\&LH_TitleDesc=0&_fsrp=1\&LH_BIN=1&_sop=12&_udhi=50&_udlo=20\&rt=nc)
 
 ### Polaris under US$90
 
 Prices for RX 570/580 have also come down to more attractive levels providing about twice the performance of the RX 560
 
-* [RX 570 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=RX+570&_sacat=27386\&LH_TitleDesc=0&_fsrp=1&_odkw=rx+570&_osacat=27386\&LH_BIN=1&_sop=12&_udhi=150)
-* [RX 580 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=rx+580&_sacat=27386\&LH_TitleDesc=0&_fsrp=1&_odkw=rx+570&_osacat=27386\&LH_BIN=1&_sop=12&_udhi=150)
+* $20 to $60 [RX 570 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_nkw=rx%20570&_sacat=27386&_fsrp=1&_udlo=20\&LH_BIN=1&_sop=12&_udhi=60\&rt=nc)
+* $30 to $90 [RX 580 in Computer Graphics and Video Cards : Search Result | eBay](https://www.ebay.com/sch/i.html?_from=R40&_nkw=rx%20580&_sacat=27386\&LH_TitleDesc=0&_fsrp=1\&LH_BIN=1&_sop=12&_udhi=90&_udlo=30\&rt=nc)
 
 ## Benchmarks Metal & OpenCL
 
-The Apple M1 GPU is shown as a baseline of modern GPU performance as supplied by Apple since 2020/21. Only the Polaris cards have comparable performance.
+The Apple M1 GPU is shown as a baseline of modern GPU performance as supplied by Apple since 2020/21. The Polaris cards have comparable performance.
 
 ### **Geekbench 5 Metal Benchmarks**
 
-* 44601 - AMD Radeon RX 580&#x20;
+* **44601 - AMD&#x20;**_**Radeon RX 580**_&#x20;
 * 43881 - Radeon HD 7970 / R9 280X
 * 40200 - AMD Radeon RX 570&#x20;
-* 39758 - Apple M1 Pro&#x20;
-* **21066 - Apple M1 GPU**
+* **39758 - Apple M1 Pro**&#x20;
+* **21066 - Apple M1**&#x20;
 * 21073 - AMD Radeon RX 560
 * 19154 - AMD Radeon RX 550
 * 17883 - AMD Radeon RX 460
@@ -85,13 +85,14 @@ The Apple M1 GPU is shown as a baseline of modern GPU performance as supplied by
 
 ### **Geekbench 5 OpenCL Benchmarks**
 
-* 49182 - AMD Radeon RX 580 Series&#x20;
+* _**49182 - AMD Radeon RX 580 Series**_&#x20;
 * 41214 - Radeon HD 7970 / R9 280X
 * 41087 - Radeon RX 570 Series&#x20;
-* 35724 - Apple M1 Pro&#x20;
-* **18178 - Apple M1**
+* **35724 - Apple M1 Pro**&#x20;
 * 21066 - Radeon RX 560 Series
 * 19398 - AMD Radeon RX460
+* **18178 - Apple M1**
+* 13812 - AMD Radeon HD 7700 Verde XT
 * 12616 - AMD Radeon RX 550
 * 8878 - AMD Radeon R7 250 Series
 * 7434 - IntelIris Plus Graphics 655
