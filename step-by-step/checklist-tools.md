@@ -8,8 +8,9 @@ description: Hackintosh Tools, Boot Key Combinations, and Links
 
 * OCAuxiliaryTool&#x73;_:_ [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) the best config.plist editor and EFI configurator&#x20;
 * EFI Mounter: [EFI Agent](https://github.com/benbaker76/EFI-Agent)
-* Plist Editor: [Xplist](https://github.com/ic005k/Xplist)
-* PlistEdit Pro – Advanced Mac plist editor: [PlistEdit Pro](https://www.fatcatsoftware.com/plisteditpro/) - nice, but commercial
+* Xplist Plist Editor: [Xplist](https://github.com/ic005k/Xplist)
+* ProperTree Plist Editor: [ProperTree](https://github.com/corpnewt/ProperTree) plist editor with OpenCore Snapshot features
+* PlistEdit Pro – Advanced Plist editor: [PlistEdit Pro](https://www.fatcatsoftware.com/plisteditpro/) - nice, but commercial
 * Open Core Legacy Patcher: [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher/releases/tag/2.1.2) for downloading macOS and updating root patches
 * Mist macOS Downloader: [Mist](https://github.com/ninxsoft/Mist) a Mac utility that downloads macOS Installers
 

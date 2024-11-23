@@ -8,15 +8,15 @@ This guide uses specific [example 10th Gen Intel hardware](https://chriswayg.git
 
 ## Using OpenCore Auxiliary Tools to Create EFI & Config
 
-* _OCAuxiliaryTools_ is an excellent configuration and update utility. It will be used to create the complete OpenCore EFI folder including the Config.plist. _(You may use this alongside a plist editor such as_ [_Xplist_](https://github.com/ic005k/PlistEDPlus)_)_.
+* _OCAuxiliaryTools_ is an excellent configuration and update utility. It will be used to create the complete OpenCore EFI folder including the Config.plist. _(You may use this alongside a plist editor such as_ [_ProperTree_](https://github.com/corpnewt/ProperTree) _or_ [_Xplist_](https://github.com/ic005k/PlistEDPlus)_)_.
 * If you are following this example, but are using different hardware, just open the relevant sections for _your CPU generation_ in [config.plist Setup | OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/#creating-your-config-plist) alongside _OCAuxiliaryTools._&#x20;
 * Download & install [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) and launch the _OCAuxiliaryTools_ application.
 
 ![OCAuxiliaryTools initial Window](<../.gitbook/assets/Screenshot 2024-06-01 at 10.01.08 PM.png>)
 
 * Click the _Database/Configuration Template_ button _(highlighted in the screenshot)_
-* This links to a [Github repo](https://github.com/5T33Z0/OC-Little-Translated/tree/main/F\_Desktop\_EFIs/Config\_Templates) where you can download the relevant configuration. _(The steps are also explained there.)_
-* _Click on_ `Config_Templates.zip` and then the _Download Raw File_ button on that Github page to download the [templates](https://raw.githubusercontent.com/5T33Z0/OC-Little-Translated/main/F\_Desktop\_EFIs/Config\_Templates/Config\_Templates.zip). Unzip the templates on your Desktop for example.
+* This links to a [Github repo](https://github.com/5T33Z0/OC-Little-Translated/tree/main/F_Desktop_EFIs/Config_Templates) where you can download the relevant configuration. _(The steps are also explained there.)_
+* _Click on_ `Config_Templates.zip` and then the _Download Raw File_ button on that Github page to download the [templates](https://raw.githubusercontent.com/5T33Z0/OC-Little-Translated/main/F_Desktop_EFIs/Config_Templates/Config_Templates.zip). Unzip the templates on your Desktop for example.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-06-01 at 10.29.59 PM.png" alt=""><figcaption><p>Configuration Templates locally downloaded</p></figcaption></figure>
 
@@ -46,7 +46,7 @@ In [ACPI - Quirks](https://dortania.github.io/OpenCore-Install-Guide/config.plis
 
 **You can hover with your mouse over each option** (or right click and _Show Tips)_ **to see the explanation from the official OpenCore reference manual.** This is a really helpful feature of _OCAuxiliaryTools_, as it enables you to quickly understand options which are only clearly explained in the very detailed [OpenCore Reference Manual](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.pdf) document:
 
-![Configuration.pdf](../images/opencore\_configuration\_doc.png)
+![Configuration.pdf](../images/opencore_configuration_doc.png)
 
 ### Booter
 
