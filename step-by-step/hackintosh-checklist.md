@@ -8,11 +8,11 @@ description: Copy this into a Markdown editor and verify each point.
 
 **Working:** check-mark. **Not Working:** bold.&#x20;
 
-**Not Tested:** leave as-is. **Not applicable:** Strikethrough or delete.&#x20;
+**Not Tested:** leave as-is. **Not applicable:** strike-through or delete.&#x20;
 
 ### Useful tools and utilities
 
-[https://chriswayg.gitbook.io/opencore-visual-beginners-guide/step-by-step/checklist-tools](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/step-by-step/checklist-tools)
+[Checklist Tools](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/step-by-step/checklist-tools)
 
 ### Desktop and General
 
@@ -192,6 +192,6 @@ additional checks relevant for Notebooks including MacBooks with Legacy Patchers
 * [ ] Touchpad basic functions
 * [ ] Touchpad Gestures
 
-
+_Location of Checklist:_ [https://github.com/chriswayg/Opencore-Visual-Beginners-Guide/blob/master/step-by-step/hackintosh-checklist.md](hackintosh-checklist.md)
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/) I make this checklist available under public domain [(CC0)](https://creativecommons.org/share-your-work/public-domain/cc0/)
