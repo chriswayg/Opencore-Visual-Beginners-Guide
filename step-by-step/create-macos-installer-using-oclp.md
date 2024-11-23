@@ -12,7 +12,7 @@ This section of the guide is focused around downloading and writing the full mac
 
 _OLCP will only be able to create an installer for Big Sur or newer. If you need to create an installer for macOS Catalina or older, then use this alternative method:_ [_Create a bootable installer for macOS with TINU_](../alternatives/create-installer-using-tinu.md)_._
 
-Another good alternative for downloading macOS is [Mist](https://github.com/ninxsoft/Mist) which can download from Mac OS X Lion (10.7.5) to macOS Sequoia (15.1.1) and beyond.
+Another good alternative for downloading macOS is [Mist](https://github.com/ninxsoft/Mist) which can download Mac OS X Lion (10.7.5) to macOS Sequoia (15.1.1) and beyond. Mist requires Full Disk Access, which may not work when using OCLP. If you cannot save files in Mist, start it from the Terminal using the following command: sudo /Applications/Mist.app/Contents/MacOS/Mist
 
 ### Download and launch OCLP
 
