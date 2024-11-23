@@ -12,7 +12,7 @@ description: Copy this into a Markdown editor and verify each point.
 
 ### Useful tools and utilities
 
-[https://app.gitbook.com/o/X8u2InnzoToQx5csHofs/s/-LwXl0c-BaUDNDvUg8TP/\~/changes/178/step-by-step/checklist-tools](https://app.gitbook.com/o/X8u2InnzoToQx5csHofs/s/-LwXl0c-BaUDNDvUg8TP/~/changes/178/step-by-step/checklist-tools)
+[https://chriswayg.gitbook.io/opencore-visual-beginners-guide/step-by-step/checklist-tools](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/step-by-step/checklist-tools)
 
 ### Desktop and General
 
