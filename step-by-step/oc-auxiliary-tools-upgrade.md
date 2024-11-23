@@ -46,7 +46,7 @@ Occasionally you may need to remove a kext (or driver) which is not needed any m
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-06-05 at 12.41.15 AM.png" alt=""><figcaption><p>three kexts need to be updated in this example</p></figcaption></figure>
 
-* Click on the _Settings_ Button_,_ referring to: _`The way to get the download link for Kext upgrade`_ and ensure that `Accessing the GitHub API` is checked, as shown below.
+* Click on the _Settings_ Butto&#x6E;_,_ referring to: _`The way to get the download link for Kext upgrade`_ and ensure that `Accessing the GitHub API` is checked, as shown below.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-06-05 at 12.42.05 AM.png" alt=""><figcaption></figcaption></figure>
 
@@ -77,7 +77,7 @@ Occasionally you may need to remove a kext (or driver) which is not needed any m
 
 ### NOTES
 
-* Much of the _Upgrade OpenCore and Kexts_ portion of this guide is based on [Updating OpenCore and Kexts with OCAT](https://github.com/5T33Z0/OC-Little-Translated/blob/main/D\_Updating\_OpenCore/README.md) by 5T33Z0. _Some possible issues are also discussed there._
-* Also check 5T33Z0's helpful [OpenCore Config Tips and Tricks](https://github.com/5T33Z0/OC-Little-Translated/tree/main/A\_Config\_Tips\_and\_Tricks) and other sections in his repo.
+* Much of the _Upgrade OpenCore and Kexts_ portion of this guide is based on [Updating OpenCore and Kexts with OCAT](https://github.com/5T33Z0/OC-Little-Translated/blob/main/D_Updating_OpenCore/README.md) by 5T33Z0. _Some possible issues are also discussed there._
+* Also check 5T33Z0's helpful [OpenCore Config Tips and Tricks](https://github.com/5T33Z0/OC-Little-Translated/tree/main/A_Config_Tips_and_Tricks) and other sections in his repo.
 
 ![](../images/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._

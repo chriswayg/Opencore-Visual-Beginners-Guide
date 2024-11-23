@@ -19,7 +19,8 @@
 
 ## 📘 Advanced Topics
 
-* [Broadcom Wifi on macOS Sequoia](advanced-topics/broadcom-wifi-on-macos-sequoia.md)
+* [Open Core Legacy Patcher (OCLP)](advanced-topics/open-core-legacy-patcher-oclp/README.md)
+  * [Broadcom Wifi on macOS Sequoia](advanced-topics/open-core-legacy-patcher-oclp/broadcom-wifi-on-macos-sequoia.md)
 * [Using Alder Lake (or Raptor Lake)](advanced-topics/using-alder-lake.md)
 * [BIOS Settings Explained](advanced-topics/bios-settings-explained.md)
 * [OpenCore UEFI Shell](advanced-topics/opencore-uefi-shell.md)

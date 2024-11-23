@@ -12,6 +12,8 @@ This section of the guide is focused around downloading and writing the full mac
 
 _OLCP will only be able to create an installer for Big Sur or newer. If you need to create an installer for macOS Catalina or older, then use this alternative method:_ [_Create a bootable installer for macOS with TINU_](../alternatives/create-installer-using-tinu.md)_._
 
+Another good alternative for downloading macOS is [Mist](https://github.com/ninxsoft/Mist) which can download from Mac OS X Lion (10.7.5) to macOS Sequoia (15.1.1) and beyond.
+
 ### Download and launch OCLP
 
 With _OpenCore Legacy Patcher_ _(OCLP)_, the new GUI includes a convenient download menu for recent macOS installers. We will not be using the other features of OCLP, as they are not relevant to creating a hackintosh.
@@ -84,7 +86,7 @@ Once finished, you can proceed to write the installer onto a USB drive.
 
 ![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.21.38 AM.png>)
 
-* Drag to copy the EFI folder previously created and configured with [OCAuxiliaryTools](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/oc\_auxiliary\_tools) from the **Desktop** to the EFI partition on the USB drive.
+* Drag to copy the EFI folder previously created and configured with [OCAuxiliaryTools](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/oc_auxiliary_tools) from the **Desktop** to the EFI partition on the USB drive.
 
 ![](<../.gitbook/assets/Screenshot 2024-06-05 at 12.24.26 AM.png>)
 
