@@ -1,8 +1,17 @@
 ---
-description: Checklist Tools, Boot Key Combinations, and Links
+description: Hackintosh Tools, Boot Key Combinations, and Links
 ---
 
-# Checklist Tools
+# Tools and Boot Keys
+
+### General Hackintosh Tools
+
+* OCAuxiliaryTool&#x73;_:_ [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) the best config.plist editor and EFI configurator&#x20;
+* EFI Mounter: [EFI Agent](https://github.com/benbaker76/EFI-Agent)
+* Plist Editor: [Xplist](https://github.com/ic005k/Xplist)
+* PlistEdit Pro – Advanced Mac plist editor: [PlistEdit Pro](https://www.fatcatsoftware.com/plisteditpro/) - nice, but commercial
+* Open Core Legacy Patcher: [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher/releases/tag/2.1.2) for downloading macOS and updating root patches
+* Mist macOS Downloader: [Mist](https://github.com/ninxsoft/Mist) a Mac utility that downloads macOS Installers
 
 ### Tools for Checking
 
@@ -19,15 +28,6 @@ description: Checklist Tools, Boot Key Combinations, and Links
 * IORegistryExplorer [IORegistryClone](https://github.com/khronokernel/IORegistryClone/blob/master/ioreg-302.zip)
 * Hardware Decode Acceleration (linked from [here](https://dortania.github.io/OpenCore-Post-Install/universal/drm.html#testing-hardware-acceleration-and-decoding)): [VDADecoderChecker](https://i.applelife.ru/2019/05/451893_10.12_VDADecoderChecker.zip)&#x20;
 * Gfxutil  for checking GPU acceleration: [Gfxutil](https://github.com/acidanthera/gfxutil/releases) tool to work with Device Properties
-
-### General Hackintosh Tools
-
-* OCAuxiliaryTool&#x73;_:_ [OpenCore Auxiliary Tools - OCAT](https://github.com/ic005k/QtOpenCoreConfig) the best config.plist editor and EFI configurator&#x20;
-* EFI Mounter: [EFI Agent](https://github.com/benbaker76/EFI-Agent)
-* Plist Editor: [Xplist](https://github.com/ic005k/Xplist)
-* PlistEdit Pro – Advanced Mac plist editor: [PlistEdit Pro](https://www.fatcatsoftware.com/plisteditpro/) - nice, but commercial
-* Open Core Legacy Patcher: [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher/releases/tag/2.1.2) for downloading macOS and updating root patches
-* Mist macOS Downloader: [Mist](https://github.com/ninxsoft/Mist) a Mac utility that automatically downloads macOS Installers
 
 ### OpenCore Boot Key Combinations
 
@@ -50,4 +50,4 @@ description: Checklist Tools, Boot Key Combinations, and Links
 * [OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/)
   * covers iGPU, Audio, Sleep, Power Management, USB mapping, NVRAM, Security, Battery, Multibooting, DRM, iMessage, etc.
 
-![](../../images/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
+![](../images/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
