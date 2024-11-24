@@ -156,6 +156,7 @@ Edit your config.plist so that it reflects these changes:
 
 4.1 Patch DMAR
 
+* You may need to enable VT-D in your BIOS already in order to be able to download the DMAR table&#x20;
 * use the following guide: [https://dortania.github.io/Getting-Started-With-ACPI/Universal/dmar-methods/manual.html](https://dortania.github.io/Getting-Started-With-ACPI/Universal/dmar-methods/manual.html) or use [https://github.com/corpnewt/SSDTTime](https://github.com/corpnewt/SSDTTime)
 * Make sure your new patched DMAR.aml file is in your EFI Partition's `EFI/OC/ACPI` folder and also added to your `config.plist`.
 
