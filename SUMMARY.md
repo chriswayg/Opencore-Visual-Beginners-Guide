@@ -26,6 +26,7 @@
 * [OpenCore UEFI Shell](advanced-topics/opencore-uefi-shell.md)
   * [acpiview - command](advanced-topics/opencore-uefi-shell/acpiview.md)
 * [Dual-Boot Options](advanced-topics/multi-boot-options/README.md)
+  * [Dual-Boot on Single Disk](advanced-topics/dual-boot-options/dual-boot-on-single-disk.md)
   * [Create rEFInd BOOTer](advanced-topics/multi-boot-options/create-refind-booter.md)
 * [Common Boot Args for macOS](advanced-topics/common-boot-args-for-macos.md)
 * [Block Update Notifications](advanced-topics/block-update-notifications.md)
