@@ -107,8 +107,6 @@ Edit your config.plist so that it reflects these changes:
                 </dict>
 ```
 
-
-
 2.2 - Allow for IOSkywalk kext downgrade by excluding it (Kernel - Block)
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.45.14.png" alt=""><figcaption><p> IOSkywalk kext downgrade</p></figcaption></figure>
@@ -132,8 +130,6 @@ Edit your config.plist so that it reflects these changes:
                 </dict>
 ```
 
-
-
 2.3 - Change SecureBootModel to Disabled (Entries - Security)
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.46.35.png" alt=""><figcaption><p>SecureBootModel Disabled</p></figcaption></figure>
@@ -143,19 +139,16 @@ Edit your config.plist so that it reflects these changes:
                 <string>Disabled</string>
 ```
 
-
-
 2.4 - Set your SIP to be partially disabled (NVRAM - Add - 7C436110-AB2A-4BBB-A880-FE41995C9F82)
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.48.25.png" alt=""><figcaption><p>SIP Partially Disabled</p></figcaption></figure>
-
-`03080000` in the plist editor
 
 ```
                     <key>csr-active-config</key>
                     <data>AwgAAA==</data>
 ```
 
+* csr-active-config is `03080000` in a plist editor
 * Double check your config.plist
 
 **3. Reboot**
@@ -171,10 +164,26 @@ Edit your config.plist so that it reflects these changes:
 4.1 Patch DMAR
 
 * You may need to enable VT-D in your BIOS already in order to be able to download the DMAR table&#x20;
-* use the following guide: [https://dortania.github.io/Getting-Started-With-ACPI/Universal/dmar-methods/manual.html](https://dortania.github.io/Getting-Started-With-ACPI/Universal/dmar-methods/manual.html) or use [https://github.com/corpnewt/SSDTTime](https://github.com/corpnewt/SSDTTime)
-* Make sure your new patched DMAR.aml file is in your EFI Partition's `EFI/OC/ACPI` folder and also added to your `config.plist`
+* Use the following guide: [Patching DMAR Table: Manual](https://dortania.github.io/Getting-Started-With-ACPI/Universal/dmar-methods/manual.html)  or use [SSDTTime](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 17.22.49.png" alt=""><figcaption><p>Patch DMAR table using  SSDTTime</p></figcaption></figure>
 
 4.2 Edit config.plist
+
+* ACPI --> Add
+  * Make sure your new patched DMAR.aml file is in your EFI Partition's `EFI/OC/ACPI` folder and also added to your `config.plist`
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.50.27.png" alt=""><figcaption></figcaption></figure>
+
+<pre><code><strong>                &#x3C;dict>
+</strong>                    &#x3C;key>Comment&#x3C;/key>
+                    &#x3C;string>&#x3C;/string>
+                    &#x3C;key>Enabled&#x3C;/key>
+                    &#x3C;true/>
+                    &#x3C;key>Path&#x3C;/key>
+                    &#x3C;string>DMAR.aml&#x3C;/string>
+                &#x3C;/dict>
+</code></pre>
 
 * Kernel --> Quirks
 
@@ -185,21 +194,6 @@ Edit your config.plist so that it reflects these changes:
                 <false/>
                 <key>DisableIoMapperMapping</key>
                 <true/>
-```
-
-* ACPI --> Add
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.50.27.png" alt=""><figcaption></figcaption></figure>
-
-```
-                <dict>
-                    <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Path</key>
-                    <string>DMAR.aml</string>
-                </dict>
 ```
 
 * ACPI --> Delete
@@ -223,7 +217,7 @@ Edit your config.plist so that it reflects these changes:
                 </dict>
 ```
 
-TableSignature is `444D4152` in the plist editor
+* TableSignature is `444D4152` in a plist editor
 
 4.3 In the BIOS set
 
@@ -252,7 +246,8 @@ TableSignature is `444D4152` in the plist editor
 
 ### **Credits**
 
-* [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated/tree/main/14_OCLP_Wintel) detailed instructions for OCLP on Hackintosh and a [Wifi on Sonoma](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/Enable_Features/WiFi_Sonoma.md) page
+* [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated/tree/main/14_OCLP_Wintel) detailed instructions for OCLP on Hackintosh, a [Wifi on Sonoma](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/Enable_Features/WiFi_Sonoma.md) page and a guide for [Replacing the `DMAR` table by a modified one](https://github.com/5T33Z0/OC-Little-Translated/blob/4f5b83b0d343e504f4babc427df5b42128fb2dc3/00_ACPI/ACPI_Dropping_Tables/README.md#example-2-replacing-the-dmar-table-by-a-modified-one)
+* [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools): screenshots of the config which was edited using OCAuxiliaryTools
 * [OCLP team](https://github.com/dortania/OpenCore-Legacy-Patcher/) who made this possible, even though they don't officially support OCLP on Hackintosh&#x20;
 * [billabongbruno](https://github.com/billabongbruno/macOS-Sonoma-Broadcom-Wifi) with an older such guide on Github&#x20;
 * [u/6e656f73](https://www.reddit.com/user/6e656f73/) on r/hackintosh especially for the AppleVTD tip :-)
