@@ -9,7 +9,7 @@ description: >-
 Apple dropped Broadcom Wifi support since Sonoma, while Broadcom Wifi worked natively until Ventura. I tested this with a Fenvi T919 card on Sequoia 15.1. This guide should work with most Broadcom cards that worked natively under Ventura, but there may be exceptions.
 
 \
-**This process involves disabling SIP and AMFI, so be warned!**
+**This process involves disabling SIP and AMFI, so be warned:** _Modifying the system with OCLP Requires SIP, Apple Secure Boot and AMFI to be disabled so there are some compromises in terms of security._
 
 <figure><img src="../../.gitbook/assets/Wifi on Sequoia.png" alt=""><figcaption><p>Broadcom Wifi working on Sequoia 15.1</p></figcaption></figure>
 
@@ -23,6 +23,8 @@ Extract and add these Kexts to your EFI folder:
 * AMFIPass.kext
 * IOSkywalkFamily.kext
 * IO80211FamilyLegacy.kext
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.42.44.png" alt=""><figcaption><p>Added kexts</p></figcaption></figure>
 
 **2. Edit config.plist**&#x20;
 
@@ -105,6 +107,10 @@ Edit your config.plist so that it reflects these changes:
                 </dict>
 ```
 
+
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.45.14.png" alt=""><figcaption><p> IOSkywalk kext downgrade</p></figcaption></figure>
+
 2.2 - Allow for IOSkywalk kext downgrade by excluding it (Kernel - Block)
 
 ```
@@ -126,6 +132,10 @@ Edit your config.plist so that it reflects these changes:
                 </dict>
 ```
 
+
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.46.35.png" alt=""><figcaption><p>SecureBootModel Disabled</p></figcaption></figure>
+
 2.3 - Change SecureBootModel to Disabled (Entries - Security)
 
 ```
@@ -133,7 +143,11 @@ Edit your config.plist so that it reflects these changes:
                 <string>Disabled</string>
 ```
 
-2.4 - Set your SIP to Disabled (NVRAM - Add - 7C436110-AB2A-4BBB-A880-FE41995C9F82)
+
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.48.25.png" alt=""><figcaption><p>SIP Partially Disabled</p></figcaption></figure>
+
+2.4 - Set your SIP to be partially disabled (NVRAM - Add - 7C436110-AB2A-4BBB-A880-FE41995C9F82)
 
 `03080000` in the plist editor
 
@@ -158,11 +172,13 @@ Edit your config.plist so that it reflects these changes:
 
 * You may need to enable VT-D in your BIOS already in order to be able to download the DMAR table&#x20;
 * use the following guide: [https://dortania.github.io/Getting-Started-With-ACPI/Universal/dmar-methods/manual.html](https://dortania.github.io/Getting-Started-With-ACPI/Universal/dmar-methods/manual.html) or use [https://github.com/corpnewt/SSDTTime](https://github.com/corpnewt/SSDTTime)
-* Make sure your new patched DMAR.aml file is in your EFI Partition's `EFI/OC/ACPI` folder and also added to your `config.plist`.
+* Make sure your new patched DMAR.aml file is in your EFI Partition's `EFI/OC/ACPI` folder and also added to your `config.plist`
 
 4.2 Edit config.plist
 
 * Kernel --> Quirks
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.53.37.png" alt=""><figcaption></figcaption></figure>
 
 ```
                 <key>DisableIoMapper</key>
@@ -172,6 +188,8 @@ Edit your config.plist so that it reflects these changes:
 ```
 
 * ACPI --> Add
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.50.27.png" alt=""><figcaption></figcaption></figure>
 
 ```
                 <dict>
@@ -185,6 +203,8 @@ Edit your config.plist so that it reflects these changes:
 ```
 
 * ACPI --> Delete
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.54.43.png" alt=""><figcaption></figcaption></figure>
 
 ```
                 <dict>
@@ -214,12 +234,16 @@ TableSignature is `444D4152` in the plist editor
 * Reboot
 * Download and open IORegistry Explorer [https://github.com/utopia-team/IORegistryExplorer/releases](https://github.com/utopia-team/IORegistryExplorer/releases)
 * In IOReg search for `AppleVTD`
-* If enabled, the AppleVTD property can bee seen under the AppleACPIPlatformExpert node
+* If enabled, the AppleVTD property can be seen under the AppleACPIPlatformExpert node
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.56.07.png" alt=""><figcaption><p>AppleVTD under AppleACPIPlatformExpert</p></figcaption></figure>
 
 **5. Check**
 
 * Reboot and check for native Wifi. If it's still not working, reset your NVRAM and check again.
 * Test Wifi transmission speed using: `Option Click -> Wifi menu bar icon -> check Tx Rate` and run an internet speed test.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.56.07.jpg" alt=""><figcaption></figcaption></figure>
 
 ### Notes
 
