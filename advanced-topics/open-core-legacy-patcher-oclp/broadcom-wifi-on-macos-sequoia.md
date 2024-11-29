@@ -24,13 +24,13 @@ Extract and add these Kexts to your EFI folder:
 * IOSkywalkFamily.kext
 * IO80211FamilyLegacy.kext
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.42.44.png" alt=""><figcaption><p>Added kexts</p></figcaption></figure>
-
 **2. Edit config.plist**&#x20;
 
 Edit your config.plist so that it reflects these changes:
 
 2.1 - Add the new kexts to your existing ones (Kernel - Add)
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.42.44.png" alt=""><figcaption><p>Added kexts</p></figcaption></figure>
 
 ```
                 <dict>
@@ -109,9 +109,9 @@ Edit your config.plist so that it reflects these changes:
 
 
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.45.14.png" alt=""><figcaption><p> IOSkywalk kext downgrade</p></figcaption></figure>
-
 2.2 - Allow for IOSkywalk kext downgrade by excluding it (Kernel - Block)
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.45.14.png" alt=""><figcaption><p> IOSkywalk kext downgrade</p></figcaption></figure>
 
 ```
                 <dict>
@@ -134,9 +134,9 @@ Edit your config.plist so that it reflects these changes:
 
 
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.46.35.png" alt=""><figcaption><p>SecureBootModel Disabled</p></figcaption></figure>
-
 2.3 - Change SecureBootModel to Disabled (Entries - Security)
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.46.35.png" alt=""><figcaption><p>SecureBootModel Disabled</p></figcaption></figure>
 
 ```
                 <key>SecureBootModel</key>
@@ -145,9 +145,9 @@ Edit your config.plist so that it reflects these changes:
 
 
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.48.25.png" alt=""><figcaption><p>SIP Partially Disabled</p></figcaption></figure>
-
 2.4 - Set your SIP to be partially disabled (NVRAM - Add - 7C436110-AB2A-4BBB-A880-FE41995C9F82)
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-29 at 16.48.25.png" alt=""><figcaption><p>SIP Partially Disabled</p></figcaption></figure>
 
 `03080000` in the plist editor
 
@@ -232,7 +232,7 @@ TableSignature is `444D4152` in the plist editor
 4.4 Check AppleVTD
 
 * Reboot
-* Download and open IORegistry Explorer [https://github.com/utopia-team/IORegistryExplorer/releases](https://github.com/utopia-team/IORegistryExplorer/releases)
+* Download and open [IORegistry Explorer ](https://github.com/utopia-team/IORegistryExplorer/releases)
 * In IOReg search for `AppleVTD`
 * If enabled, the AppleVTD property can be seen under the AppleACPIPlatformExpert node
 
