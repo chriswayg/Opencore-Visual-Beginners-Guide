@@ -102,8 +102,9 @@ Note: _XhciPortLimit - Enable_ was previously used to patch the XCHI port limit 
 
 ![Disable XhciPortLimit](<../.gitbook/assets/image (4) (1).png>)
 
-#### Credits
+#### Credits and Discussion
 
 * Thanks to the developer of this excellent tool[ Dhinak G](https://github.com/dhinakg) who also pointed out some issues with the original version of this guide on r/hackintosh.
+* Current discussion and feedback can be found on r/hackintosh: [GUIDE: Easy USB Mapping with USBToolbox on Windows ](https://www.reddit.com/r/hackintosh/comments/ta1ef4/guide_easy_usb_mapping_with_usbtoolbox_on_windows/)
 
 ![](../images/by-nc-license.svg) _Except where otherwise noted, content on this site is licensed under the_ [_Creative Commons — Attribution-NonCommercial 4.0 International — CC BY-NC 4.0_](https://creativecommons.org/licenses/by-nc/4.0/) _license. Attribution by link to_ [_chriswayg · GitHub_](https://github.com/chriswayg)_._
